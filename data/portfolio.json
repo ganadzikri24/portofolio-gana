@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "name": "Muhamad Ganabitz Dzikri",
+    "title": "Creative Technologist | Network Engineer",
+    "description": "Mahasiswa Teknologi Rekayasa Komputer dengan ketertarikan mendalam pada pengembangan sistem terintegrasi. Menggabungkan keahlian dalam desain grafis, motion graphics, infrastruktur jaringan, dan Internet of Things untuk menciptakan solusi digital yang estetis dan fungsional."
+  },
+  "education": [
+    {
+      "id": 1,
+      "institution": "IPB University (Sekolah Vokasi)",
+      "year": "2024 - Sekarang",
+      "degree": "Teknologi Rekayasa Komputer"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Freelance Graphic & Motion Designer",
+      "company": "Independent Creative Studio",
+      "year": "2023 - Sekarang",
+      "description": "Mengelola proyek multimedia profesional dari pra-produksi hingga pasca-produksi menggunakan Adobe Creative Suite. Berfokus pada visualisasi identitas merek dan komposisi motion graphics."
+    }
+  ],
+  "skills": [
+    { "name": "Adobe Premiere Pro", "category": "Videography" },
+    { "name": "Adobe After Effects", "category": "Motion Graphics" },
+    { "name": "ESP32 & Microcontrollers", "category": "IoT Projects" },
+    { "name": "MikroTik & BGP Routing", "category": "Networking" },
+    { "name": "React & Next.js", "category": "Web Development" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Smart Server Room Monitoring",
+      "category": "IoT Projects",
+      "image": "/projects/server-iot.jpg",
+      "description": "Sistem pemantauan lingkungan ruang server berbasis ESP32 dan BME280 dengan dashboard ThingsBoard.",
+      "tools": ["ESP32", "C++", "ThingsBoard", "MQTT"]
+    },
+    {
+      "id": 2,
+      "title": "Corporate Motion Identity",
+      "category": "Motion Graphics",
+      "image": "/projects/motion-id.jpg",
+      "description": "Pembuatan identitas visual animasi untuk klien korporat menggunakan After Effects.",
+      "tools": ["After Effects", "Illustrator"]
+    },
+    {
+      "id": 3,
+      "title": "WAN Topology Simulation",
+      "category": "Networking",
+      "image": "/projects/wan-topo.jpg",
+      "description": "Simulasi topologi jaringan berskala besar menggunakan hardware MikroTik dan routing BGP.",
+      "tools": ["MikroTik hAP ac", "Winbox"]
+    }
+  ]
+}
