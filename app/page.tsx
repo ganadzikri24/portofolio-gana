@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, ExternalLink, X, Download } from "lucide-react";
+import { Mail, ExternalLink, X, Download } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import data from "@/data/portfolio.json";
 
 export default function Portfolio() {
