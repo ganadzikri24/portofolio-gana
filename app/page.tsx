@@ -273,7 +273,7 @@ export default function Portfolio() {
               Tertarik untuk berkolaborasi dalam proyek desain, jaringan, atau sistem IoT? Jangan ragu untuk menghubungi.
             </p>
             <div className="flex justify-center gap-6 relative z-10">
-              {[Mail, Github, Linkedin].map((Icon, idx) => (
+              {[Mail, FaGithub, FaLinkedin].map((Icon, idx) => (
                 <a
                   key={idx}
                   href="#"
