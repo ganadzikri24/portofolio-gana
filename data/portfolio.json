@@ -1,57 +1,601 @@
 {
   "profile": {
     "name": "Muhamad Ganabitz Dzikri",
-    "title": "Creative Technologist | Network Engineer",
-    "description": "Mahasiswa Teknologi Rekayasa Komputer dengan ketertarikan mendalam pada pengembangan sistem terintegrasi. Menggabungkan keahlian dalam desain grafis, motion graphics, infrastruktur jaringan, dan Internet of Things untuk menciptakan solusi digital yang estetis dan fungsional."
+    "title": "Creative Technologist & Network Engineer",
+    "description": "Computer Engineering student at IPB University with specific expertise in two areas: IT (IoT, Networking, Web Development) and Multimedia (Design, Motion Graphics, Video, Broadcasting). I am a fast-paced worker, highly adaptable to new technologies, and dedicated to delivering functional, high-quality results.",
+    "photo": "/foto-hero.png"
   },
   "education": [
     {
       "id": 1,
       "institution": "IPB University (Sekolah Vokasi)",
-      "year": "2024 - Sekarang",
-      "degree": "Teknologi Rekayasa Komputer"
+      "year": "2024 - Present",
+      "degree": "Computer Engineering",
+      "logo": "/logo-ipb.png"
+    },
+    {
+      "id": 2,
+      "institution": "SMKN 1 Pacet - 3.88 (GPA)",
+      "year": "Graduate",
+      "degree": "Computer and Network Engineering",
+      "logo": "/logo-smk.png"
     }
   ],
   "experience": [
     {
       "id": 1,
       "role": "Freelance Graphic & Motion Designer",
-      "company": "Independent Creative Studio",
-      "year": "2023 - Sekarang",
-      "description": "Mengelola proyek multimedia profesional dari pra-produksi hingga pasca-produksi menggunakan Adobe Creative Suite. Berfokus pada visualisasi identitas merek dan komposisi motion graphics."
-    }
+      "company": "Glyph & Glide",
+      "year": "2023 - Present",
+      "description": "Graphic Design • Motion Graphics"
+    },
+
+        {
+      "id": 2,
+      "role": "Graphic Design Team",
+      "company": "Event Organizer - Music Of Vocation",
+      "year": "OKT 2024 - DES 2025",
+      "description": "Social Media Graphic Designer"
+    },
+
+      {
+      "id": 3,
+      "role": "Head Of Graphic Design Team",
+      "company": "TEKOM IPB 61",
+      "year": "OKT 2024 - DES 2025",
+      "description": "Social Media Graphic Designer"
+    },
+
+     {
+      "id": 4,
+      "role": "Vice Head of Creative Division – Portal 7 IPB (International Digital Creative Competition)",
+      "company": "BEM SV IPB",
+      "year": "FEB 2025 - OKT 2025",
+      "description": "Video Directing • Video Editing • Motion Graphics • Live Broadcasting"
+    },
+
+    {
+      "id": 5,
+      "role": "Production Lead – Coaching Clinic 2025 Music of Vocation",
+      "company": "Music OF Vocation",
+      "year": "JAN 2025 - APR 2025",
+      "description": "Event Production • Production Planning • Production Management • Event Management"
+    },
+
+      {
+      "id": 6,
+      "role": "Creative Staff – Portal 6 IPB (National Digital Creative Competition)",
+      "company": "BEM SV IPB",
+      "year": "APR 2024 - OKT 2024",
+      "description": "Motion Graphics • Live Broadcasting"
+    },
+
+      {
+      "id": 7,
+      "role": "Creative Team Co-Lead",
+      "company": "Ripple Studio",
+      "year": "APR 2022 - APR 2023",
+      "description": "Graphic Design • Motion Graphics • Video Editing • Photography • Videography • Drone Piloting"
+    },
+
+      {
+      "id": 8,
+      "role": "IT Support Assistant",
+      "company": "Balai Besar Pelatihan Kesehatan (BBPK) Ciloto",
+      "year": "JAN 2022 - APR 2022",
+      "description": "IT Service Management • Network Configuration • Networking & Infrasturcture • Troubleshooting"
+    }    
+
   ],
   "skills": [
-    { "name": "Adobe Premiere Pro", "category": "Videography" },
-    { "name": "Adobe After Effects", "category": "Motion Graphics" },
-    { "name": "ESP32 & Microcontrollers", "category": "IoT Projects" },
-    { "name": "MikroTik & BGP Routing", "category": "Networking" },
-    { "name": "React & Next.js", "category": "Web Development" }
+    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.png" },
+    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.png" },
+    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.png" },
+    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.png" },
+    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.png" },
+    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.png" },
+    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.png" },
+    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.png" },
+    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.png" },
+    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.png" },
+    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.png" },
+    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.png" },
+    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.png" },
+    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.png" },
+    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.png" }
+  ],
+  "categories": [
+    "All",
+    "Design",
+    "Photography",
+    "Video Editing",
+    "Motion Graphics & Animation",
+    "IoT Projects",
+    "Networking",
+    "Web Development",
+    "More"
   ],
   "projects": [
+ {
+  "id": 1,
+  "title": "Sumo Ramen Brand Identity",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek1-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek1-part1.gif",
+    "/portfolio/design-projek1-part2.png",
+    "/portfolio/design-projek1-part3.gif",
+    "/portfolio/design-projek1-part4.gif",
+    "/portfolio/design-projek1-part5.png",
+    "/portfolio/design-projek1-part6.png",
+    "/portfolio/design-projek1-part7.png",
+    "/portfolio/design-projek1-part8.gif"
+  ],
+  "description": "Sumo Ramen adalah proyek identitas visual kuliner yang dirancang untuk mendobrak pakem kedai ramen tradisional dengan mengganti dominasi warna merah menjadi palet deep blue. Pemilihan warna ini tidak hanya memancarkan kesan modern dan segar, tetapi juga secara cerdas menciptakan kontras komplementer yang kuat, sehingga warna hangat dari hidangan ramen tampil lebih menonjol dan menggugah selera. Pendekatan desain ini diperkuat oleh maskot pesumo bergaya line-art tebal yang playful untuk merepresentasikan porsi besar dan kepuasan bersantap, serta dipadukan dengan tipografi sans-serif membulat yang solid. Hasil akhirnya adalah sebuah sistem branding yang ramah, dinamis, dan sangat stand-out saat diaplikasikan ke berbagai media seperti mangkuk keramik hingga kemasan.",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 2,
+  "title": "Trawana Outdoor Brand Identity",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek2-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek2-part1.png",
+    "/portfolio/design-projek2-part2.gif",
+    "/portfolio/design-projek2-part3.png",
+    "/portfolio/design-projek2-part4.png",
+    "/portfolio/design-projek2-part5.png",
+    "/portfolio/design-projek2-part6.png",
+    "/portfolio/design-projek2-part7.png",
+    "/portfolio/design-projek2-part8.png",
+    "/portfolio/design-projek2-part9.png"
+  ],
+  "description": "Trawana adalah proyek identitas merek perlengkapan outdoor yang mengusung harmoni antara petualangan dan alam melalui visual yang minimalis namun fungsional. Logo ini menggunakan bentuk geometris pohon pinus yang disusun bertingkat untuk merepresentasikan jalur pendakian dan ketangguhan, dikombinasikan dengan palet warna Forest Green yang dominan untuk kesan organik serta aksen oranye cerah sebagai simbol vitalitas dan keamanan di alam liar. Dengan tipografi Futura yang bersih dan modern, identitas ini dirancang untuk memberikan kesan profesional dan reliabel, yang diaplikasikan secara konsisten mulai dari branding pada tenda dan jaket hingga peralatan teknis seperti pisau lipat dan perlengkapan mendaki lainnya.",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 3,
+  "title": "Matcha Brand Identity",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek2-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek2-part1.png",
+    "/portfolio/design-projek2-part2.gif",
+    "/portfolio/design-projek2-part3.png",
+    "/portfolio/design-projek2-part4.png",
+    "/portfolio/design-projek2-part5.png",
+    "/portfolio/design-projek2-part6.png",
+    "/portfolio/design-projek2-part7.png",
+    "/portfolio/design-projek2-part8.png",
+    "/portfolio/design-projek2-part9.png"
+  ],
+  "description": "Lorem Ipsum",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 4,
+  "title": "Roseva Skincare Brand Identity",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek4-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek4-part1.png",
+    "/portfolio/design-projek4-part2.png",
+    "/portfolio/design-projek4-part3.png",
+    "/portfolio/design-projek4-part4.png",
+    "/portfolio/design-projek4-part5.png",
+    "/portfolio/design-projek4-part6.png",
+    "/portfolio/design-projek4-part7.png",
+     "/portfolio/design-projek4-part8.png"
+  ],
+  "description": "LOREM IPSUM.",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 5,
+  "title": "Next Brand Identity",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek4-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek4-part1.png",
+    "/portfolio/design-projek4-part2.png",
+    "/portfolio/design-projek4-part3.png",
+    "/portfolio/design-projek4-part4.png",
+    "/portfolio/design-projek4-part5.png",
+    "/portfolio/design-projek4-part6.png",
+    "/portfolio/design-projek4-part7.png",
+     "/portfolio/design-projek4-part8.png"
+  ],
+  "description": "LOREM IPSUM.",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 6,
+  "title": "Tekom Social Media Design",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek3-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek3-part1.png",
+    "/portfolio/design-projek3-part2.png",
+    "/portfolio/design-projek3-part3.png"
+  ],
+  "description": "Proyek ini adalah desain feed Instagram untuk akun @tekom_ipb (Teknologi Rekayasa Komputer IPB), di mana saya bertanggung jawab sebagai desainer visual untuk menyusun sistem konten media sosial yang kohesif. Dengan mengusung tema Infinite Connection with Technology, saya menggunakan palet warna dominan biru elektrik yang dipadukan dengan aksen kuning cerah untuk memberikan kesan modern, futuristik, dan akademis. Desain ini menggabungkan berbagai jenis konten, mulai dari infografis edukatif (seperti komponen wajib anak tekom), informasi administrasi kampus, hingga ucapan hari besar, yang semuanya disatukan oleh layout yang bersih dan penggunaan grafis geometris minimalis untuk memastikan feed terlihat rapi, informatif, dan profesional.",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 7,
+  "title": "Sport Digital Imaging",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek3-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek3-part1.png",
+    "/portfolio/design-projek3-part2.png",
+    "/portfolio/design-projek3-part3.png"
+  ],
+  "description": "Lorem Ipsum",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+{
+ "id": 8,
+  "title": "Logo Folio",
+  "category": "Design",
+  "thumbnail": "/portfolio/design-projek3-thumb.png",
+  "type": "seamless-image",
+  "images": [
+    "/portfolio/design-projek3-part1.png",
+    "/portfolio/design-projek3-part2.png",
+    "/portfolio/design-projek3-part3.png"
+  ],
+  "description": "Lorem Ipsum",
+  "tools": ["Photoshop", "Illustrator"]
+},
+
+    {
+      "id": 9,
+      "title": "Portal 7 After Movie",
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/video1-thumb.png",
+      "type": "video-top",
+      "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
+      "description": "Lorem Ipsum.",
+      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+    },
+
+    {
+      "id": 10,
+      "title": "Portal 7 Company Profile",
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/video10-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://youtu.be/v4mg5vFAZ6Q",
+      "description": "Lorem Ipsum.",
+      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+    },
+
+    {
+      "id": 11,
+      "title": "TEK Gather 2025 After Movie",
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/video1-thumb.png",
+      "type": "video-top",
+      "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
+      "description": "Lorem Ipsum",
+      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+    },
+
+    {
+      "id": 12,
+      "title": "CARITA CIANJUR - CANDI TRIDHARMA VIDEO DOKUMENTER",
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/video2-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=nv0_3QseIbY",
+      "description": "Lorem Ipsum",
+      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+    },
+
+    {
+      "id": 13,
+      "title": "LAST CEREMONY - KELAS XII SMKN 1 PACET TAHUN 2022",
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/video3-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=v3Nz-WxLMkg",
+      "description": "Lorem Ipsum",
+      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+    },
+
+     {
+      "id": 14,
+      "title": "LAST CEREMONY - KELAS XII SMKN 1 PACET TAHUN 2023",
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/video4-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=FAn_QFzsCaM",
+      "description": "Lorem Ipsum",
+      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+    },
+
+     {
+      "id": 15,
+      "title": "Ripple Studio Video Profile",
+        "category": "Video Editing",
+        "thumbnail": "/portfolio/video8-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://www.youtube.com/watch?v=IpVsoafgn9E",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },  
+
+     {
+      "id": 16,
+      "title": "Pacettoe Podcast",
+        "category": "Video Editing",
+        "thumbnail": "/portfolio/video16-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://www.youtube.com/watch?v=isEPEF6Pjcc",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },  
+
+       {
+      "id": 17,
+      "title": "Portal 7 Mascot Animation",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video6-thumb.png",
+        "type": "video-top",
+        "videoUrl": "https://www.instagram.com/p/DMKiuaaSMev/?img_index=2",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },  
+
+    {
+      "id": 18,
+      "title": "Company A Bumper",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video5-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      }, 
+
+     {
+      "id": 19,
+      "title": "Company B Bumper",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video5-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },  
+
+     {
+      "id": 20,
+      "title": "Company C Bumper",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video5-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },  
+
+     {
+      "id": 21,
+      "title": "Portal 6 Bumper Motion",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video21-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://youtu.be/Ij6V7aEwWkE",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },       
+
+     {
+      "id": 22,
+      "title": "Ripple Studio Bumper Motion",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video5-thumb.jpg",
+        "type": "video-top",
+        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },   
+
+      {
+      "id": 23,
+      "title": "Pacettoe Podcast Bumper Motion",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video7-thumb.png",
+        "type": "video-top",
+        "videoUrl": "https://youtu.be/YiOfgfA2Umg?si=bzw-Dl2lhtwboCJk",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },   
+   
+      {
+      "id": 24,
+      "title": "SMKN 1 Pacet Bumper Motion",
+        "category": "Motion Graphics & Animation",
+        "thumbnail": "/portfolio/video24-thumb.png",
+        "type": "video-top",
+        "videoUrl": "https://youtu.be/s5DtlujaeAA?si=y2KgnqzkoaC8-tq0",
+        "description": "lorem ipsum.",
+        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      },  
+
+    {
+      "id": 25,
+      "title": "Server Monitoring",
+      "category": "IoT Projects",
+      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "type": "article",
+      "content": [
+        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
+        { "type": "image", "value": "/portfolio/iot-device.jpg" },
+        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
+      ],
+      "description": "Lorem Ipsum",
+      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
+    },
+
+    {
+      "id": 26,
+      "title": "Greenhouse Monitoring",
+      "category": "IoT Projects",
+      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "type": "article",
+      "content": [
+        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
+        { "type": "image", "value": "/portfolio/iot-device.jpg" },
+        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
+      ],
+      "description": "Lorem Ipsum",
+      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
+    },
+
+    {
+      "id": 27,
+      "title": "Penyiram Tanaman Otomatis",
+      "category": "IoT Projects",
+      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "type": "article",
+      "content": [
+        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
+        { "type": "image", "value": "/portfolio/iot-device.jpg" },
+        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
+      ],
+      "description": "Lorem Ipsum",
+      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
+    },
+
+        {
+      "id": 28,
+      "title": "Eco Bug",
+      "category": "IoT Projects",
+      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "type": "article",
+      "content": [
+        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
+        { "type": "image", "value": "/portfolio/iot-device.jpg" },
+        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
+      ],
+      "description": "Lorem Ipsum",
+      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
+    },
+
+    {
+      "id": 29,
+            "title": "Gaming Centre",
+            "category": "Networking",
+            "thumbnail": "/portfolio/net-thumb.jpg",
+            "type": "article",
+            "content": [
+              { "type": "text", "value": "Dokumentasi konfigurasi routing BGP menggunakan perangkat MikroTik." },
+              { "type": "image", "value": "/portfolio/topology.jpg" }
+            ],
+            "description": "Lorem Ipsum.",
+            "tools": ["MikroTik", "Cisco Packet Tracer"]
+          },
+
+      {
+        "id": 30,
+        "title": "Karcisin",
+        "category": "Web Development",
+        "thumbnail": "/portfolio/web-thumb.jpg",
+        "type": "article",
+        "content": [
+          { "type": "text", "value": "Website ini dibangun dari nol dengan desain yang responsif, memastikan tampilan tetap rapi saat dibuka melalui desktop maupun smartphone." },
+          { "type": "image", "value": "/portfolio/web-desktop.jpg" },
+          { "type": "text", "value": "Pada bagian backend, sistem ini dilengkapi dengan dashboard admin untuk mengelola data produk dan transaksi secara dinamis." },
+          { "type": "image", "value": "/portfolio/web-mobile.jpg" }
+        ],
+        "description": "Lorem Ipsum",
+        "tools": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Laravel"]
+      },
+
+    {
+      "id": 31,
+      "title": "SMKN 1 Pacet Pendikar 2021",
+      "category": "Photography",
+      "thumbnail": "/portfolio/photo1-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/photo-1.png",
+        "/portfolio/photo-2.png",
+        "/portfolio/photo-3.png",
+        "/portfolio/photo-4.png",
+        "/portfolio/photo-5.png",
+        "/portfolio/photo-6.png",
+       "/portfolio/photo-7.png"
+      ],
+      "description": "Lorem Ipsum",
+      "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
+    },
+
+      {
+        "id": 32,
+        "title": "Lorem Ipsum",
+        "category": "More",
+        "thumbnail": "/portfolio/web-thumb.jpg",
+        "type": "article",
+        "content": [
+          { "type": "text", "value": "Website ini dibangun dari nol dengan desain yang responsif, memastikan tampilan tetap rapi saat dibuka melalui desktop maupun smartphone." },
+          { "type": "image", "value": "/portfolio/web-desktop.jpg" },
+          { "type": "text", "value": "Pada bagian backend, sistem ini dilengkapi dengan dashboard admin untuk mengelola data produk dan transaksi secara dinamis." },
+          { "type": "image", "value": "/portfolio/web-mobile.jpg" }
+        ],
+        "description": "Lorem Ipsum",
+        "tools": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Laravel"]
+      }
+  
+  ],
+  "more": [
     {
       "id": 1,
-      "title": "Smart Server Room Monitoring",
-      "category": "IoT Projects",
-      "image": "/projects/server-iot.jpg",
-      "description": "Sistem pemantauan lingkungan ruang server berbasis ESP32 dan BME280 dengan dashboard ThingsBoard.",
-      "tools": ["ESP32", "C++", "ThingsBoard", "MQTT"]
+      "title": "CCNA: Switching, Routing, and Wireless Essentials",
+      "issuer": "Cisco Networking Academy",
+      "year": "2025"
     },
     {
       "id": 2,
-      "title": "Corporate Motion Identity",
-      "category": "Motion Graphics",
-      "image": "/projects/motion-id.jpg",
-      "description": "Pembuatan identitas visual animasi untuk klien korporat menggunakan After Effects.",
-      "tools": ["After Effects", "Illustrator"]
+      "title": "CCNA: Introduction to Networks",
+      "issuer": "Cisco Networking Academy",
+      "year": "2024"
     },
-    {
+        {
       "id": 3,
-      "title": "WAN Topology Simulation",
-      "category": "Networking",
-      "image": "/projects/wan-topo.jpg",
-      "description": "Simulasi topologi jaringan berskala besar menggunakan hardware MikroTik dan routing BGP.",
-      "tools": ["MikroTik hAP ac", "Winbox"]
+      "title": "15 Karya Terbaik Cluster Poster Sektor Vokasi - Prestasi Goes To You Chapter OMB",
+      "issuer": "Direktorat Kemahasiswaan (Ditmawa) IPB University",
+      "year": "2024"
+    },
+            {
+      "id": 4,
+      "title": "Certificate of Competence in Computer and Network Engineering",
+      "issuer": "Badan Nasional Sertifikasi Profesi (BNSP)",
+      "year": "2023"
+    },
+        {
+      "id": 5,
+      "title": "E-Sports Team Manager & Coach - Valorant SMKN 1 Pacet Team",
+      "issuer": "SBAC Thailand",
+      "year": "2022"
     }
+
   ]
 }

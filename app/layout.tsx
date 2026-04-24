@@ -5,7 +5,7 @@ import "./globals.css";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "M.G.D. | Portfolio",
+  title: "Ganabitz Portfolio",
   description: "Creative Technologist & Network Engineer Portfolio",
 };
 
@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${jakarta.className} bg-dark text-white antialiased overflow-x-hidden`}>
+    <html lang="id" className="scroll-smooth">
+      <body className={`${jakarta.className} bg-[#030303] text-gray-200 antialiased overflow-x-hidden`}>
         {children}
       </body>
     </html>
