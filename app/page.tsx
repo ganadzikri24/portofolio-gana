@@ -141,7 +141,6 @@ export default function AestheticPortfolio() {
   };
 
   return (
-    // TAMBAHAN: overflow-x-hidden w-full agar browser HP tidak memaksakan zoom-out
     <div className="relative min-h-screen selection:bg-primary selection:text-white bg-[#050505] overflow-x-hidden w-full">
       
       {/* 🌌 DYNAMIC GLOWING BACKGROUND */}
@@ -161,13 +160,14 @@ export default function AestheticPortfolio() {
         />
       </div>
 
-      {/* 🧭 NAVBAR MELAYANG (Diubah agar support scroll menyamping di HP, tidak hilang) */}
+      {/* 🧭 NAVBAR MELAYANG */}
       <nav className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 glass-nav rounded-full px-4 md:px-6 py-3 flex items-center justify-between w-[95%] max-w-5xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border-white/10">
         <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 flex items-center gap-3 cursor-pointer" onClick={() => scrollTo("about")}>
           <img src="/logo-navbar.png" alt="Logo" className="w-8 h-8 object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
         </motion.div>
-        {/* Container menu bisa di-scroll di HP tanpa menghilangkan desain */}
-        <div className="flex items-center gap-4 md:gap-6 overflow-x-auto w-full ml-4 md:ml-0 justify-start md:justify-end" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        
+        {/* REVISI: flex-nowrap, pb-1, dan pr-4 supaya scroll di HP mulus, mentok kanan, dan tidak memotong animasi garis bawah */}
+        <div className="flex items-center flex-nowrap gap-5 md:gap-6 overflow-x-auto w-full ml-4 md:ml-0 justify-start md:justify-end pr-4 md:pr-0 pb-1 md:pb-0" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {t[lang].nav.map((item) => (
             <button key={item.id} onClick={() => scrollTo(item.id)} className="flex-shrink-0 relative group text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-gray-300 hover:text-white transition-colors">
               {item.label}
@@ -185,7 +185,6 @@ export default function AestheticPortfolio() {
         </div>
       </nav>
 
-      {/* Spacing diperkecil di HP (space-y-20) agar tidak terlalu berjarak */}
       <main className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 space-y-20 md:space-y-32 pb-24">
         
         {/* 🚀 HERO SECTION */}
@@ -194,7 +193,6 @@ export default function AestheticPortfolio() {
           <div className="w-full md:w-[55%] text-center md:text-left z-20 flex flex-col items-center md:items-start order-2 md:order-1 mt-8 md:mt-0">
             <motion.h1 
               initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}
-              // Teks diperkecil untuk HP (text-4xl sm:text-5xl) agar tidak memaksa browser zoom-out
               className="text-4xl sm:text-5xl md:text-[5.5rem] leading-[1.1] font-black tracking-tight text-white mb-4 md:mb-6 drop-shadow-2xl cursor-default"
             >
               {data.profile.name.split(" ").map((word: string, i: number) => {
@@ -238,7 +236,6 @@ export default function AestheticPortfolio() {
             <div className="absolute inset-[-15px] rounded-[3rem] md:rounded-[4rem] bg-gradient-to-r from-primary via-secondary to-fuchsia-500 opacity-20 group-hover:opacity-60 blur-2xl transition-opacity duration-500 animate-[spin_6s_linear_infinite]" />
             <div className="absolute inset-[-4px] rounded-[3rem] md:rounded-[4rem] bg-gradient-to-r from-primary to-secondary animate-[spin_4s_linear_infinite]" />
             
-            {/* Ukuran Foto disesuaikan di layar HP agar tetap proporsional */}
             <motion.div whileHover={{ scale: 1.03 }} className="w-[240px] h-[300px] sm:w-[280px] sm:h-[340px] md:w-[380px] md:h-[480px] rounded-[3rem] md:rounded-[4rem] relative overflow-hidden bg-[#0a0a0a] z-10 flex items-center justify-center p-1 border-4 border-transparent shadow-[0_0_50px_rgba(139,92,246,0.3)]">
               <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
               <img 
@@ -387,7 +384,6 @@ export default function AestheticPortfolio() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-gray-300 text-sm md:text-base font-medium mb-8 md:mb-12">
                 <MapPin size={18} className="text-secondary" /> {t[lang].based} Bogor, West Java, Indonesia
               </div>
-              {/* Ikon Sosial Media di HP akan mengecil sedikit supaya muat */}
               <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                 {[
                   { isLocal: true, imgSrc: "/icon-cv.png", url: "https://drive.google.com/drive/folders/1RKlbgk_HDLakO0m1zsU_JJ88LgZ3Xdmq?usp=sharing", color: "hover:bg-amber-500 hover:shadow-[0_0_20px_rgba(245,158,11,0.6)]" },
