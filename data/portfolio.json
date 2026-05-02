@@ -8,7 +8,7 @@
   "education": [
     {
       "id": 1,
-      "institution": "IPB University (Sekolah Vokasi)",
+      "institution": "IPB University (Vocational School)",
       "year": "2024 - Present",
       "degree": "Computer Engineering",
       "logo": "/logo-ipb.png"
@@ -29,31 +29,27 @@
       "year": "2023 - Present",
       "description": "Graphic Design • Motion Graphics"
     },
-
-        {
+    {
       "id": 2,
       "role": "Graphic Design Team",
       "company": "Event Organizer - Music Of Vocation",
-      "year": "OKT 2024 - DES 2025",
+      "year": "OCT 2024 - DEC 2025",
       "description": "Social Media Graphic Designer"
     },
-
-      {
+    {
       "id": 3,
       "role": "Head Of Graphic Design Team",
       "company": "TEKOM IPB 61",
-      "year": "OKT 2024 - DES 2025",
+      "year": "OCT 2024 - DEC 2025",
       "description": "Social Media Graphic Designer"
     },
-
-     {
+    {
       "id": 4,
       "role": "Vice Head of Creative Division – Portal 7 IPB (International Digital Creative Competition)",
       "company": "BEM SV IPB",
-      "year": "FEB 2025 - OKT 2025",
+      "year": "FEB 2025 - OCT 2025",
       "description": "Video Directing • Video Editing • Motion Graphics • Live Broadcasting"
     },
-
     {
       "id": 5,
       "role": "Production Lead – Coaching Clinic 2025 Music of Vocation",
@@ -61,31 +57,27 @@
       "year": "JAN 2025 - APR 2025",
       "description": "Event Production • Production Planning • Production Management • Event Management"
     },
-
-      {
+    {
       "id": 6,
       "role": "Creative Staff – Portal 6 IPB (National Digital Creative Competition)",
       "company": "BEM SV IPB",
-      "year": "APR 2024 - OKT 2024",
+      "year": "APR 2024 - OCT 2024",
       "description": "Motion Graphics • Live Broadcasting"
     },
-
-      {
+    {
       "id": 7,
       "role": "Creative Team Co-Lead",
       "company": "Ripple Studio",
       "year": "APR 2022 - APR 2023",
       "description": "Graphic Design • Motion Graphics • Video Editing • Photography • Videography • Drone Piloting"
     },
-
-      {
+    {
       "id": 8,
       "role": "IT Support Assistant",
       "company": "Balai Besar Pelatihan Kesehatan (BBPK) Ciloto",
       "year": "JAN 2022 - APR 2022",
       "description": "IT Service Management • Network Configuration • Networking & Infrasturcture • Troubleshooting"
     }    
-
   ],
   "skills": [
     { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.png" },
@@ -116,454 +108,679 @@
     "More"
   ],
   "projects": [
- {
-  "id": 1,
-  "title": "Sumo Ramen Brand Identity",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek1-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek1-part1.gif",
-    "/portfolio/design-projek1-part2.png",
-    "/portfolio/design-projek1-part3.gif",
-    "/portfolio/design-projek1-part4.gif",
-    "/portfolio/design-projek1-part5.png",
-    "/portfolio/design-projek1-part6.png",
-    "/portfolio/design-projek1-part7.png",
-    "/portfolio/design-projek1-part8.gif"
-  ],
-  "description": "Sumo Ramen adalah proyek identitas visual kuliner yang dirancang untuk mendobrak pakem kedai ramen tradisional dengan mengganti dominasi warna merah menjadi palet deep blue. Pemilihan warna ini tidak hanya memancarkan kesan modern dan segar, tetapi juga secara cerdas menciptakan kontras komplementer yang kuat, sehingga warna hangat dari hidangan ramen tampil lebih menonjol dan menggugah selera. Pendekatan desain ini diperkuat oleh maskot pesumo bergaya line-art tebal yang playful untuk merepresentasikan porsi besar dan kepuasan bersantap, serta dipadukan dengan tipografi sans-serif membulat yang solid. Hasil akhirnya adalah sebuah sistem branding yang ramah, dinamis, dan sangat stand-out saat diaplikasikan ke berbagai media seperti mangkuk keramik hingga kemasan.",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 2,
-  "title": "Trawana Outdoor Brand Identity",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek2-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek2-part1.png",
-    "/portfolio/design-projek2-part2.gif",
-    "/portfolio/design-projek2-part3.png",
-    "/portfolio/design-projek2-part4.png",
-    "/portfolio/design-projek2-part5.png",
-    "/portfolio/design-projek2-part6.png",
-    "/portfolio/design-projek2-part7.png",
-    "/portfolio/design-projek2-part8.png",
-    "/portfolio/design-projek2-part9.png"
-  ],
-  "description": "Trawana adalah proyek identitas merek perlengkapan outdoor yang mengusung harmoni antara petualangan dan alam melalui visual yang minimalis namun fungsional. Logo ini menggunakan bentuk geometris pohon pinus yang disusun bertingkat untuk merepresentasikan jalur pendakian dan ketangguhan, dikombinasikan dengan palet warna Forest Green yang dominan untuk kesan organik serta aksen oranye cerah sebagai simbol vitalitas dan keamanan di alam liar. Dengan tipografi Futura yang bersih dan modern, identitas ini dirancang untuk memberikan kesan profesional dan reliabel, yang diaplikasikan secara konsisten mulai dari branding pada tenda dan jaket hingga peralatan teknis seperti pisau lipat dan perlengkapan mendaki lainnya.",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 3,
-  "title": "Matcha Brand Identity",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek2-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek2-part1.png",
-    "/portfolio/design-projek2-part2.gif",
-    "/portfolio/design-projek2-part3.png",
-    "/portfolio/design-projek2-part4.png",
-    "/portfolio/design-projek2-part5.png",
-    "/portfolio/design-projek2-part6.png",
-    "/portfolio/design-projek2-part7.png",
-    "/portfolio/design-projek2-part8.png",
-    "/portfolio/design-projek2-part9.png"
-  ],
-  "description": "Lorem Ipsum",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 4,
-  "title": "Roseva Skincare Brand Identity",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek4-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek4-part1.png",
-    "/portfolio/design-projek4-part2.png",
-    "/portfolio/design-projek4-part3.png",
-    "/portfolio/design-projek4-part4.png",
-    "/portfolio/design-projek4-part5.png",
-    "/portfolio/design-projek4-part6.png",
-    "/portfolio/design-projek4-part7.png",
-     "/portfolio/design-projek4-part8.png"
-  ],
-  "description": "LOREM IPSUM.",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 5,
-  "title": "Next Brand Identity",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek4-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek4-part1.png",
-    "/portfolio/design-projek4-part2.png",
-    "/portfolio/design-projek4-part3.png",
-    "/portfolio/design-projek4-part4.png",
-    "/portfolio/design-projek4-part5.png",
-    "/portfolio/design-projek4-part6.png",
-    "/portfolio/design-projek4-part7.png",
-     "/portfolio/design-projek4-part8.png"
-  ],
-  "description": "LOREM IPSUM.",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 6,
-  "title": "Tekom Social Media Design",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek3-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek3-part1.png",
-    "/portfolio/design-projek3-part2.png",
-    "/portfolio/design-projek3-part3.png"
-  ],
-  "description": "Proyek ini adalah desain feed Instagram untuk akun @tekom_ipb (Teknologi Rekayasa Komputer IPB), di mana saya bertanggung jawab sebagai desainer visual untuk menyusun sistem konten media sosial yang kohesif. Dengan mengusung tema Infinite Connection with Technology, saya menggunakan palet warna dominan biru elektrik yang dipadukan dengan aksen kuning cerah untuk memberikan kesan modern, futuristik, dan akademis. Desain ini menggabungkan berbagai jenis konten, mulai dari infografis edukatif (seperti komponen wajib anak tekom), informasi administrasi kampus, hingga ucapan hari besar, yang semuanya disatukan oleh layout yang bersih dan penggunaan grafis geometris minimalis untuk memastikan feed terlihat rapi, informatif, dan profesional.",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 7,
-  "title": "Sport Digital Imaging",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek3-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek3-part1.png",
-    "/portfolio/design-projek3-part2.png",
-    "/portfolio/design-projek3-part3.png"
-  ],
-  "description": "Lorem Ipsum",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
-{
- "id": 8,
-  "title": "Logo Folio",
-  "category": "Design",
-  "thumbnail": "/portfolio/design-projek3-thumb.png",
-  "type": "seamless-image",
-  "images": [
-    "/portfolio/design-projek3-part1.png",
-    "/portfolio/design-projek3-part2.png",
-    "/portfolio/design-projek3-part3.png"
-  ],
-  "description": "Lorem Ipsum",
-  "tools": ["Photoshop", "Illustrator"]
-},
-
     {
-      "id": 9,
-      "title": "Portal 7 After Movie",
-      "category": "Video Editing",
-      "thumbnail": "/portfolio/video1-thumb.png",
-      "type": "video-top",
-      "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
-      "description": "Lorem Ipsum.",
-      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+      "id": 1,
+      "title": "Sumo Ramen Brand Identity",
+      "category": "Design",
+      "thumbnail": "/portfolio/sumo/design-projek1-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/sumo/design-projek1-part1.gif",
+        "/portfolio/sumo/design-projek1-part2.png",
+        "/portfolio/sumo/design-projek1-part3.gif",
+        "/portfolio/sumo/design-projek1-part4.gif",
+        "/portfolio/sumo/design-projek1-part5.png",
+        "/portfolio/sumo/design-projek1-part6.png",
+        "/portfolio/sumo/design-projek1-part7.png",
+        "/portfolio/sumo/design-projek1-part8.gif"
+      ],
+      "description": "Sumo Ramen is a culinary visual identity project designed to break away from traditional ramen shop conventions by replacing the typical dominant red with a deep blue palette. This color choice not only exudes a modern and fresh vibe but also cleverly creates a strong complementary contrast, making the warm tones of the ramen dishes stand out and look even more appetizing. This design approach is reinforced by a playful, thick line-art sumo wrestler mascot representing generous portions and dining satisfaction, paired with solid, rounded sans-serif typography. The final result is a friendly, dynamic, and highly standout branding system when applied across various media, from ceramic bowls to packaging.",
+      "tools": ["Photoshop", "Illustrator"]
     },
-
+    {
+      "id": 2,
+      "title": "Trawana Outdoor Brand Identity",
+      "category": "Design",
+      "thumbnail": "/portfolio/trawana/design-projek2-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/trawana/design-projek2-part1.png",
+        "/portfolio/trawana/design-projek2-part2.gif",
+        "/portfolio/trawana/design-projek2-part3.png",
+        "/portfolio/trawana/design-projek2-part4.png",
+        "/portfolio/trawana/design-projek2-part5.png",
+        "/portfolio/trawana/design-projek2-part6.png",
+        "/portfolio/trawana/design-projek2-part7.png",
+        "/portfolio/trawana/design-projek2-part8.png",
+        "/portfolio/trawana/design-projek2-part9.png"
+      ],
+      "description": "Trawana is an outdoor gear brand identity project that embraces the harmony between adventure and nature through minimalist yet functional visuals. The logo utilizes stacked geometric pine tree shapes to represent hiking trails and resilience, combined with a dominant Forest Green color palette for an organic feel and bright orange accents as a symbol of vitality and safety in the wild. Featuring clean and modern Futura typography, this identity is designed to convey a professional and reliable impression, applied consistently from branding on tents and jackets to technical equipment such as folding knives and other hiking gear.",
+      "tools": ["Photoshop", "Illustrator"]
+    },
+    {
+      "id": 3,
+      "title": "Matchaby Brand Identity",
+      "category": "Design",
+      "thumbnail": "/portfolio/matchaby/design-projek3-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/matchaby/design-projek3-part1.png",
+        "/portfolio/matchaby/design-projek3-part2.png",
+        "/portfolio/matchaby/design-projek3-part3.gif",
+        "/portfolio/matchaby/design-projek3-part4.png",
+        "/portfolio/matchaby/design-projek3-part5.png",
+        "/portfolio/matchaby/design-projek3-part6.png",
+        "/portfolio/matchaby/design-projek3-part7.png",
+        "/portfolio/matchaby/design-projek3-part8.gif",
+        "/portfolio/matchaby/design-projek3-part9.png",
+        "/portfolio/matchaby/design-projek3-part10.png",
+        "/portfolio/matchaby/design-projek3-part11.png",
+        "/portfolio/matchaby/design-projek3-part12.png",
+        "/portfolio/matchaby/design-projek3-part13.png",
+        "/portfolio/matchaby/design-projek3-part14.png",
+        "/portfolio/matchaby/design-projek3-part15.png",
+        "/portfolio/matchaby/design-projek3-part16.png"
+      ],
+      "description": "Matchaby's brand identity design embraces an Urban & Daily Lifestyle concept, positioning matcha beverages as a modern lifestyle choice and an everyday energy source (YOUR Daily Green Boost). Adapting a Modern Retro visual style and a casual yet clean streetwear aesthetic, the design is dominated by a fresh monochromatic green palette (Hunter, Moss, and Sage Green) alongside warm Off-White accents. The overall look is balanced by a combination of friendly, bubbly typography in the logo and sharp, bold headlines. Meanwhile, the presence of a cool, sunglasses-wearing mascot and die-cut sticker-style graphic elements provides a dynamic, trendy, and highly Instagrammable visual character across various packaging media.",
+      "tools": ["Photoshop", "Illustrator"]
+    },
+    {
+      "id": 4,
+      "title": "Roseva Skincare Brand Identity",
+      "category": "Design",
+      "thumbnail": "/portfolio/roseva/design-projek4-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/roseva/design-projek4-part1.png",
+        "/portfolio/roseva/design-projek4-part2.png",
+        "/portfolio/roseva/design-projek4-part3.png",
+        "/portfolio/roseva/design-projek4-part4.png",
+        "/portfolio/roseva/design-projek4-part5.png",
+        "/portfolio/roseva/design-projek4-part6.png",
+        "/portfolio/roseva/design-projek4-part7.png",
+        "/portfolio/roseva/design-projek4-part8.png"
+      ],
+      "description": "The Roseva Skincare brand identity embraces the concept of elegant natural beauty, focusing on a rose silhouette element ('bloom with elegance'). The visuals combine a minimalist logomark with classic serif typography, supported by a captivating feminine color palette ranging from a premium crimson red to a soft peach. The application of the design across packaging, products, and retail spaces appears extremely clean, modern, and luxurious, reinforcing the image of a skincare brand that is exclusive and gentle, yet full of character.",
+      "tools": ["Photoshop", "Illustrator"]
+    },
+    {
+      "id": 6,
+      "title": "Tekom Social Media Design",
+      "category": "Design",
+      "thumbnail": "/portfolio/teksos/design-projek6-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/teksos/design-projek6-part1.png",
+        "/portfolio/teksos/design-projek6-part2.png",
+        "/portfolio/teksos/design-projek6-part3.png"
+      ],
+      "description": "",
+      "tools": ["Photoshop", "Illustrator"]
+    },
+    {
+      "id": 7,
+      "title": "Sports Digital Imaging",
+      "category": "Design",
+      "thumbnail": "/portfolio/design-projek7-thumb.png",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/design-projek7-part1.png",
+        "/portfolio/design-projek7-part2.png",
+        "/portfolio/design-projek7-part3.png"
+      ],
+      "description": "Lorem Ipsum",
+      "tools": ["Photoshop", "Illustrator"]
+    },
+    {
+      "id": 8,
+      "title": "Logofolio",
+      "category": "Design",
+      "thumbnail": "/portfolio/logofolio/design-projek8-thumb.jpg",
+      "type": "seamless-image",
+      "images": [
+        "/portfolio/logofolio/design-projek8-part1.png",
+        "/portfolio/logofolio/design-projek8-part2.png",
+        "/portfolio/logofolio/design-projek8-part3.png"
+      ],
+      "description": "This project is a compilation of visual identity design works spanning various categories, from logotypes, monograms, combination marks, and mascot logos to logomarks. Each logo is designed to represent the unique characteristics of various sectors, such as culinary (Sumo Ramen, Matchaby), technology and services (Karcisin, Zevo), and construction and lifestyle (Jiwa Karya, AkarNusa). Through an explorative and varied design approach—including the use of expressive mascots and strong typography—this collection demonstrates creative flexibility in translating a brand's vision into a visual identity that is functional, iconic, and has broad market appeal.",
+      "tools": ["Photoshop", "Illustrator"]
+    },
     {
       "id": 10,
       "title": "Portal 7 Company Profile",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/video10-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video2-thumb.jpg",
       "type": "video-top",
       "videoUrl": "https://youtu.be/v4mg5vFAZ6Q",
-      "description": "Lorem Ipsum.",
+      "description": "In the Portal 7 IPB Company Profile project, an international-scale digital creative competition, I was entrusted to lead the entire multimedia production line end-to-end. Acting as Director and Video Editor, I took full responsibility for directing the creative vision from conceptualization and shooting to directly executing the post-production process. This project required comprehensive technical management and dynamic visual storytelling to ensure the final video appeared professional, characterful, and capable of representing the competition's value to a global audience.",
       "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
     },
-
     {
       "id": 11,
       "title": "TEK Gather 2025 After Movie",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/video1-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video3-thumb.png",
       "type": "video-top",
       "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
-      "description": "Lorem Ipsum",
-      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+      "description": "As the Video Editor for the TEK Gather 2025 After Movie project, I was responsible for summarizing the moments of togetherness from the gathering event for new students of the Computer Engineering Technology (TRK) study program, Vocational School of IPB University, batch 61. Through a dynamic editing process, color grading adjustments, and careful selection of background music, this project was focused on capturing the euphoria, warmth, and spirit of solidarity of the participants into a visual work that is engaging, emotional, and memorable.",
+      "tools": ["Premiere Pro", "After Effects"]
     },
-
     {
       "id": 12,
-      "title": "CARITA CIANJUR - CANDI TRIDHARMA VIDEO DOKUMENTER",
+      "title": "CARITA CIANJUR - CANDI TRIDHARMA DOCUMENTARY VIDEO",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/video2-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video4-thumb.jpg",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=nv0_3QseIbY",
-      "description": "Lorem Ipsum",
-      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+      "description": "In the production of a documentary video for the Carita Cianjur competition organized by the Indonesian Television Journalists Association (IJTI) Korda Cianjur, I had comprehensive responsibilities as a Videographer, Drone Pilot, and Video Editor. This project highlighted the charm of hidden tourist destinations Candi Tridharma and Curug Dengdeng through ground visual exploration and cinematic aerial footage. Thanks to strong visual storytelling and a neat post-production process, this documentary successfully won 2nd Place and brought pride to SMKN 1 Pacet.",
+      "tools": ["Premiere Pro"]
     },
-
     {
       "id": 13,
-      "title": "LAST CEREMONY - KELAS XII SMKN 1 PACET TAHUN 2022",
+      "title": "LAST CEREMONY - 12TH GRADE SMKN 1 PACET 2022",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/video3-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video5-thumb.jpg",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=v3Nz-WxLMkg",
-      "description": "Lorem Ipsum",
-      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+      "description": "In the production of the SMKN 1 Pacet 2022 Last Ceremony After Movie, I played a comprehensive role as a Videographer, Drone Pilot, and Video Editor. This project aimed to immortalize an emotional and historic farewell moment through a combination of ground shots and cinematic aerial footage. Through meticulous video editing and precise audio-visual synchronization, I wove all those memories into a documentary that is moving, memorable, and full of nostalgia for the entire school community.",
+      "tools": ["Premiere Pro"]
     },
-
-     {
+    {
       "id": 14,
-      "title": "LAST CEREMONY - KELAS XII SMKN 1 PACET TAHUN 2023",
+      "title": "LAST CEREMONY - 12TH GRADE SMKN 1 PACET 2023",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/video4-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video6-thumb.jpg",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=FAn_QFzsCaM",
-      "description": "Lorem Ipsum",
-      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+      "description": "In the production of the SMKN 1 Pacet 2023 Last Ceremony After Movie, I played a comprehensive role as a Videographer, Drone Pilot, and Video Editor. This project aimed to immortalize an emotional and historic farewell moment through a combination of ground shots and cinematic aerial footage. Through meticulous video editing and precise audio-visual synchronization, I wove all those memories into a documentary that is moving, memorable, and full of nostalgia for the entire school community.",
+      "tools": ["Premiere Pro"]
     },
-
-     {
+    {
       "id": 15,
       "title": "Ripple Studio Video Profile",
-        "category": "Video Editing",
-        "thumbnail": "/portfolio/video8-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://www.youtube.com/watch?v=IpVsoafgn9E",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },  
-
-     {
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/vid-thumb/video7-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=IpVsoafgn9E",
+      "description": "In the production of the Ripple Studio profile video, I was fully responsible from the shooting process to the editing stage to introduce the identity of the multimedia extracurricular at SMKN 1 Pacet. This project was designed to highlight the creativity, facilities, and technical expertise of the members in the audio-visual field through dynamic storytelling and professional visual quality. By combining slick cinematography techniques and strong editing, this video successfully represents Ripple Studio as a hub for inspiring digital innovation within the school environment.",
+      "tools": ["Premiere Pro"]
+    },  
+    {
       "id": 16,
       "title": "Pacettoe Podcast",
-        "category": "Video Editing",
-        "thumbnail": "/portfolio/video16-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://www.youtube.com/watch?v=isEPEF6Pjcc",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },  
-
-       {
+      "category": "Video Editing",
+      "thumbnail": "/portfolio/vid-thumb/video8-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=isEPEF6Pjcc",
+      "description": "In the production of the Pacettoe Podcast, the official podcast program of SMKN 1 Pacet, I played a multifunctional role as technical operator, videographer, audio mixer, and video editor. This project involved managing the technical production in real-time as well as a detailed post-production process to ensure audio and visual quality remained clear and professional. By combining dynamic shooting techniques and neat editing, I succeeded in creating discussion content that is engaging, informative, and able to strengthen the digital media identity within the school.",
+      "tools": ["Premiere Pro", "OBS"]
+    },  
+    {
       "id": 17,
       "title": "Portal 7 Mascot Animation",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video6-thumb.png",
-        "type": "video-top",
-        "videoUrl": "https://www.instagram.com/p/DMKiuaaSMev/?img_index=2",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },  
-
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video9-thumb.png",
+      "type": "video-top",
+      "videoUrl": "https://www.instagram.com/p/DMKiuaaSMev/?img_index=2",
+      "description": "In this project, I was responsible for executing the creation of a mascot animation through editing, motion graphics, and sound design to bring the main visual icon of the competition to life. My main focus was transforming the character assets into dynamic and expressive entities to strengthen the brand identity of this international-scale digital creative event. By combining smooth animation techniques and precise audio design, I successfully created visual elements capable of increasing the interaction and appeal of the Portal 7 to a global audience.",
+      "tools": ["After Effects", "Illustrator"]
+    },  
     {
       "id": 18,
       "title": "Company A Bumper",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video5-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      }, 
-
-     {
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video10-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+      "description": "lorem ipsum.",
+      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+    }, 
+    {
       "id": 19,
       "title": "Company B Bumper",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video5-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },  
-
-     {
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video11-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+      "description": "lorem ipsum.",
+      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+    },  
+    {
       "id": 20,
       "title": "Company C Bumper",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video5-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },  
-
-     {
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video12-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+      "description": "lorem ipsum.",
+      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+    },  
+    {
       "id": 21,
       "title": "Portal 6 Bumper Motion",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video21-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://youtu.be/Ij6V7aEwWkE",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },       
-
-     {
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video13-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://youtu.be/Ij6V7aEwWkE",
+      "description": "In this project, I was responsible for executing the creation of a motion graphics bumper that serves as an iconic visual opening to reinforce the event's brand identity. I managed the entire post-production process, from crafting dynamic graphic movements to designing synchronized sound design to create a futuristic and professional impression. The final result of this project focuses on delivering strong competitive energy through smooth visual transitions and immersive audio to grab the audience's attention from the very first second.",
+      "tools": ["After Effects", "Illustrator"]
+    },       
+    {
       "id": 22,
       "title": "Ripple Studio Bumper Motion",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video5-thumb.jpg",
-        "type": "video-top",
-        "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },   
-
-      {
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video14-thumb.jpg",
+      "type": "video-top",
+      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+      "description": "In this project, I was responsible for executing the creation of a motion graphics bumper as the main visual identity element for the multimedia creative hub of SMKN 1 Pacet. My main focus was to design dynamic and modern graphic movements, paired with synchronized sound design to create a professional impression at the opening of every video content. Through mastery of motion graphics techniques, this work successfully strengthened Ripple Studio's branding as an inspiring center for audio-visual innovation within the school.",
+      "tools": ["After Effects", "Illustrator"]
+    },   
+    {
       "id": 23,
       "title": "Pacettoe Podcast Bumper Motion",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video7-thumb.png",
-        "type": "video-top",
-        "videoUrl": "https://youtu.be/YiOfgfA2Umg?si=bzw-Dl2lhtwboCJk",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },   
-   
-      {
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video15-thumb.png",
+      "type": "video-top",
+      "videoUrl": "https://youtu.be/YiOfgfA2Umg?si=bzw-Dl2lhtwboCJk",
+      "description": "In this project, I executed the creation of a motion graphics bumper that serves as the opening visual identity for the official podcast program of SMKN 1 Pacet. My main focus was designing dynamic and modern graphic movements to align with the relaxed yet professional atmosphere of the discussions. By combining smooth visual transitions and precise audio synchronization, this bumper successfully strengthened the digital branding of Pacettoe Podcast as outstanding creative content within the school environment.",
+      "tools": ["After Effects", "Illustrator"]
+    },   
+    {
       "id": 24,
       "title": "SMKN 1 Pacet Bumper Motion",
-        "category": "Motion Graphics & Animation",
-        "thumbnail": "/portfolio/video24-thumb.png",
-        "type": "video-top",
-        "videoUrl": "https://youtu.be/s5DtlujaeAA?si=y2KgnqzkoaC8-tq0",
-        "description": "lorem ipsum.",
-        "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-      },  
-
+      "category": "Motion Graphics & Animation",
+      "thumbnail": "/portfolio/vid-thumb/video16-thumb.png",
+      "type": "video-top",
+      "videoUrl": "https://youtu.be/s5DtlujaeAA?si=y2KgnqzkoaC8-tq0",
+      "description": "In this project, I executed the creation of the official Motion Graphics Bumper for SMKN 1 Pacet, designed as a universal visual asset for various school content needs. My main focus was to create dynamic and modern graphic movements so they could be easily integrated into various video formats, from official announcements to activity documentation. By combining smooth transitions and visual elements that represent the school's identity, this bumper successfully became a standard video opening that gives a professional, consistent impression and strengthens the institution's branding in every digital publication.",
+      "tools": ["After Effects", "Illustrator"]
+    },  
     {
       "id": 25,
       "title": "Server Monitoring",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.jpg",
-      "type": "article",
       "content": [
-        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
-        { "type": "image", "value": "/portfolio/iot-device.jpg" },
-        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
-      ],
-      "description": "Lorem Ipsum",
-      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
-    },
-
+          { 
+            "type": "text", 
+            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "1. Hardware Design" 
+          },
+          { 
+            "type": "text", 
+            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/skema-wiring.jpg" 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "2. Network & Dashboard Implementation" 
+          },
+          { 
+            "type": "text", 
+            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/dashboard-iot.jpg" 
+          }
+        ]
+      },
     {
       "id": 26,
       "title": "Greenhouse Monitoring",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.jpg",
-      "type": "article",
       "content": [
-        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
-        { "type": "image", "value": "/portfolio/iot-device.jpg" },
-        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
-      ],
-      "description": "Lorem Ipsum",
-      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
-    },
-
+          { 
+            "type": "text", 
+            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "1. Hardware Design" 
+          },
+          { 
+            "type": "text", 
+            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/skema-wiring.jpg" 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "2. Network & Dashboard Implementation" 
+          },
+          { 
+            "type": "text", 
+            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/dashboard-iot.jpg" 
+          }
+        ]
+      },
     {
       "id": 27,
       "title": "Penyiram Tanaman Otomatis",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.jpg",
-      "type": "article",
       "content": [
-        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
-        { "type": "image", "value": "/portfolio/iot-device.jpg" },
-        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
-      ],
-      "description": "Lorem Ipsum",
-      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
-    },
-
-        {
+          { 
+            "type": "text", 
+            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "1. Hardware Design" 
+          },
+          { 
+            "type": "text", 
+            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/skema-wiring.jpg" 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "2. Network & Dashboard Implementation" 
+          },
+          { 
+            "type": "text", 
+            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/dashboard-iot.jpg" 
+          }
+        ]
+      },
+      {
       "id": 28,
       "title": "Eco Bug",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.jpg",
       "type": "article",
       "content": [
-        { "type": "text", "value": "Sistem ini dirancang untuk memantau suhu dan kelembapan area kampus secara real-time." },
-        { "type": "image", "value": "/portfolio/iot-device.jpg" },
-        { "type": "text", "value": "Menggunakan mikrokontroler ESP32 yang terhubung via MQTT ke server pusat." }
-      ],
-      "description": "Lorem Ipsum",
-      "tools": ["ESP32", "C++", "Arduino IDE", "MQTT"]
-    },
-
+          { 
+            "type": "text", 
+            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "1. Hardware Design" 
+          },
+          { 
+            "type": "text", 
+            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/skema-wiring.jpg" 
+          },
+          { 
+            "type": "subtitle", 
+            "value": "2. Network & Dashboard Implementation" 
+          },
+          { 
+            "type": "text", 
+            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
+          },
+          { 
+            "type": "image", 
+            "value": "/portfolio/dashboard-iot.jpg" 
+          }
+        ]
+      },
     {
       "id": 29,
             "title": "Gaming Centre",
             "category": "Networking",
             "thumbnail": "/portfolio/net-thumb.jpg",
             "type": "article",
-            "content": [
-              { "type": "text", "value": "Dokumentasi konfigurasi routing BGP menggunakan perangkat MikroTik." },
-              { "type": "image", "value": "/portfolio/topology.jpg" }
-            ],
-            "description": "Lorem Ipsum.",
-            "tools": ["MikroTik", "Cisco Packet Tracer"]
-          },
-
+ "content": [
+    { 
+      "type": "text", 
+      "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "1. Hardware Design" 
+    },
+    { 
+      "type": "text", 
+      "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
+    },
+    { 
+      "type": "image", 
+      "value": "/portfolio/skema-wiring.jpg" 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "2. Network & Dashboard Implementation" 
+    },
+    { 
+      "type": "text", 
+      "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
+    },
+    { 
+      "type": "image", 
+      "value": "/portfolio/dashboard-iot.jpg" 
+    }
+  ]
+},
       {
         "id": 30,
-        "title": "Karcisin",
+        "title": "Karcis.in - Platform E-Ticketing Event Kampus & Komunitas",
         "category": "Web Development",
-        "thumbnail": "/portfolio/web-thumb.jpg",
+        "thumbnail": "/portfolio/karcisin/thum.png",
+        "description": "Role: Full-Stack Developer",
+        "tools": [],
         "type": "article",
         "content": [
-          { "type": "text", "value": "Website ini dibangun dari nol dengan desain yang responsif, memastikan tampilan tetap rapi saat dibuka melalui desktop maupun smartphone." },
-          { "type": "image", "value": "/portfolio/web-desktop.jpg" },
-          { "type": "text", "value": "Pada bagian backend, sistem ini dilengkapi dengan dashboard admin untuk mengelola data produk dan transaksi secara dinamis." },
-          { "type": "image", "value": "/portfolio/web-mobile.jpg" }
-        ],
-        "description": "Lorem Ipsum",
-        "tools": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Laravel"]
-      },
-
+    { 
+      "type": "image", 
+      "value": "/portfolio/karcisin/header.png" 
+    },
+          { 
+      "type": "text", 
+      "value": "Karcis.in is a comprehensive E-Ticketing web platform focused on digitizing the student event ecosystem—from seminar committees and campus concerts to student association workshops. Although designed with a workflow perfectly suited for student needs, the system is professionally scaled and highly flexible, allowing it to be used for various commercial events outside of campus. This application facilitates event creation, online ticket sales, automatic E-Ticket issuance (PDF & Email), and attendee attendance validation using an integrated QR Code Scanner." 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "Project Objectives" 
+    },
+    { 
+      "type": "text", 
+      "value": "This project aims to solve the hassle of student event registration, which is generally still manual (e.g., data collection via Google Forms or selling physical paper tickets) by presenting a modern paperless system. Karcis.in helps campus committees and general organizers prevent fake tickets and double ticket usage (double scan) through QR Code validation, while also providing neat governance by separating access rights between the Committee (Creator), Participants (User), and Administrator (Developer)." 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "Tech Stack" 
+    },
+    { 
+      "type": "text", 
+      "value": "Backend & Architecture:" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Framework: Laravel 10/11 (PHP) - MVC Architecture",
+    "Database: MySQL",
+    "Authentication: Laravel UI (Session-based Auth) with a Multi-Role system (User, Creator, Developer)."
+  ]
+},
+    { 
+      "type": "text", 
+      "value": "Frontend (UI/UX):" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Markup & Styling: HTML5, CSS3, Bootstrap 5 (Responsive Design).",
+    "Interactivity: JavaScript (Vanilla & jQuery).",
+    "Icons & Fonts: Bootstrap Icons, Font Awesome."
+  ]
+},
+    { 
+      "type": "text", 
+      "value": "Supporting Libraries (Key Features):" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Barryvdh/DomPDF: Auto-generate E-Tickets in PDF format.",
+    "HTML5-QRCode (Mebjas): Implementation of a web-based camera scanner for ticket validation.",
+    "Laravel Mail / SMTP (Mailtrap/Gmail): Sending email notifications and PDF files to participants.",
+    "Laravel Storage: File upload management (Event Banners & Payment Proofs)."
+  ]
+},
+    { 
+      "type": "image", 
+      "value": "/portfolio/karcisin/dok1.png" 
+    },
+        { 
+      "type": "image", 
+      "value": "/portfolio/karcisin/dok2.png" 
+    },
+        { 
+      "type": "image", 
+      "value": "/portfolio/karcisin/dok3.png" 
+    },
+        { 
+      "type": "image", 
+      "value": "/portfolio/karcisin/dok4.png" 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "Key Features" 
+    },
+    { 
+      "type": "text", 
+      "value": "Public & Participant Features (User Mode)" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Dynamic Landing Page: Displays a list of Approved events based on categories (Concert, Seminar, Tour, etc.), complete with hero banners and responsive design.",
+    "Search System: Users can search for event names directly from the navbar.",
+    "Dynamic Registration Form: A smart registration form that changes according to the selected account type (Regular User or Creator with additional NIK/Phone No. verification).",
+    "Checkout & Payment Upload: Ticket purchase process with automatically updated quotas and a form to upload proof of transfer.",
+    "My Tickets Management: A dashboard to view transaction status (Pending/Approved/Rejected) and download PDF tickets.",
+    "Email Notifications: Receive PDF E-Tickets directly to the participant's email after payment is approved."
+  ]
+},
+    { 
+      "type": "text", 
+      "value": "Event Organizer Features (Creator Mode)" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Creator Dashboard (Minimal CMS): A dedicated panel to monitor created events and buyer transaction history.",
+    "CRUD Events with Approval: Creators can create events (Name, Price, Quota, Date, Banner, Category), which will be Pending until approved by the Admin. Edit and Delete events are supported with database security logic (deleting related transactions).",
+    "Participant Transaction Management: Creators validate participants' proof of payment. Upon Approval, the system automatically generates a Unique Code, creates a PDF, and sends an email.",
+    "Smart QR Scanner (Web-Camera): A dedicated page per event to scan participants' tickets at the venue in real-time.",
+    "Anti-Double Scan Logic: The system prevents the same ticket (QR Code) from being used twice by locking the is_checked_in status."
+  ]
+},
+    { 
+      "type": "text", 
+      "value": "Administrator Features (Developer Mode)" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Role-Based Access Control (RBAC): Access to Developer mode is secured and can only be accessed using a specific administrator email address.",
+    "Approval System (Quality Control): Developers review new events submitted by Creators. Only events with an Approved status will go live on the public page."
+  ]
+},
+    { 
+      "type": "subtitle", 
+      "value": "System Workflow" 
+    },
+    { 
+      "type": "image", 
+      "value": "/portfolio/karcisin/flow.png" 
+    },
+    { 
+      "type": "text", 
+      "value": "System Steps:" 
+    },
+    {
+  "type": "list",
+  "value": [
+    "Creator registers, then creates an Event. (Status: Pending).",
+    "Developer/Admin reviews and approves the event. (Status: Approved -> Appears on Homepage).",
+    "User registers, selects an event, proceeds to checkout, and uploads proof of payment.",
+    "Creator receives a transaction notification, checks the payment proof, then clicks Approve.",
+    "The Backend system automatically creates a Ticket row, generates a Unique QR Code, renders the PDF, and sends an email to the User.",
+    "On the day of the event, the User shows the QR Code (on their phone or printed).",
+    "Creator scans the QR Code using the web Scanner feature. The system validates authenticity and prevents double tickets."
+  ]
+},
+    { 
+      "type": "subtitle", 
+      "value": "Access the full details at the GitHub link below:" 
+    },
+    { 
+      "type": "text", 
+      "value": "<a href='https://github.com/ganadzikri24/karcisin' target='_blank' class='text-primary hover:text-white underline decoration-primary/50 transition-colors'>click this link</a>"
+    }
+  ]
+},
     {
       "id": 31,
       "title": "SMKN 1 Pacet Pendikar 2021",
       "category": "Photography",
-      "thumbnail": "/portfolio/photo1-thumb.png",
+      "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.png",
       "type": "seamless-image",
       "images": [
-        "/portfolio/photo-1.png",
-        "/portfolio/photo-2.png",
-        "/portfolio/photo-3.png",
-        "/portfolio/photo-4.png",
-        "/portfolio/photo-5.png",
-        "/portfolio/photo-6.png",
-       "/portfolio/photo-7.png"
+        "/portfolio/foto-pendikar/photo-1.png",
+        "/portfolio/foto-pendikar/photo-2.png",
+        "/portfolio/foto-pendikar/photo-3.png",
+        "/portfolio/foto-pendikar/photo-4.png",
+        "/portfolio/foto-pendikar/photo-5.png",
+        "/portfolio/foto-pendikar/photo-6.png",
+        "/portfolio/foto-pendikar/photo-7.png"
       ],
       "description": "Lorem Ipsum",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
     },
-
       {
         "id": 32,
         "title": "Lorem Ipsum",
         "category": "More",
         "thumbnail": "/portfolio/web-thumb.jpg",
-        "type": "article",
         "content": [
-          { "type": "text", "value": "Website ini dibangun dari nol dengan desain yang responsif, memastikan tampilan tetap rapi saat dibuka melalui desktop maupun smartphone." },
-          { "type": "image", "value": "/portfolio/web-desktop.jpg" },
-          { "type": "text", "value": "Pada bagian backend, sistem ini dilengkapi dengan dashboard admin untuk mengelola data produk dan transaksi secara dinamis." },
-          { "type": "image", "value": "/portfolio/web-mobile.jpg" }
-        ],
-        "description": "Lorem Ipsum",
-        "tools": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Laravel"]
-      }
-  
+            { 
+              "type": "text", 
+              "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
+            },
+            { 
+              "type": "subtitle", 
+              "value": "1. Hardware Design" 
+            },
+            { 
+              "type": "text", 
+              "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
+            },
+            { 
+              "type": "image", 
+              "value": "/portfolio/skema-wiring.jpg" 
+            },
+            { 
+              "type": "subtitle", 
+              "value": "2. Network & Dashboard Implementation" 
+            },
+            { 
+              "type": "text", 
+              "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
+            },
+            { 
+              "type": "image", 
+              "value": "/portfolio/dashboard-iot.jpg" 
+            }
+          ]
+        }
   ],
   "more": [
     {
@@ -580,14 +797,14 @@
     },
         {
       "id": 3,
-      "title": "15 Karya Terbaik Cluster Poster Sektor Vokasi - Prestasi Goes To You Chapter OMB",
-      "issuer": "Direktorat Kemahasiswaan (Ditmawa) IPB University",
+      "title": "Top 15 Best Poster Works in the Vocational Sector - Prestasi Goes To You Chapter OMB",
+      "issuer": "Directorate of Student Affairs (Ditmawa) IPB University",
       "year": "2024"
     },
             {
       "id": 4,
       "title": "Certificate of Competence in Computer and Network Engineering",
-      "issuer": "Badan Nasional Sertifikasi Profesi (BNSP)",
+      "issuer": "National Professional Certification Agency (BNSP)",
       "year": "2023"
     },
         {
@@ -596,6 +813,5 @@
       "issuer": "SBAC Thailand",
       "year": "2022"
     }
-
   ]
 }

@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { Mail, Download, X, MapPin, Award, BookOpen, Briefcase, Code, FolderGit2 } from "lucide-react";
+import { Mail, Download, X, ExternalLink, MapPin, Award, BookOpen, Briefcase, Code, FolderGit2 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaYoutube, FaBehance } from "react-icons/fa";
 
-// IMPORT DUA FILE JSON UNTUK BAHASA (Pastikan file portfolio-id.json sudah dibuat)
 import dataEN from "@/data/portfolio.json";
 import dataID from "@/data/portfolio-id.json";
 
@@ -13,11 +12,9 @@ export default function AestheticPortfolio() {
   const [activeTab, setActiveTab] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
   
-  // STATE UNTUK BAHASA (Default English)
   const [lang, setLang] = useState<"en" | "id">("en");
   const data = lang === "en" ? dataEN : dataID;
 
-  // DICTIONARY TEKS STATIS
   const t = {
     en: {
       nav: [
@@ -30,7 +27,7 @@ export default function AestheticPortfolio() {
       eduTitle: "Education",
       expTitle: "Experience",
       skillTitle: "Skills",
-      portTitle: "Portfolio Project",
+      portTitle: "Portofolio Project",
       moreTitle: "Certifications & Achievements",
       contactTitle: "Let's Connect",
       based: "Based in",
@@ -59,7 +56,6 @@ export default function AestheticPortfolio() {
 
   const { scrollYProgress } = useScroll();
   
-  // FIX LAG SCROLL: Menggunakan properti transform Y
   const bgGradientY1 = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const bgGradientY2 = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   const blobRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
@@ -78,7 +74,7 @@ export default function AestheticPortfolio() {
     if (project.type === "seamless-image") {
       return (
         <div className="flex flex-col w-full">
-          {project.images.map((img: string, i: number) => (
+          {project.images?.map((img: string, i: number) => (
             <img key={i} src={img} className="w-full h-auto block m-0 p-0" alt={`Portfolio ${i}`} />
           ))}
         </div>
@@ -88,7 +84,6 @@ export default function AestheticPortfolio() {
     if (project.type === "video-top") {
       const url = project.videoUrl || "";
       
-      // LOGIKA YOUTUBE
       if (url.includes("youtube.com") || url.includes("youtu.be")) {
         const videoId = url.split('v=')[1] || url.split('youtu.be/')[1];
         const embedUrl = `https://www.youtube.com/embed/${videoId?.split('&')[0]}`;
@@ -99,7 +94,6 @@ export default function AestheticPortfolio() {
         );
       }
 
-      // LOGIKA INSTAGRAM
       if (url.includes("instagram.com")) {
         const cleanUrl = url.split('?')[0]; 
         const embedUrl = `${cleanUrl.endsWith('/') ? cleanUrl : cleanUrl + '/'}embed`;
@@ -118,20 +112,38 @@ export default function AestheticPortfolio() {
         );
       }
       
-      // LOGIKA VIDEO LOKAL
       return (
         <div className="w-full">
           <video controls className="w-full aspect-video bg-black rounded-2xl shadow-2xl border border-white/5" src={url} />
         </div>
       );
     }
+
     if (project.type === "article") {
       return (
-        <div className="w-full space-y-6">
-          {project.content.map((item: any, i: number) => {
-            if (item.type === "text") return <p key={i} className="text-xl text-gray-300 leading-relaxed font-medium">{item.value}</p>;
-            if (item.type === "image") return <img key={i} src={item.value} className="w-full rounded-2xl shadow-2xl" alt="Article Content" />;
-            if (item.type === "video") return <video key={i} controls src={item.value} className="w-full rounded-2xl shadow-2xl" />;
+        <div className="w-full space-y-6 p-6 md:p-10">
+          {project.content?.map((item: any, i: number) => {
+            if (item.type === "subtitle") {
+              return <h3 key={i} className="text-2xl font-black text-white mt-10 mb-2 border-b border-white/10 pb-3">{item.value}</h3>;
+            }
+            if (item.type === "text") {
+              return <p key={i} className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: item.value }} />;
+            }
+            if (item.type === "list") {
+              return (
+                <ul key={i} className="list-disc list-outside ml-6 space-y-3">
+                  {item.value?.map((point: string, idx: number) => (
+                    <li key={idx} className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: point }} />
+                  ))}
+                </ul>
+              );
+            }
+            if (item.type === "image") {
+              return <img key={i} src={item.value} className="w-full rounded-2xl shadow-2xl my-8 border border-white/5" alt="Article Content" />;
+            }
+            if (item.type === "video") {
+              return <video key={i} controls src={item.value} className="w-full rounded-2xl shadow-2xl my-8 border border-white/5" />;
+            }
             return null;
           })}
         </div>
@@ -143,7 +155,6 @@ export default function AestheticPortfolio() {
   return (
     <div className="relative min-h-screen selection:bg-primary selection:text-white bg-[#050505] overflow-x-hidden w-full">
       
-      {/* 🌌 DYNAMIC GLOWING BACKGROUND */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden opacity-10">
         <motion.div 
           style={{ y: bgGradientY1, rotate: blobRotate, scale: blobScale }}
@@ -160,13 +171,12 @@ export default function AestheticPortfolio() {
         />
       </div>
 
-      {/* 🧭 NAVBAR MELAYANG */}
       <nav className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 glass-nav rounded-full px-4 md:px-6 py-3 flex items-center justify-between w-[95%] max-w-5xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border-white/10">
         <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 flex items-center gap-3 cursor-pointer" onClick={() => scrollTo("about")}>
           <img src="/logo-navbar.png" alt="Logo" className="w-8 h-8 object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
+          <span className="font-extrabold tracking-widest text-white text-lg drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]"></span>
         </motion.div>
         
-        {/* REVISI: flex-nowrap, pb-1, dan pr-4 supaya scroll di HP mulus, mentok kanan, dan tidak memotong animasi garis bawah */}
         <div className="flex items-center flex-nowrap gap-5 md:gap-6 overflow-x-auto w-full ml-4 md:ml-0 justify-start md:justify-end pr-4 md:pr-0 pb-1 md:pb-0" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {t[lang].nav.map((item) => (
             <button key={item.id} onClick={() => scrollTo(item.id)} className="flex-shrink-0 relative group text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-gray-300 hover:text-white transition-colors">
@@ -174,12 +184,10 @@ export default function AestheticPortfolio() {
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full shadow-[0_0_10px_rgba(139,92,246,0.8)]" />
             </button>
           ))}
-          {/* TOMBOL BILINGUAL */}
           <button 
             onClick={() => setLang(lang === "en" ? "id" : "en")} 
             className="flex-shrink-0 ml-1 md:ml-2 px-3 md:px-4 py-1.5 rounded-full bg-white/10 hover:bg-primary border border-white/20 text-xs font-black text-white transition-all duration-300 flex items-center gap-1 md:gap-2"
           >
-            <span>🌐</span>
             <span>{lang === "en" ? "ID" : "EN"}</span>
           </button>
         </div>
@@ -187,7 +195,6 @@ export default function AestheticPortfolio() {
 
       <main className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 space-y-20 md:space-y-32 pb-24">
         
-        {/* 🚀 HERO SECTION */}
         <section id="about" className="min-h-screen flex flex-col md:flex-row justify-between items-center pt-28 md:pt-32 pb-16 relative gap-10 md:gap-8">
           
           <div className="w-full md:w-[55%] text-center md:text-left z-20 flex flex-col items-center md:items-start order-2 md:order-1 mt-8 md:mt-0">
@@ -249,7 +256,6 @@ export default function AestheticPortfolio() {
 
         </section>
 
-        {/* 📚 PENDIDIKAN */}
         <section id="education" className="scroll-mt-20">
           <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4 drop-shadow-lg">
             <BookOpen className="text-primary w-8 h-8 md:w-10 md:h-10" /> {t[lang].eduTitle}
@@ -273,7 +279,6 @@ export default function AestheticPortfolio() {
           </div>
         </section>
 
-        {/* 💼 PENGALAMAN */}
         <section id="experience" className="scroll-mt-20">
           <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4">
             <Briefcase className="text-secondary w-8 h-8 md:w-10 md:h-10" /> {t[lang].expTitle}
@@ -297,7 +302,6 @@ export default function AestheticPortfolio() {
           </div>
         </section>
 
-        {/* 🛠️ SKILLS */}
         <section id="skills" className="scroll-mt-20">
           <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4">
             <Code className="text-primary w-8 h-8 md:w-10 md:h-10" /> {t[lang].skillTitle}
@@ -318,7 +322,6 @@ export default function AestheticPortfolio() {
           </div>
         </section>
 
-        {/* 🎨 PORTOFOLIO */}
         <section id="portofolio" className="scroll-mt-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8 mb-10 md:mb-16">
             <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black flex items-center gap-4">
@@ -356,7 +359,6 @@ export default function AestheticPortfolio() {
           </motion.div>
         </section>
 
-        {/* 🏆 MORE (PRESTASI) */}
         <section id="more" className="scroll-mt-20">
           <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4">
             <Award className="text-primary w-8 h-8 md:w-10 md:h-10" /> {t[lang].moreTitle}
@@ -375,7 +377,6 @@ export default function AestheticPortfolio() {
           </div>
         </section>
 
-        {/* 📞 KONTAK */}
         <section id="contacts" className="py-20 md:py-32 scroll-mt-20 border-t border-white/10">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative group rounded-[3rem] md:rounded-[4rem] p-[2px] overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-fuchsia-500 animate-[spin_6s_linear_infinite]" />
@@ -409,7 +410,6 @@ export default function AestheticPortfolio() {
         </section>
       </main>
 
-      {/* 🖼️ MODAL PORTOFOLIO */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[200] bg-[#050505]/95 backdrop-blur-3xl overflow-y-auto">
@@ -436,7 +436,7 @@ export default function AestheticPortfolio() {
                     
                     <h3 className="text-xs md:text-sm font-black mb-3 md:mb-4 text-white uppercase tracking-widest">{t[lang].tools}</h3>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {selectedProject.tools.map((t: string, i: number) => (
+                      {selectedProject.tools?.map((t: string, i: number) => (
                         <span key={i} className="px-3 md:px-5 py-1.5 md:py-2 glass-card rounded-lg text-[10px] md:text-xs font-bold text-white hover:bg-primary transition-colors cursor-default border border-white/10 shadow-lg">{t}</span>
                       ))}
                     </div>

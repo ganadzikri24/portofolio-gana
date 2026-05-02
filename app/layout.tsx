@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body className={`${jakarta.className} bg-[#030303] text-gray-200 antialiased overflow-x-hidden`}>
+      <body className={`${jakarta.className} bg-[#030303] text-gray-200 antialiased overflow-x-hidden`} suppressHydrationWarning>
         {children}
       </body>
     </html>
