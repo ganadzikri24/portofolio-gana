@@ -328,13 +328,13 @@
     }, 
     {
       "id": 19,
-      "title": "Company B Bumper",
+      "title": "Satya Networks Bumper Animation",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video11-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video11-thumb.png",
       "type": "video-top",
-      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-      "description": "lorem ipsum.",
-      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      "videoUrl": "https://youtu.be/km-S9C3aTGc",
+      "description": "",
+      "tools": ["After Effects","Illustrator"]
     },  
     {
       "id": 20,

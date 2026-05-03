@@ -326,15 +326,15 @@
       "description": "Sebagai Creative Contributor, saya bertanggung jawab penuh dalam proses editing dan produksi lebih dari 300 aset motion loop animation. Proyek berskala masif ini menuntut konsistensi visual, ketelitian teknis, serta manajemen waktu yang efisien untuk memastikan setiap animasi memiliki transisi looping yang mulus (seamless). Melalui proyek ini, saya berhasil mendemonstrasikan kemampuan mengeksekusi produksi aset grafis gerak dalam jumlah besar (high-volume production) dengan standar kualitas yang tetap terjaga untuk berbagai kebutuhan konten digital.",
       "tools": ["After Effects", "Illustrator"]
     }, 
-    {
+ {
       "id": 19,
-      "title": "Company B Bumper",
+      "title": "Satya Networks Bumper Animation",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video11-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video11-thumb.png",
       "type": "video-top",
-      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-      "description": "lorem ipsum.",
-      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      "videoUrl": "https://youtu.be/km-S9C3aTGc",
+      "description": "",
+      "tools": ["After Effects","Illustrator"]
     },  
     {
       "id": 20,
