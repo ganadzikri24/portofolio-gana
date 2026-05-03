@@ -2,7 +2,7 @@
   "profile": {
     "name": "Muhamad Ganabitz Dzikri",
     "title": "Creative Technologist & Network Engineer",
-    "description": "Computer Engineering student at IPB University with specific expertise in two areas: IT (IoT, Networking, Web Development) and Multimedia (Design, Motion Graphics, Video, Broadcasting). I am a fast-paced worker, highly adaptable to new technologies, and dedicated to delivering functional, high-quality results.",
+    "description": "Computer Engineering student at IPB University with specific expertise in two areas: IT (IoT, Networking, Web Development) and Multimedia (Design, Motion Graphics, Video, Broadcasting). I am a fast-paced worker, highly adaptable to new technologies, and dedicated to delivering functional, high quality results.",
     "photo": "/foto-hero.png"
   },
   "education": [
@@ -204,22 +204,23 @@
         "/portfolio/teksos/design-projek6-part2.png",
         "/portfolio/teksos/design-projek6-part3.png"
       ],
-      "description": "",
+      "description": "This project is an Instagram feed design for the @tekom_ipb (Computer Engineering Technology IPB) account, where I served as the visual designer responsible for creating a cohesive social media content system. Carrying the theme Infinite Connection with Technology, I utilized a dominant electric blue color palette combined with bright yellow accents to deliver a modern, futuristic, and academic impression. The design integrates various types of content—ranging from educational infographics (such as essential components for computer engineering students) and campus administrative information, to holiday greetings—all unified by a clean layout and the use of minimalist geometric graphics to ensure the feed remains neat, informative, and professional.",
       "tools": ["Photoshop", "Illustrator"]
     },
     {
       "id": 7,
       "title": "Sports Digital Imaging",
       "category": "Design",
-      "thumbnail": "/portfolio/design-projek7-thumb.png",
+      "thumbnail": "/portfolio/digital-imaging/design-projek7-thumb.png",
       "type": "seamless-image",
       "images": [
-        "/portfolio/design-projek7-part1.png",
-        "/portfolio/design-projek7-part2.png",
-        "/portfolio/design-projek7-part3.png"
+        "/portfolio/digital-imaging/design-projek7-part1.png",
+        "/portfolio/digital-imaging/design-projek7-part2.png",
+        "/portfolio/digital-imaging/design-projek7-part3.png",
+        "/portfolio/digital-imaging/design-projek7-part4.png"
       ],
-      "description": "Lorem Ipsum",
-      "tools": ["Photoshop", "Illustrator"]
+      "description": "In this project, I created a series of photo manipulation artworks focusing on football themes, highlighting epic moments from renowned clubs and players. This project demanded technical expertise in compositing, lighting manipulation, and color grading to produce cinematic and dramatic matchday posters and tribute visuals. By blending surreal elements with sports realism, these artworks are designed to evoke emotion and heroism, while demonstrating my ability to craft compelling visual storytelling within the sports design industry.",
+      "tools": ["Photoshop"]
     },
     {
       "id": 8,
@@ -317,13 +318,13 @@
     },  
     {
       "id": 18,
-      "title": "Company A Bumper",
+      "title": "300+ Motion Loop Animations – Contributor Project",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video10-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video10-thumb.png",
       "type": "video-top",
-      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-      "description": "lorem ipsum.",
-      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      "videoUrl": "https://youtu.be/CC4FkcNl4bY",
+      "description": "As a Creative Contributor, I was fully responsible for the editing and production of over 300 motion loop animation assets. This large-scale project required visual consistency, technical precision, and efficient time management to ensure every animation featured a seamless looping transition. Through this project, I successfully demonstrated my ability to execute high-volume production of motion graphic assets while maintaining top-tier quality standards for diverse digital content needs.",
+      "tools": ["After Effects", "Illustrator"]
     }, 
     {
       "id": 19,
@@ -729,7 +730,7 @@
 },
     {
       "id": 31,
-      "title": "SMKN 1 Pacet Pendikar 2021",
+      "title": "SMKN 1 Pacet Pendikar 2022",
       "category": "Photography",
       "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.png",
       "type": "seamless-image",
@@ -742,7 +743,7 @@
         "/portfolio/foto-pendikar/photo-6.png",
         "/portfolio/foto-pendikar/photo-7.png"
       ],
-      "description": "Lorem Ipsum",
+      "description": "In the photography documentation project for the Pendikar (Character Education) SMKN 1 Pacet, I was fully responsible for capturing the essence of the students' discipline, resilience, and camaraderie. Through my lens, I immortalized invaluable moments, ranging from the intensity of physical and mental training alongside military instructors and the dynamics of teamwork during group activities, to the warmth of student solidarity. To enhance the visual storytelling, I applied a cinematic and earthy color grading during post-production, giving each photograph a dramatic, distinct character that powerfully evokes the participants' memorable journey and perseverance.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
     },
       {

@@ -211,15 +211,16 @@
       "id": 7,
       "title": "Sports Digital Imaging",
       "category": "Design",
-      "thumbnail": "/portfolio/design-projek7-thumb.png",
+      "thumbnail": "/portfolio/digital-imaging/design-projek7-thumb.png",
       "type": "seamless-image",
       "images": [
-        "/portfolio/design-projek7-part1.png",
-        "/portfolio/design-projek7-part2.png",
-        "/portfolio/design-projek7-part3.png"
+        "/portfolio/digital-imaging/design-projek7-part1.png",
+        "/portfolio/digital-imaging/design-projek7-part2.png",
+        "/portfolio/digital-imaging/design-projek7-part3.png",
+        "/portfolio/digital-imaging/design-projek7-part4.png"
       ],
-      "description": "Lorem Ipsum",
-      "tools": ["Photoshop", "Illustrator"]
+      "description": "Dalam proyek ini, saya menciptakan serangkaian karya manipulasi foto (photo manipulation) yang berfokus pada tema sepak bola, menampilkan momen-momen epik dari klub dan pemain ternama. Proyek ini menuntut keahlian teknis dalam compositing (penggabungan beberapa gambar), manipulasi pencahayaan (lighting/shadows), dan color grading untuk menghasilkan poster pertandingan serta visual tribute bergaya sinematik dan dramatis. Melalui perpaduan elemen surealis dan realisme olahraga, karya ini dirancang untuk membangkitkan emosi serta heroisme, sekaligus menunjukkan kemampuan saya dalam meracik penceritaan visual yang kuat di industri desain olahraga (sports design).",
+      "tools": ["Photoshop"]
     },
     {
       "id": 8,
@@ -317,13 +318,13 @@
     },  
     {
       "id": 18,
-      "title": "Company A Bumper",
+      "title": "300+ Motion Loop Animations – Contributor Project",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video10-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video10-thumb.png",
       "type": "video-top",
-      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
-      "description": "lorem ipsum.",
-      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
+      "videoUrl": "https://youtu.be/CC4FkcNl4bY",
+      "description": "Sebagai Creative Contributor, saya bertanggung jawab penuh dalam proses editing dan produksi lebih dari 300 aset motion loop animation. Proyek berskala masif ini menuntut konsistensi visual, ketelitian teknis, serta manajemen waktu yang efisien untuk memastikan setiap animasi memiliki transisi looping yang mulus (seamless). Melalui proyek ini, saya berhasil mendemonstrasikan kemampuan mengeksekusi produksi aset grafis gerak dalam jumlah besar (high-volume production) dengan standar kualitas yang tetap terjaga untuk berbagai kebutuhan konten digital.",
+      "tools": ["After Effects", "Illustrator"]
     }, 
     {
       "id": 19,
@@ -729,7 +730,7 @@
 },
     {
       "id": 31,
-      "title": "SMKN 1 Pacet Pendikar 2021",
+      "title": "SMKN 1 Pacet Pendikar 2022",
       "category": "Photography",
       "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.png",
       "type": "seamless-image",
@@ -742,7 +743,7 @@
         "/portfolio/foto-pendikar/photo-6.png",
         "/portfolio/foto-pendikar/photo-7.png"
       ],
-      "description": "Lorem Ipsum",
+      "description": "Dalam proyek dokumentasi fotografi untuk kegiatan Pendikar (Pendidikan Karakter) SMKN 1 Pacet, saya bertanggung jawab penuh untuk menangkap esensi kedisiplinan, ketangguhan, dan kebersamaan para siswa. Melalui serangkaian bidikan lensa, saya mengabadikan berbagai momen berharga, mulai dari intensitas pelatihan fisik dan mental bersama instruktur TNI, dinamika kerja sama tim dalam berbagai permainan, hingga kehangatan solidaritas antar siswa. Untuk memperkuat penceritaan visualnya, saya mengaplikasikan color grading bergaya cinematic dan earthy pada proses pasca-produksi, sehingga setiap foto tampil dengan nuansa yang dramatis, berkarakter, dan mampu membangkitkan memori perjuangan bagi para peserta.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
     },
       {
