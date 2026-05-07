@@ -745,43 +745,8 @@
       ],
       "description": "Dalam proyek dokumentasi fotografi untuk kegiatan Pendikar (Pendidikan Karakter) SMKN 1 Pacet, saya bertanggung jawab penuh untuk menangkap esensi kedisiplinan, ketangguhan, dan kebersamaan para siswa. Melalui serangkaian bidikan lensa, saya mengabadikan berbagai momen berharga, mulai dari intensitas pelatihan fisik dan mental bersama instruktur TNI, dinamika kerja sama tim dalam berbagai permainan, hingga kehangatan solidaritas antar siswa. Untuk memperkuat penceritaan visualnya, saya mengaplikasikan color grading bergaya cinematic dan earthy pada proses pasca-produksi, sehingga setiap foto tampil dengan nuansa yang dramatis, berkarakter, dan mampu membangkitkan memori perjuangan bagi para peserta.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
-    },
-      {
-        "id": 32,
-        "title": "Lorem Ipsum",
-        "category": "More",
-        "thumbnail": "/portfolio/web-thumb.jpg",
-        "content": [
-            { 
-              "type": "text", 
-              "value": "Project ini dirancang untuk memantau suhu dan keamanan ruang server secara <b>real-time</b> 24 jam penuh. Jika terdeteksi anomali, sistem akan mengirimkan notifikasi." 
-            },
-            { 
-              "type": "subtitle", 
-              "value": "1. Desain Perangkat Keras (Hardware)" 
-            },
-            { 
-              "type": "text", 
-              "value": "Otak dari sistem ini menggunakan <b>Mikrokontroler ESP32</b>. Saya mengintegrasikan beberapa sensor, antara lain sensor suhu <b>DHT22</b>, sensor gas/asap <b>MQ2</b>, dan sensor gerak PIR." 
-            },
-            { 
-              "type": "image", 
-              "value": "/portfolio/skema-wiring.jpg" 
-            },
-            { 
-              "type": "subtitle", 
-              "value": "2. Implementasi Jaringan & Dashboard" 
-            },
-            { 
-              "type": "text", 
-              "value": "Data dari sensor dikirimkan melalui jaringan WiFi ke platform <b>ThingsBoard</b> menggunakan protokol MQTT, sehingga visualisasi data dapat dipantau dari jarak jauh." 
-            },
-            { 
-              "type": "image", 
-              "value": "/portfolio/dashboard-iot.jpg" 
-            }
-          ]
-        }
+    }
+
   ],
   "more": [
     {
@@ -812,6 +777,12 @@
       "id": 5,
       "title": "Manajer & Pelatih Tim E-Sports - Tim Valorant SMKN 1 Pacet",
       "issuer": "SBAC Thailand",
+      "year": "2022"
+    },
+    {
+      "id": 6,
+      "title": "Juara 2 Lomba Video Inspiratif Carita Cianjur Tingkat SMA/SMK se-Kabupaten Cianjur",
+      "issuer": "Ikatan Jurnalis Televisi Indonesia (IJTI) Korda Cianjur",
       "year": "2022"
     }
   ]

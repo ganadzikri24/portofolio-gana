@@ -745,43 +745,8 @@
       ],
       "description": "In the photography documentation project for the Pendikar (Character Education) SMKN 1 Pacet, I was fully responsible for capturing the essence of the students' discipline, resilience, and camaraderie. Through my lens, I immortalized invaluable moments, ranging from the intensity of physical and mental training alongside military instructors and the dynamics of teamwork during group activities, to the warmth of student solidarity. To enhance the visual storytelling, I applied a cinematic and earthy color grading during post-production, giving each photograph a dramatic, distinct character that powerfully evokes the participants' memorable journey and perseverance.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
-    },
-      {
-        "id": 32,
-        "title": "Lorem Ipsum",
-        "category": "More",
-        "thumbnail": "/portfolio/web-thumb.jpg",
-        "content": [
-            { 
-              "type": "text", 
-              "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
-            },
-            { 
-              "type": "subtitle", 
-              "value": "1. Hardware Design" 
-            },
-            { 
-              "type": "text", 
-              "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
-            },
-            { 
-              "type": "image", 
-              "value": "/portfolio/skema-wiring.jpg" 
-            },
-            { 
-              "type": "subtitle", 
-              "value": "2. Network & Dashboard Implementation" 
-            },
-            { 
-              "type": "text", 
-              "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
-            },
-            { 
-              "type": "image", 
-              "value": "/portfolio/dashboard-iot.jpg" 
-            }
-          ]
-        }
+    }
+  
   ],
   "more": [
     {
@@ -812,6 +777,12 @@
       "id": 5,
       "title": "E-Sports Team Manager & Coach - Valorant SMKN 1 Pacet Team",
       "issuer": "SBAC Thailand",
+      "year": "2022"
+    },
+            {
+      "id": 6,
+      "title": "2nd Place, Carita Cianjur Inspirational Video Competition (High School/Vocational School Level, Cianjur Regency)",
+      "issuer": "Indonesian Television Journalists Association (IJTI), Cianjur Regional Chapter",
       "year": "2022"
     }
   ]
