@@ -745,7 +745,45 @@
       ],
       "description": "In the photography documentation project for the Pendikar (Character Education) SMKN 1 Pacet, I was fully responsible for capturing the essence of the students' discipline, resilience, and camaraderie. Through my lens, I immortalized invaluable moments, ranging from the intensity of physical and mental training alongside military instructors and the dynamics of teamwork during group activities, to the warmth of student solidarity. To enhance the visual storytelling, I applied a cinematic and earthy color grading during post-production, giving each photograph a dramatic, distinct character that powerfully evokes the participants' memorable journey and perseverance.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
+    },
+
+    {
+      "id": 32,
+            "title": "SmileMush",
+            "category": "Networking",
+            "thumbnail": "/portfolio/net-thumb.jpg",
+            "type": "article",
+ "content": [
+    { 
+      "type": "text", 
+      "value": "Project ini dirancang untuk memantau suhu dan keamanan ruang server secara <b>real-time</b> 24 jam penuh. Jika terdeteksi anomali, sistem akan mengirimkan notifikasi." 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "1. Desain Perangkat Keras (Hardware)" 
+    },
+    { 
+      "type": "text", 
+      "value": "Otak dari sistem ini menggunakan <b>Mikrokontroler ESP32</b>. Saya mengintegrasikan beberapa sensor, antara lain sensor suhu <b>DHT22</b>, sensor gas/asap <b>MQ2</b>, dan sensor gerak PIR." 
+    },
+    { 
+      "type": "image", 
+      "value": "/portfolio/skema-wiring.jpg" 
+    },
+    { 
+      "type": "subtitle", 
+      "value": "2. Implementasi Jaringan & Dashboard" 
+    },
+    { 
+      "type": "text", 
+      "value": "Data dari sensor dikirimkan melalui jaringan WiFi ke platform <b>ThingsBoard</b> menggunakan protokol MQTT, sehingga visualisasi data dapat dipantau dari jarak jauh." 
+    },
+    { 
+      "type": "image", 
+      "value": "/portfolio/dashboard-iot.jpg" 
     }
+  ]
+}
   
   ],
   "more": [
