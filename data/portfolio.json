@@ -11,14 +11,14 @@
       "institution": "IPB University (Vocational School)",
       "year": "2024 - Present",
       "degree": "Computer Engineering",
-      "logo": "/logo-ipb.webp"
+      "logo": "/logo-ipb.png"
     },
     {
       "id": 2,
       "institution": "SMKN 1 Pacet - 3.88 (GPA)",
       "year": "Graduate",
       "degree": "Computer and Network Engineering",
-      "logo": "/logo-smk.webp"
+      "logo": "/logo-smk.png"
     }
   ],
   "experience": [
@@ -80,21 +80,21 @@
     }    
   ],
   "skills": [
-    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.webp" },
-    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.webp" },
-    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.webp" },
-    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.webp" },
-    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.webp" },
-    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.webp" },
-    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.webp" },
-    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.webp" },
-    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.webp" },
-    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.webp" },
-    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.webp" },
-    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.webp" },
-    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.webp" },
-    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.webp" },
-    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.webp" }
+    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.png" },
+    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.png" },
+    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.png" },
+    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.png" },
+    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.png" },
+    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.png" },
+    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.png" },
+    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.png" },
+    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.png" },
+    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.png" },
+    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.png" },
+    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.png" },
+    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.png" },
+    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.png" },
+    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.png" }
   ],
   "categories": [
     "All",
@@ -418,7 +418,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.webp" 
+            "value": "/portfolio/dashboard-iot.png" 
           }
         ]
       },
