@@ -3,7 +3,7 @@
     "name": "Muhamad Ganabitz Dzikri",
     "title": "Creative Technologist & Network Engineer",
     "description": "Computer Engineering student at IPB University with specific expertise in two areas: IT (IoT, Networking, Web Development) and Multimedia (Design, Motion Graphics, Video, Broadcasting). I am a fast-paced worker, highly adaptable to new technologies, and dedicated to delivering functional, high quality results.",
-    "photo": "/foto-hero.png"
+    "photo": "/foto-hero.webp"
   },
   "education": [
     {
@@ -11,14 +11,14 @@
       "institution": "IPB University (Vocational School)",
       "year": "2024 - Present",
       "degree": "Computer Engineering",
-      "logo": "/logo-ipb.png"
+      "logo": "/logo-ipb.webp"
     },
     {
       "id": 2,
       "institution": "SMKN 1 Pacet - 3.88 (GPA)",
       "year": "Graduate",
       "degree": "Computer and Network Engineering",
-      "logo": "/logo-smk.png"
+      "logo": "/logo-smk.webp"
     }
   ],
   "experience": [
@@ -80,21 +80,21 @@
     }    
   ],
   "skills": [
-    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.png" },
-    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.png" },
-    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.png" },
-    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.png" },
-    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.png" },
-    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.png" },
-    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.png" },
-    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.png" },
-    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.png" },
-    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.png" },
-    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.png" },
-    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.png" },
-    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.png" },
-    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.png" },
-    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.png" }
+    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.webp" },
+    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.webp" },
+    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.webp" },
+    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.webp" },
+    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.webp" },
+    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.webp" },
+    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.webp" },
+    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.webp" },
+    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.webp" },
+    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.webp" },
+    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.webp" },
+    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.webp" },
+    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.webp" },
+    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.webp" },
+    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.webp" }
   ],
   "categories": [
     "All",
@@ -112,17 +112,17 @@
       "id": 1,
       "title": "Sumo Ramen Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/sumo/design-projek1-thumb.png",
+      "thumbnail": "/portfolio/sumo/design-projek1-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/sumo/design-projek1-part1.gif",
-        "/portfolio/sumo/design-projek1-part2.png",
-        "/portfolio/sumo/design-projek1-part3.gif",
-        "/portfolio/sumo/design-projek1-part4.gif",
-        "/portfolio/sumo/design-projek1-part5.png",
-        "/portfolio/sumo/design-projek1-part6.png",
-        "/portfolio/sumo/design-projek1-part7.png",
-        "/portfolio/sumo/design-projek1-part8.gif"
+        "/portfolio/sumo/design-projek1-part1.webp",
+        "/portfolio/sumo/design-projek1-part2.webp",
+        "/portfolio/sumo/design-projek1-part3.webp",
+        "/portfolio/sumo/design-projek1-part4.webp",
+        "/portfolio/sumo/design-projek1-part5.webp",
+        "/portfolio/sumo/design-projek1-part6.webp",
+        "/portfolio/sumo/design-projek1-part7.webp",
+        "/portfolio/sumo/design-projek1-part8.webp"
       ],
       "description": "Sumo Ramen is a culinary visual identity project designed to break away from traditional ramen shop conventions by replacing the typical dominant red with a deep blue palette. This color choice not only exudes a modern and fresh vibe but also cleverly creates a strong complementary contrast, making the warm tones of the ramen dishes stand out and look even more appetizing. This design approach is reinforced by a playful, thick line-art sumo wrestler mascot representing generous portions and dining satisfaction, paired with solid, rounded sans-serif typography. The final result is a friendly, dynamic, and highly standout branding system when applied across various media, from ceramic bowls to packaging.",
       "tools": ["Photoshop", "Illustrator"]
@@ -131,18 +131,18 @@
       "id": 2,
       "title": "Trawana Outdoor Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/trawana/design-projek2-thumb.png",
+      "thumbnail": "/portfolio/trawana/design-projek2-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/trawana/design-projek2-part1.png",
-        "/portfolio/trawana/design-projek2-part2.gif",
-        "/portfolio/trawana/design-projek2-part3.png",
-        "/portfolio/trawana/design-projek2-part4.png",
-        "/portfolio/trawana/design-projek2-part5.png",
-        "/portfolio/trawana/design-projek2-part6.png",
-        "/portfolio/trawana/design-projek2-part7.png",
-        "/portfolio/trawana/design-projek2-part8.png",
-        "/portfolio/trawana/design-projek2-part9.png"
+        "/portfolio/trawana/design-projek2-part1.webp",
+        "/portfolio/trawana/design-projek2-part2.webp",
+        "/portfolio/trawana/design-projek2-part3.webp",
+        "/portfolio/trawana/design-projek2-part4.webp",
+        "/portfolio/trawana/design-projek2-part5.webp",
+        "/portfolio/trawana/design-projek2-part6.webp",
+        "/portfolio/trawana/design-projek2-part7.webp",
+        "/portfolio/trawana/design-projek2-part8.webp",
+        "/portfolio/trawana/design-projek2-part9.webp"
       ],
       "description": "Trawana is an outdoor gear brand identity project that embraces the harmony between adventure and nature through minimalist yet functional visuals. The logo utilizes stacked geometric pine tree shapes to represent hiking trails and resilience, combined with a dominant Forest Green color palette for an organic feel and bright orange accents as a symbol of vitality and safety in the wild. Featuring clean and modern Futura typography, this identity is designed to convey a professional and reliable impression, applied consistently from branding on tents and jackets to technical equipment such as folding knives and other hiking gear.",
       "tools": ["Photoshop", "Illustrator"]
@@ -151,25 +151,25 @@
       "id": 3,
       "title": "Matchaby Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/matchaby/design-projek3-thumb.png",
+      "thumbnail": "/portfolio/matchaby/design-projek3-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/matchaby/design-projek3-part1.png",
-        "/portfolio/matchaby/design-projek3-part2.png",
-        "/portfolio/matchaby/design-projek3-part3.gif",
-        "/portfolio/matchaby/design-projek3-part4.png",
-        "/portfolio/matchaby/design-projek3-part5.png",
-        "/portfolio/matchaby/design-projek3-part6.png",
-        "/portfolio/matchaby/design-projek3-part7.png",
-        "/portfolio/matchaby/design-projek3-part8.gif",
-        "/portfolio/matchaby/design-projek3-part9.png",
-        "/portfolio/matchaby/design-projek3-part10.png",
-        "/portfolio/matchaby/design-projek3-part11.png",
-        "/portfolio/matchaby/design-projek3-part12.png",
-        "/portfolio/matchaby/design-projek3-part13.png",
-        "/portfolio/matchaby/design-projek3-part14.png",
-        "/portfolio/matchaby/design-projek3-part15.png",
-        "/portfolio/matchaby/design-projek3-part16.png"
+        "/portfolio/matchaby/design-projek3-part1.webp",
+        "/portfolio/matchaby/design-projek3-part2.webp",
+        "/portfolio/matchaby/design-projek3-part3.webp",
+        "/portfolio/matchaby/design-projek3-part4.webp",
+        "/portfolio/matchaby/design-projek3-part5.webp",
+        "/portfolio/matchaby/design-projek3-part6.webp",
+        "/portfolio/matchaby/design-projek3-part7.webp",
+        "/portfolio/matchaby/design-projek3-part8.webp",
+        "/portfolio/matchaby/design-projek3-part9.webp",
+        "/portfolio/matchaby/design-projek3-part10.webp",
+        "/portfolio/matchaby/design-projek3-part11.webp",
+        "/portfolio/matchaby/design-projek3-part12.webp",
+        "/portfolio/matchaby/design-projek3-part13.webp",
+        "/portfolio/matchaby/design-projek3-part14.webp",
+        "/portfolio/matchaby/design-projek3-part15.webp",
+        "/portfolio/matchaby/design-projek3-part16.webp"
       ],
       "description": "Matchaby's brand identity design embraces an Urban & Daily Lifestyle concept, positioning matcha beverages as a modern lifestyle choice and an everyday energy source (YOUR Daily Green Boost). Adapting a Modern Retro visual style and a casual yet clean streetwear aesthetic, the design is dominated by a fresh monochromatic green palette (Hunter, Moss, and Sage Green) alongside warm Off-White accents. The overall look is balanced by a combination of friendly, bubbly typography in the logo and sharp, bold headlines. Meanwhile, the presence of a cool, sunglasses-wearing mascot and die-cut sticker-style graphic elements provides a dynamic, trendy, and highly Instagrammable visual character across various packaging media.",
       "tools": ["Photoshop", "Illustrator"]
@@ -178,17 +178,17 @@
       "id": 4,
       "title": "Roseva Skincare Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/roseva/design-projek4-thumb.png",
+      "thumbnail": "/portfolio/roseva/design-projek4-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/roseva/design-projek4-part1.png",
-        "/portfolio/roseva/design-projek4-part2.png",
-        "/portfolio/roseva/design-projek4-part3.png",
-        "/portfolio/roseva/design-projek4-part4.png",
-        "/portfolio/roseva/design-projek4-part5.png",
-        "/portfolio/roseva/design-projek4-part6.png",
-        "/portfolio/roseva/design-projek4-part7.png",
-        "/portfolio/roseva/design-projek4-part8.png"
+        "/portfolio/roseva/design-projek4-part1.webp",
+        "/portfolio/roseva/design-projek4-part2.webp",
+        "/portfolio/roseva/design-projek4-part3.webp",
+        "/portfolio/roseva/design-projek4-part4.webp",
+        "/portfolio/roseva/design-projek4-part5.webp",
+        "/portfolio/roseva/design-projek4-part6.webp",
+        "/portfolio/roseva/design-projek4-part7.webp",
+        "/portfolio/roseva/design-projek4-part8.webp"
       ],
       "description": "The Roseva Skincare brand identity embraces the concept of elegant natural beauty, focusing on a rose silhouette element ('bloom with elegance'). The visuals combine a minimalist logomark with classic serif typography, supported by a captivating feminine color palette ranging from a premium crimson red to a soft peach. The application of the design across packaging, products, and retail spaces appears extremely clean, modern, and luxurious, reinforcing the image of a skincare brand that is exclusive and gentle, yet full of character.",
       "tools": ["Photoshop", "Illustrator"]
@@ -197,12 +197,12 @@
       "id": 6,
       "title": "Tekom Social Media Design",
       "category": "Design",
-      "thumbnail": "/portfolio/teksos/design-projek6-thumb.png",
+      "thumbnail": "/portfolio/teksos/design-projek6-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/teksos/design-projek6-part1.png",
-        "/portfolio/teksos/design-projek6-part2.png",
-        "/portfolio/teksos/design-projek6-part3.png"
+        "/portfolio/teksos/design-projek6-part1.webp",
+        "/portfolio/teksos/design-projek6-part2.webp",
+        "/portfolio/teksos/design-projek6-part3.webp"
       ],
       "description": "This project is an Instagram feed design for the @tekom_ipb (Computer Engineering Technology IPB) account, where I served as the visual designer responsible for creating a cohesive social media content system. Carrying the theme Infinite Connection with Technology, I utilized a dominant electric blue color palette combined with bright yellow accents to deliver a modern, futuristic, and academic impression. The design integrates various types of content—ranging from educational infographics (such as essential components for computer engineering students) and campus administrative information, to holiday greetings—all unified by a clean layout and the use of minimalist geometric graphics to ensure the feed remains neat, informative, and professional.",
       "tools": ["Photoshop", "Illustrator"]
@@ -211,13 +211,13 @@
       "id": 7,
       "title": "Sports Digital Imaging",
       "category": "Design",
-      "thumbnail": "/portfolio/digital-imaging/design-projek7-thumb.png",
+      "thumbnail": "/portfolio/digital-imaging/design-projek7-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/digital-imaging/design-projek7-part1.png",
-        "/portfolio/digital-imaging/design-projek7-part2.png",
-        "/portfolio/digital-imaging/design-projek7-part3.png",
-        "/portfolio/digital-imaging/design-projek7-part4.png"
+        "/portfolio/digital-imaging/design-projek7-part1.webp",
+        "/portfolio/digital-imaging/design-projek7-part2.webp",
+        "/portfolio/digital-imaging/design-projek7-part3.webp",
+        "/portfolio/digital-imaging/design-projek7-part4.webp"
       ],
       "description": "In this project, I created a series of photo manipulation artworks focusing on football themes, highlighting epic moments from renowned clubs and players. This project demanded technical expertise in compositing, lighting manipulation, and color grading to produce cinematic and dramatic matchday posters and tribute visuals. By blending surreal elements with sports realism, these artworks are designed to evoke emotion and heroism, while demonstrating my ability to craft compelling visual storytelling within the sports design industry.",
       "tools": ["Photoshop"]
@@ -226,12 +226,12 @@
       "id": 8,
       "title": "Logofolio",
       "category": "Design",
-      "thumbnail": "/portfolio/logofolio/design-projek8-thumb.jpg",
+      "thumbnail": "/portfolio/logofolio/design-projek8-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/logofolio/design-projek8-part1.png",
-        "/portfolio/logofolio/design-projek8-part2.png",
-        "/portfolio/logofolio/design-projek8-part3.png"
+        "/portfolio/logofolio/design-projek8-part1.webp",
+        "/portfolio/logofolio/design-projek8-part2.webp",
+        "/portfolio/logofolio/design-projek8-part3.webp"
       ],
       "description": "This project is a compilation of visual identity design works spanning various categories, from logotypes, monograms, combination marks, and mascot logos to logomarks. Each logo is designed to represent the unique characteristics of various sectors, such as culinary (Sumo Ramen, Matchaby), technology and services (Karcisin, Zevo), and construction and lifestyle (Jiwa Karya, AkarNusa). Through an explorative and varied design approach—including the use of expressive mascots and strong typography—this collection demonstrates creative flexibility in translating a brand's vision into a visual identity that is functional, iconic, and has broad market appeal.",
       "tools": ["Photoshop", "Illustrator"]
@@ -240,7 +240,7 @@
       "id": 10,
       "title": "Portal 7 Company Profile",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video2-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video2-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/v4mg5vFAZ6Q",
       "description": "In the Portal 7 IPB Company Profile project, an international-scale digital creative competition, I was entrusted to lead the entire multimedia production line end-to-end. Acting as Director and Video Editor, I took full responsibility for directing the creative vision from conceptualization and shooting to directly executing the post-production process. This project required comprehensive technical management and dynamic visual storytelling to ensure the final video appeared professional, characterful, and capable of representing the competition's value to a global audience.",
@@ -250,7 +250,7 @@
       "id": 11,
       "title": "TEK Gather 2025 After Movie",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video3-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video3-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
       "description": "As the Video Editor for the TEK Gather 2025 After Movie project, I was responsible for summarizing the moments of togetherness from the gathering event for new students of the Computer Engineering Technology (TRK) study program, Vocational School of IPB University, batch 61. Through a dynamic editing process, color grading adjustments, and careful selection of background music, this project was focused on capturing the euphoria, warmth, and spirit of solidarity of the participants into a visual work that is engaging, emotional, and memorable.",
@@ -260,7 +260,7 @@
       "id": 12,
       "title": "CARITA CIANJUR - CANDI TRIDHARMA DOCUMENTARY VIDEO",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video4-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video4-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=nv0_3QseIbY",
       "description": "In the production of a documentary video for the Carita Cianjur competition organized by the Indonesian Television Journalists Association (IJTI) Korda Cianjur, I had comprehensive responsibilities as a Videographer, Drone Pilot, and Video Editor. This project highlighted the charm of hidden tourist destinations Candi Tridharma and Curug Dengdeng through ground visual exploration and cinematic aerial footage. Thanks to strong visual storytelling and a neat post-production process, this documentary successfully won 2nd Place and brought pride to SMKN 1 Pacet.",
@@ -270,7 +270,7 @@
       "id": 13,
       "title": "LAST CEREMONY - 12TH GRADE SMKN 1 PACET 2022",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video5-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video5-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=v3Nz-WxLMkg",
       "description": "In the production of the SMKN 1 Pacet 2022 Last Ceremony After Movie, I played a comprehensive role as a Videographer, Drone Pilot, and Video Editor. This project aimed to immortalize an emotional and historic farewell moment through a combination of ground shots and cinematic aerial footage. Through meticulous video editing and precise audio-visual synchronization, I wove all those memories into a documentary that is moving, memorable, and full of nostalgia for the entire school community.",
@@ -280,7 +280,7 @@
       "id": 14,
       "title": "LAST CEREMONY - 12TH GRADE SMKN 1 PACET 2023",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video6-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video6-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=FAn_QFzsCaM",
       "description": "In the production of the SMKN 1 Pacet 2023 Last Ceremony After Movie, I played a comprehensive role as a Videographer, Drone Pilot, and Video Editor. This project aimed to immortalize an emotional and historic farewell moment through a combination of ground shots and cinematic aerial footage. Through meticulous video editing and precise audio-visual synchronization, I wove all those memories into a documentary that is moving, memorable, and full of nostalgia for the entire school community.",
@@ -290,7 +290,7 @@
       "id": 15,
       "title": "Ripple Studio Video Profile",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video7-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video7-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=IpVsoafgn9E",
       "description": "In the production of the Ripple Studio profile video, I was fully responsible from the shooting process to the editing stage to introduce the identity of the multimedia extracurricular at SMKN 1 Pacet. This project was designed to highlight the creativity, facilities, and technical expertise of the members in the audio-visual field through dynamic storytelling and professional visual quality. By combining slick cinematography techniques and strong editing, this video successfully represents Ripple Studio as a hub for inspiring digital innovation within the school environment.",
@@ -300,7 +300,7 @@
       "id": 16,
       "title": "Pacettoe Podcast",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video8-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video8-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=isEPEF6Pjcc",
       "description": "In the production of the Pacettoe Podcast, the official podcast program of SMKN 1 Pacet, I played a multifunctional role as technical operator, videographer, audio mixer, and video editor. This project involved managing the technical production in real-time as well as a detailed post-production process to ensure audio and visual quality remained clear and professional. By combining dynamic shooting techniques and neat editing, I succeeded in creating discussion content that is engaging, informative, and able to strengthen the digital media identity within the school.",
@@ -310,7 +310,7 @@
       "id": 17,
       "title": "Portal 7 Mascot Animation",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video9-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video9-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.instagram.com/p/DMKiuaaSMev/?img_index=2",
       "description": "In this project, I was responsible for executing the creation of a mascot animation through editing, motion graphics, and sound design to bring the main visual icon of the competition to life. My main focus was transforming the character assets into dynamic and expressive entities to strengthen the brand identity of this international-scale digital creative event. By combining smooth animation techniques and precise audio design, I successfully created visual elements capable of increasing the interaction and appeal of the Portal 7 to a global audience.",
@@ -320,7 +320,7 @@
       "id": 18,
       "title": "300+ Motion Loop Animations – Contributor Project",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video10-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video10-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/CC4FkcNl4bY",
       "description": "As a Creative Contributor, I was fully responsible for the editing and production of over 300 motion loop animation assets. This large-scale project required visual consistency, technical precision, and efficient time management to ensure every animation featured a seamless looping transition. Through this project, I successfully demonstrated my ability to execute high-volume production of motion graphic assets while maintaining top-tier quality standards for diverse digital content needs.",
@@ -330,7 +330,7 @@
       "id": 19,
       "title": "Satya Networks Bumper Animation",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video11-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video11-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/km-S9C3aTGc",
       "description": "",
@@ -340,7 +340,7 @@
       "id": 20,
       "title": "Company C Bumper",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video12-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video12-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
       "description": "lorem ipsum.",
@@ -350,7 +350,7 @@
       "id": 21,
       "title": "Portal 6 Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video13-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video13-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/Ij6V7aEwWkE",
       "description": "In this project, I was responsible for executing the creation of a motion graphics bumper that serves as an iconic visual opening to reinforce the event's brand identity. I managed the entire post-production process, from crafting dynamic graphic movements to designing synchronized sound design to create a futuristic and professional impression. The final result of this project focuses on delivering strong competitive energy through smooth visual transitions and immersive audio to grab the audience's attention from the very first second.",
@@ -360,7 +360,7 @@
       "id": 22,
       "title": "Ripple Studio Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video14-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video14-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
       "description": "In this project, I was responsible for executing the creation of a motion graphics bumper as the main visual identity element for the multimedia creative hub of SMKN 1 Pacet. My main focus was to design dynamic and modern graphic movements, paired with synchronized sound design to create a professional impression at the opening of every video content. Through mastery of motion graphics techniques, this work successfully strengthened Ripple Studio's branding as an inspiring center for audio-visual innovation within the school.",
@@ -370,7 +370,7 @@
       "id": 23,
       "title": "Pacettoe Podcast Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video15-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video15-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/YiOfgfA2Umg?si=bzw-Dl2lhtwboCJk",
       "description": "In this project, I executed the creation of a motion graphics bumper that serves as the opening visual identity for the official podcast program of SMKN 1 Pacet. My main focus was designing dynamic and modern graphic movements to align with the relaxed yet professional atmosphere of the discussions. By combining smooth visual transitions and precise audio synchronization, this bumper successfully strengthened the digital branding of Pacettoe Podcast as outstanding creative content within the school environment.",
@@ -380,7 +380,7 @@
       "id": 24,
       "title": "SMKN 1 Pacet Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video16-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video16-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/s5DtlujaeAA?si=y2KgnqzkoaC8-tq0",
       "description": "In this project, I executed the creation of the official Motion Graphics Bumper for SMKN 1 Pacet, designed as a universal visual asset for various school content needs. My main focus was to create dynamic and modern graphic movements so they could be easily integrated into various video formats, from official announcements to activity documentation. By combining smooth transitions and visual elements that represent the school's identity, this bumper successfully became a standard video opening that gives a professional, consistent impression and strengthens the institution's branding in every digital publication.",
@@ -390,7 +390,7 @@
       "id": 25,
       "title": "Server Monitoring",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
           { 
             "type": "text", 
@@ -406,7 +406,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -418,7 +418,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -426,7 +426,7 @@
       "id": 26,
       "title": "Greenhouse Monitoring",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
           { 
             "type": "text", 
@@ -442,7 +442,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -454,7 +454,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -462,7 +462,7 @@
       "id": 27,
       "title": "Penyiram Tanaman Otomatis",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
           { 
             "type": "text", 
@@ -478,7 +478,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -490,7 +490,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -498,7 +498,7 @@
       "id": 28,
       "title": "Eco Bug",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "type": "article",
       "content": [
           { 
@@ -515,7 +515,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -527,7 +527,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -535,7 +535,7 @@
       "id": 29,
             "title": "Gaming Centre",
             "category": "Networking",
-            "thumbnail": "/portfolio/net-thumb.jpg",
+            "thumbnail": "/portfolio/net-thumb.webp",
             "type": "article",
  "content": [
     { 
@@ -552,7 +552,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/skema-wiring.jpg" 
+      "value": "/portfolio/skema-wiring.webp" 
     },
     { 
       "type": "subtitle", 
@@ -564,7 +564,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/dashboard-iot.jpg" 
+      "value": "/portfolio/dashboard-iot.webp" 
     }
   ]
 },
@@ -572,14 +572,14 @@
         "id": 30,
         "title": "Karcis.in - Platform E-Ticketing Event Kampus & Komunitas",
         "category": "Web Development",
-        "thumbnail": "/portfolio/karcisin/thum.png",
+        "thumbnail": "/portfolio/karcisin/thum.webp",
         "description": "Role: Full-Stack Developer",
         "tools": [],
         "type": "article",
         "content": [
     { 
       "type": "image", 
-      "value": "/portfolio/karcisin/header.png" 
+      "value": "/portfolio/karcisin/header.webp" 
     },
           { 
       "type": "text", 
@@ -636,19 +636,19 @@
 },
     { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok1.png" 
+      "value": "/portfolio/karcisin/dok1.webp" 
     },
         { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok2.png" 
+      "value": "/portfolio/karcisin/dok2.webp" 
     },
         { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok3.png" 
+      "value": "/portfolio/karcisin/dok3.webp" 
     },
         { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok4.png" 
+      "value": "/portfolio/karcisin/dok4.webp" 
     },
     { 
       "type": "subtitle", 
@@ -700,7 +700,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/karcisin/flow.png" 
+      "value": "/portfolio/karcisin/flow.webp" 
     },
     { 
       "type": "text", 
@@ -732,16 +732,16 @@
       "id": 31,
       "title": "SMKN 1 Pacet Pendikar 2022",
       "category": "Photography",
-      "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.png",
+      "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/foto-pendikar/photo-1.png",
-        "/portfolio/foto-pendikar/photo-2.png",
-        "/portfolio/foto-pendikar/photo-3.png",
-        "/portfolio/foto-pendikar/photo-4.png",
-        "/portfolio/foto-pendikar/photo-5.png",
-        "/portfolio/foto-pendikar/photo-6.png",
-        "/portfolio/foto-pendikar/photo-7.png"
+        "/portfolio/foto-pendikar/photo-1.webp",
+        "/portfolio/foto-pendikar/photo-2.webp",
+        "/portfolio/foto-pendikar/photo-3.webp",
+        "/portfolio/foto-pendikar/photo-4.webp",
+        "/portfolio/foto-pendikar/photo-5.webp",
+        "/portfolio/foto-pendikar/photo-6.webp",
+        "/portfolio/foto-pendikar/photo-7.webp"
       ],
       "description": "In the photography documentation project for the Pendikar (Character Education) SMKN 1 Pacet, I was fully responsible for capturing the essence of the students' discipline, resilience, and camaraderie. Through my lens, I immortalized invaluable moments, ranging from the intensity of physical and mental training alongside military instructors and the dynamics of teamwork during group activities, to the warmth of student solidarity. To enhance the visual storytelling, I applied a cinematic and earthy color grading during post-production, giving each photograph a dramatic, distinct character that powerfully evokes the participants' memorable journey and perseverance.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
@@ -751,7 +751,7 @@
       "id": 32,
             "title": "SmileMush",
             "category": "Networking",
-            "thumbnail": "/portfolio/smilemush/smilemush-thumb.png",
+            "thumbnail": "/portfolio/smilemush/smilemush-thumb.webp",
             "type": "article",
  "content": [
     { 
@@ -768,7 +768,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/skema-wiring.jpg" 
+      "value": "/portfolio/skema-wiring.webp" 
     },
     { 
       "type": "subtitle", 
@@ -780,7 +780,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/dashboard-iot.jpg" 
+      "value": "/portfolio/dashboard-iot.webp" 
     }
   ]
 }

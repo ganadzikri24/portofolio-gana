@@ -3,7 +3,7 @@
     "name": "Muhamad Ganabitz Dzikri",
     "title": "Creative Technologist & Network Engineer",
     "description": "Mahasiswa Teknologi Rekayasa Komputer di IPB University dengan keahlian spesifik di dua bidang: IT (IoT, Networking, Web Development) dan Multimedia (Desain, Motion Graphics, Video, Broadcasting). Saya adalah pekerja serba cepat, sangat mudah beradaptasi dengan teknologi baru, dan berdedikasi untuk memberikan hasil yang fungsional dan berkualitas tinggi.",
-    "photo": "/foto-hero.png"
+    "photo": "/foto-hero.webp"
   },
   "education": [
     {
@@ -11,14 +11,14 @@
       "institution": "IPB University (Sekolah Vokasi)",
       "year": "2024 - Sekarang",
       "degree": "Teknologi Rekayasa Komputer",
-      "logo": "/logo-ipb.png"
+      "logo": "/logo-ipb.webp"
     },
     {
       "id": 2,
       "institution": "SMKN 1 Pacet - 3.88 (GPA)",
       "year": "Lulus",
       "degree": "Teknik Komputer dan Jaringan",
-      "logo": "/logo-smk.png"
+      "logo": "/logo-smk.webp"
     }
   ],
   "experience": [
@@ -80,21 +80,21 @@
     }    
   ],
   "skills": [
-    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.png" },
-    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.png" },
-    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.png" },
-    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.png" },
-    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.png" },
-    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.png" },
-    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.png" },
-    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.png" },
-    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.png" },
-    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.png" },
-    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.png" },
-    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.png" },
-    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.png" },
-    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.png" },
-    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.png" }
+    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.webp" },
+    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.webp" },
+    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.webp" },
+    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.webp" },
+    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.webp" },
+    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.webp" },
+    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.webp" },
+    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.webp" },
+    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.webp" },
+    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.webp" },
+    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.webp" },
+    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.webp" },
+    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.webp" },
+    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.webp" },
+    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.webp" }
   ],
   "categories": [
     "All",
@@ -112,17 +112,17 @@
       "id": 1,
       "title": "Sumo Ramen Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/sumo/design-projek1-thumb.png",
+      "thumbnail": "/portfolio/sumo/design-projek1-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/sumo/design-projek1-part1.gif",
-        "/portfolio/sumo/design-projek1-part2.png",
-        "/portfolio/sumo/design-projek1-part3.gif",
-        "/portfolio/sumo/design-projek1-part4.gif",
-        "/portfolio/sumo/design-projek1-part5.png",
-        "/portfolio/sumo/design-projek1-part6.png",
-        "/portfolio/sumo/design-projek1-part7.png",
-        "/portfolio/sumo/design-projek1-part8.gif"
+        "/portfolio/sumo/design-projek1-part1.webp",
+        "/portfolio/sumo/design-projek1-part2.webp",
+        "/portfolio/sumo/design-projek1-part3.webp",
+        "/portfolio/sumo/design-projek1-part4.webp",
+        "/portfolio/sumo/design-projek1-part5.webp",
+        "/portfolio/sumo/design-projek1-part6.webp",
+        "/portfolio/sumo/design-projek1-part7.webp",
+        "/portfolio/sumo/design-projek1-part8.webp"
       ],
       "description": "Sumo Ramen adalah proyek identitas visual kuliner yang dirancang untuk mendobrak konvensi kedai ramen tradisional dengan mengganti warna merah dominan khas dengan palet biru pekat. Pilihan warna ini tidak hanya memancarkan kesan modern dan segar, tetapi juga dengan cerdas menciptakan kontras komplementer yang kuat, membuat warna hangat dari hidangan ramen menonjol dan terlihat lebih menggugah selera. Pendekatan desain ini diperkuat oleh maskot pesumo line-art tebal yang jenaka, mewakili porsi besar dan kepuasan bersantap, dipadukan dengan tipografi sans-serif bulat yang solid. Hasil akhirnya adalah sistem branding yang ramah, dinamis, dan sangat menonjol ketika diaplikasikan di berbagai media, mulai dari mangkuk keramik hingga kemasan.",
       "tools": ["Photoshop", "Illustrator"]
@@ -131,18 +131,18 @@
       "id": 2,
       "title": "Trawana Outdoor Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/trawana/design-projek2-thumb.png",
+      "thumbnail": "/portfolio/trawana/design-projek2-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/trawana/design-projek2-part1.png",
-        "/portfolio/trawana/design-projek2-part2.gif",
-        "/portfolio/trawana/design-projek2-part3.png",
-        "/portfolio/trawana/design-projek2-part4.png",
-        "/portfolio/trawana/design-projek2-part5.png",
-        "/portfolio/trawana/design-projek2-part6.png",
-        "/portfolio/trawana/design-projek2-part7.png",
-        "/portfolio/trawana/design-projek2-part8.png",
-        "/portfolio/trawana/design-projek2-part9.png"
+        "/portfolio/trawana/design-projek2-part1.webp",
+        "/portfolio/trawana/design-projek2-part2.webp",
+        "/portfolio/trawana/design-projek2-part3.webp",
+        "/portfolio/trawana/design-projek2-part4.webp",
+        "/portfolio/trawana/design-projek2-part5.webp",
+        "/portfolio/trawana/design-projek2-part6.webp",
+        "/portfolio/trawana/design-projek2-part7.webp",
+        "/portfolio/trawana/design-projek2-part8.webp",
+        "/portfolio/trawana/design-projek2-part9.webp"
       ],
       "description": "Trawana adalah proyek identitas brand perlengkapan outdoor yang merangkul harmoni antara petualangan dan alam melalui visual yang minimalis namun fungsional. Logonya menggunakan tumpukan bentuk pohon pinus geometris untuk merepresentasikan jalur pendakian dan ketangguhan, dipadukan dengan palet warna Forest Green dominan untuk kesan organik dan aksen oranye terang sebagai simbol vitalitas dan keselamatan di alam liar. Menampilkan tipografi Futura yang bersih dan modern, identitas ini dirancang untuk menyampaikan kesan profesional dan dapat diandalkan, diaplikasikan secara konsisten dari branding pada tenda dan jaket hingga peralatan teknis seperti pisau lipat dan perlengkapan pendakian lainnya.",
       "tools": ["Photoshop", "Illustrator"]
@@ -151,25 +151,25 @@
       "id": 3,
       "title": "Matchaby Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/matchaby/design-projek3-thumb.png",
+      "thumbnail": "/portfolio/matchaby/design-projek3-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/matchaby/design-projek3-part1.png",
-        "/portfolio/matchaby/design-projek3-part2.png",
-        "/portfolio/matchaby/design-projek3-part3.gif",
-        "/portfolio/matchaby/design-projek3-part4.png",
-        "/portfolio/matchaby/design-projek3-part5.png",
-        "/portfolio/matchaby/design-projek3-part6.png",
-        "/portfolio/matchaby/design-projek3-part7.png",
-        "/portfolio/matchaby/design-projek3-part8.gif",
-        "/portfolio/matchaby/design-projek3-part9.png",
-        "/portfolio/matchaby/design-projek3-part10.png",
-        "/portfolio/matchaby/design-projek3-part11.png",
-        "/portfolio/matchaby/design-projek3-part12.png",
-        "/portfolio/matchaby/design-projek3-part13.png",
-        "/portfolio/matchaby/design-projek3-part14.png",
-        "/portfolio/matchaby/design-projek3-part15.png",
-        "/portfolio/matchaby/design-projek3-part16.png"
+        "/portfolio/matchaby/design-projek3-part1.webp",
+        "/portfolio/matchaby/design-projek3-part2.webp",
+        "/portfolio/matchaby/design-projek3-part3.webp",
+        "/portfolio/matchaby/design-projek3-part4.webp",
+        "/portfolio/matchaby/design-projek3-part5.webp",
+        "/portfolio/matchaby/design-projek3-part6.webp",
+        "/portfolio/matchaby/design-projek3-part7.webp",
+        "/portfolio/matchaby/design-projek3-part8.webp",
+        "/portfolio/matchaby/design-projek3-part9.webp",
+        "/portfolio/matchaby/design-projek3-part10.webp",
+        "/portfolio/matchaby/design-projek3-part11.webp",
+        "/portfolio/matchaby/design-projek3-part12.webp",
+        "/portfolio/matchaby/design-projek3-part13.webp",
+        "/portfolio/matchaby/design-projek3-part14.webp",
+        "/portfolio/matchaby/design-projek3-part15.webp",
+        "/portfolio/matchaby/design-projek3-part16.webp"
       ],
       "description": "Desain identitas brand Matchaby mengusung konsep Urban & Daily Lifestyle, memposisikan minuman matcha sebagai pilihan gaya hidup modern dan sumber energi sehari-hari (YOUR Daily Green Boost). Mengadaptasi gaya visual Modern Retro dan estetika streetwear yang kasual namun bersih, desainnya didominasi oleh palet hijau monokromatik yang segar (Hunter, Moss, dan Sage Green) bersama aksen Off-White yang hangat. Tampilan keseluruhannya diseimbangkan oleh kombinasi tipografi logo yang ramah dan bubbly serta headline yang tajam dan tebal. Sementara itu, kehadiran maskot keren berkacamata hitam dan elemen grafis bergaya stiker die-cut memberikan karakter visual yang dinamis, trendi, dan sangat Instagrammable di berbagai media kemasan.",
       "tools": ["Photoshop", "Illustrator"]
@@ -178,17 +178,17 @@
       "id": 4,
       "title": "Roseva Skincare Brand Identity",
       "category": "Design",
-      "thumbnail": "/portfolio/roseva/design-projek4-thumb.png",
+      "thumbnail": "/portfolio/roseva/design-projek4-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/roseva/design-projek4-part1.png",
-        "/portfolio/roseva/design-projek4-part2.png",
-        "/portfolio/roseva/design-projek4-part3.png",
-        "/portfolio/roseva/design-projek4-part4.png",
-        "/portfolio/roseva/design-projek4-part5.png",
-        "/portfolio/roseva/design-projek4-part6.png",
-        "/portfolio/roseva/design-projek4-part7.png",
-        "/portfolio/roseva/design-projek4-part8.png"
+        "/portfolio/roseva/design-projek4-part1.webp",
+        "/portfolio/roseva/design-projek4-part2.webp",
+        "/portfolio/roseva/design-projek4-part3.webp",
+        "/portfolio/roseva/design-projek4-part4.webp",
+        "/portfolio/roseva/design-projek4-part5.webp",
+        "/portfolio/roseva/design-projek4-part6.webp",
+        "/portfolio/roseva/design-projek4-part7.webp",
+        "/portfolio/roseva/design-projek4-part8.webp"
       ],
       "description": "Identitas brand Roseva Skincare mengusung konsep kecantikan alami yang elegan, berfokus pada elemen siluet bunga mawar ('bloom with elegance'). Visualnya menggabungkan logomark minimalis dengan tipografi serif klasik, didukung oleh palet warna feminin yang menawan mulai dari merah crimson premium hingga peach lembut. Penerapan desain di seluruh kemasan, produk, dan ruang ritel tampil sangat bersih, modern, dan mewah, memperkuat citra brand skincare yang eksklusif dan lembut, namun penuh karakter.",
       "tools": ["Photoshop", "Illustrator"]
@@ -197,12 +197,12 @@
       "id": 6,
       "title": "Tekom Social Media Design",
       "category": "Design",
-      "thumbnail": "/portfolio/teksos/design-projek6-thumb.png",
+      "thumbnail": "/portfolio/teksos/design-projek6-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/teksos/design-projek6-part1.png",
-        "/portfolio/teksos/design-projek6-part2.png",
-        "/portfolio/teksos/design-projek6-part3.png"
+        "/portfolio/teksos/design-projek6-part1.webp",
+        "/portfolio/teksos/design-projek6-part2.webp",
+        "/portfolio/teksos/design-projek6-part3.webp"
       ],
       "description": "Proyek ini adalah desain feed Instagram untuk akun @tekom_ipb (Teknologi Rekayasa Komputer IPB), di mana saya bertanggung jawab sebagai desainer visual untuk menyusun sistem konten media sosial yang kohesif. Dengan mengusung tema Infinite Connection with Technology, saya menggunakan palet warna dominan biru elektrik yang dipadukan dengan aksen kuning cerah untuk memberikan kesan modern, futuristik, dan akademis. Desain ini menggabungkan berbagai jenis konten, mulai dari infografis edukatif (seperti komponen wajib anak tekom), informasi administrasi kampus, hingga ucapan hari besar, yang semuanya disatukan oleh layout yang bersih dan penggunaan grafis geometris minimalis untuk memastikan feed terlihat rapi, informatif, dan profesional.",
       "tools": ["Photoshop", "Illustrator"]
@@ -211,13 +211,13 @@
       "id": 7,
       "title": "Sports Digital Imaging",
       "category": "Design",
-      "thumbnail": "/portfolio/digital-imaging/design-projek7-thumb.png",
+      "thumbnail": "/portfolio/digital-imaging/design-projek7-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/digital-imaging/design-projek7-part1.png",
-        "/portfolio/digital-imaging/design-projek7-part2.png",
-        "/portfolio/digital-imaging/design-projek7-part3.png",
-        "/portfolio/digital-imaging/design-projek7-part4.png"
+        "/portfolio/digital-imaging/design-projek7-part1.webp",
+        "/portfolio/digital-imaging/design-projek7-part2.webp",
+        "/portfolio/digital-imaging/design-projek7-part3.webp",
+        "/portfolio/digital-imaging/design-projek7-part4.webp"
       ],
       "description": "Dalam proyek ini, saya menciptakan serangkaian karya manipulasi foto (photo manipulation) yang berfokus pada tema sepak bola, menampilkan momen-momen epik dari klub dan pemain ternama. Proyek ini menuntut keahlian teknis dalam compositing (penggabungan beberapa gambar), manipulasi pencahayaan (lighting/shadows), dan color grading untuk menghasilkan poster pertandingan serta visual tribute bergaya sinematik dan dramatis. Melalui perpaduan elemen surealis dan realisme olahraga, karya ini dirancang untuk membangkitkan emosi serta heroisme, sekaligus menunjukkan kemampuan saya dalam meracik penceritaan visual yang kuat di industri desain olahraga (sports design).",
       "tools": ["Photoshop"]
@@ -226,12 +226,12 @@
       "id": 8,
       "title": "Logofolio",
       "category": "Design",
-      "thumbnail": "/portfolio/logofolio/design-projek8-thumb.jpg",
+      "thumbnail": "/portfolio/logofolio/design-projek8-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/logofolio/design-projek8-part1.png",
-        "/portfolio/logofolio/design-projek8-part2.png",
-        "/portfolio/logofolio/design-projek8-part3.png"
+        "/portfolio/logofolio/design-projek8-part1.webp",
+        "/portfolio/logofolio/design-projek8-part2.webp",
+        "/portfolio/logofolio/design-projek8-part3.webp"
       ],
       "description": "Proyek ini merupakan kumpulan karya desain identitas visual yang mencakup berbagai kategori, mulai dari logotypes, monogram, combination mark, mascot logo, hingga logomarks. Setiap logo dirancang untuk merepresentasikan karakteristik unik dari berbagai sektor, seperti kuliner (Sumo Ramen, Matchaby), teknologi dan layanan (Karcisin, Zevo), hingga konstruksi dan gaya hidup (Jiwa Karya, AkarNusa). Melalui pendekatan desain yang eksploratif dan variatif—termasuk penggunaan maskot yang ekspresif serta tipografi yang kuat—koleksi ini menunjukkan fleksibilitas kreatif dalam menerjemahkan visi brand menjadi identitas visual yang fungsional, ikonik, dan memiliki daya tarik pasar yang luas.",
       "tools": ["Photoshop", "Illustrator"]
@@ -240,7 +240,7 @@
       "id": 10,
       "title": "Portal 7 Company Profile",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video2-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video2-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/v4mg5vFAZ6Q",
       "description": "Dalam proyek Company Profile Portal 7 IPB, sebuah ajang kompetisi kreatif digital berskala internasional, saya dipercaya memimpin seluruh lini produksi multimedia secara end-to-end. Bertindak sebagai Sutradara sekaligus Video Editor, saya bertanggung jawab penuh mengarahkan visi kreatif mulai dari tahap konseptualisasi dan pengambilan gambar, hingga mengeksekusi langsung proses pasca-produksi. Proyek ini menuntut manajemen teknis yang komprehensif serta penceritaan visual yang dinamis untuk memastikan hasil akhir video tampil profesional, berkarakter, dan mampu merepresentasikan nilai kompetisi kepada audiens global.",
@@ -250,7 +250,7 @@
       "id": 11,
       "title": "TEK Gather 2025 After Movie",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video3-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video3-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
       "description": "Sebagai Video Editor untuk proyek After Movie TEK Gather 2025, saya bertanggung jawab merangkum momen kebersamaan dari acara gathering mahasiswa baru program studi Teknologi Rekayasa Komputer (TRK) Sekolah Vokasi IPB University angkatan 61. Melalui proses editing yang dinamis, penyesuaian color grading, dan pemilihan backsound yang tepat, proyek ini difokuskan untuk menangkap euforia, kehangatan, serta semangat solidaritas peserta ke dalam sebuah karya visual yang engaging, emosional, dan berkesan.",
@@ -260,7 +260,7 @@
       "id": 12,
       "title": "CARITA CIANJUR - CANDI TRIDHARMA VIDEO DOKUMENTER",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video4-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video4-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=nv0_3QseIbY",
       "description": "Dalam produksi video dokumenter untuk kompetisi Carita Cianjur yang diselenggarakan oleh Ikatan Jurnalis Televisi Indonesia (IJTI) Korda Cianjur, saya bertanggung jawab secara komprehensif sebagai Videografer, Pilot Drone, sekaligus Video Editor. Proyek ini mengangkat pesona destinasi wisata tersembunyi Candi Tridharma dan Curug Dengdeng melalui eksplorasi visual darat dan footage udara yang sinematik. Berkat penceritaan visual (storytelling) yang kuat serta proses pasca-produksi yang apik, karya dokumenter ini sukses meraih Juara 2 dan membanggakan nama SMKN 1 Pacet.",
@@ -270,7 +270,7 @@
       "id": 13,
       "title": "LAST CEREMONY - KELAS XII SMKN 1 PACET TAHUN 2022",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video5-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video5-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=v3Nz-WxLMkg",
       "description": "Dalam produksi video After Movie Upacara Terakhir SMKN 1 Pacet 2022, saya berperan secara komprehensif sebagai Videografer, Pilot Drone, sekaligus Video Editor. Proyek ini bertujuan untuk mengabadikan momen perpisahan yang emosional dan bersejarah melalui perpaduan pengambilan gambar darat serta footage udara (aerial) yang sinematik. Melalui proses penyuntingan video yang teliti dan penyelarasan audio visual yang tepat, saya merangkai seluruh memori tersebut menjadi sebuah karya dokumentasi yang haru, berkesan, dan penuh nostalgia bagi seluruh elemen sekolah.",
@@ -280,7 +280,7 @@
       "id": 14,
       "title": "LAST CEREMONY - KELAS XII SMKN 1 PACET TAHUN 2023",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video6-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video6-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=FAn_QFzsCaM",
       "description": "Dalam produksi video After Movie Upacara Terakhir SMKN 1 Pacet 2023, saya berperan secara komprehensif sebagai Videografer, Pilot Drone, sekaligus Video Editor. Proyek ini bertujuan untuk mengabadikan momen perpisahan yang emosional dan bersejarah melalui perpaduan pengambilan gambar darat serta footage udara (aerial) yang sinematik. Melalui proses penyuntingan video yang teliti dan penyelarasan audio visual yang tepat, saya merangkai seluruh memori tersebut menjadi sebuah karya dokumentasi yang haru, berkesan, dan penuh nostalgia bagi seluruh elemen sekolah.",
@@ -290,7 +290,7 @@
       "id": 15,
       "title": "Ripple Studio Video Profile",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video7-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video7-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=IpVsoafgn9E",
       "description": "Dalam produksi video profil Ripple Studio, saya bertanggung jawab secara menyeluruh mulai dari proses pengambilan gambar (shooting) hingga tahap penyuntingan (editing) untuk memperkenalkan identitas ekstrakurikuler multimedia di SMKN 1 Pacet. Proyek ini dirancang untuk menonjolkan kreativitas, fasilitas, dan keahlian teknis para anggota dalam bidang audio visual melalui penceritaan yang dinamis dan kualitas visual yang profesional. Dengan menggabungkan teknik sinematografi yang apik dan editing yang kuat, video ini berhasil merepresentasikan Ripple Studio sebagai wadah inovasi digital yang inspiratif bagi lingkungan sekolah.",
@@ -300,7 +300,7 @@
       "id": 16,
       "title": "Pacettoe Podcast",
       "category": "Video Editing",
-      "thumbnail": "/portfolio/vid-thumb/video8-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video8-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=isEPEF6Pjcc",
       "description": "Dalam produksi Pacettoe Podcast, yaitu program siniar resmi milik SMKN 1 Pacet, saya berperan secara multifungsi sebagai operator teknis, videografer, audio mixing, sekaligus editor video. Proyek ini melibatkan pengelolaan teknis produksi secara real-time serta proses pasca-produksi yang detail untuk memastikan kualitas audio dan visual tetap jernih dan profesional. Dengan menggabungkan teknik pengambilan gambar yang dinamis dan penyuntingan yang rapi, saya berhasil menciptakan konten diskusi yang menarik, informatif, dan mampu memperkuat identitas media digital di lingkungan sekolah.",
@@ -310,7 +310,7 @@
       "id": 17,
       "title": "Portal 7 Mascot Animation",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video9-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video9-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.instagram.com/p/DMKiuaaSMev/?img_index=2",
       "description": "Dalam proyek ini, saya bertanggung jawab mengeksekusi pembuatan maskot animasi melalui proses penyuntingan, motion graphics, dan sound design untuk menghidupkan ikon visual utama kompetisi tersebut. Fokus utama saya adalah mentransformasi aset karakter menjadi entitas yang dinamis dan ekspresif guna memperkuat identitas branding ajang kreatif digital berskala internasional ini. Dengan menggabungkan teknik animasi yang halus serta perancangan audio yang tepat, saya berhasil menciptakan elemen visual yang mampu meningkatkan interaksi dan daya tarik audiens global terhadap Portal 7.",
@@ -320,7 +320,7 @@
       "id": 18,
       "title": "300+ Motion Loop Animations – Contributor Project",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video10-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video10-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/CC4FkcNl4bY",
       "description": "Sebagai Creative Contributor, saya bertanggung jawab penuh dalam proses editing dan produksi lebih dari 300 aset motion loop animation. Proyek berskala masif ini menuntut konsistensi visual, ketelitian teknis, serta manajemen waktu yang efisien untuk memastikan setiap animasi memiliki transisi looping yang mulus (seamless). Melalui proyek ini, saya berhasil mendemonstrasikan kemampuan mengeksekusi produksi aset grafis gerak dalam jumlah besar (high-volume production) dengan standar kualitas yang tetap terjaga untuk berbagai kebutuhan konten digital.",
@@ -330,7 +330,7 @@
       "id": 19,
       "title": "Satya Networks Bumper Animation",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video11-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video11-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/km-S9C3aTGc",
       "description": "",
@@ -340,7 +340,7 @@
       "id": 20,
       "title": "Company C Bumper",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video12-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video12-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
       "description": "lorem ipsum.",
@@ -350,7 +350,7 @@
       "id": 21,
       "title": "Portal 6 Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video13-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video13-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/Ij6V7aEwWkE",
       "description": "Dalam proyek ini, saya bertanggung jawab mengeksekusi pembuatan bumper motion graphics yang berfungsi sebagai pembuka visual ikonik untuk memperkuat identitas branding acara tersebut. Saya mengelola seluruh proses pasca-produksi, mulai dari penyusunan gerak grafis yang dinamis hingga perancangan desain suara (sound design) yang selaras untuk menciptakan kesan futuristik dan profesional. Hasil akhir proyek ini fokus pada penyampaian energi kompetisi yang kuat melalui transisi visual yang halus dan audio yang imersif guna menarik perhatian audiens sejak detik pertama.",
@@ -360,7 +360,7 @@
       "id": 22,
       "title": "Ripple Studio Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video14-thumb.jpg",
+      "thumbnail": "/portfolio/vid-thumb/video14-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
       "description": "Dalam proyek ini, saya bertanggung jawab mengeksekusi pembuatan bumper motion graphics sebagai elemen identitas visual utama bagi wadah kreatif multimedia SMKN 1 Pacet. Fokus utama saya adalah merancang pergerakan grafis yang dinamis dan modern, dipadukan dengan desain suara yang sinkron untuk menciptakan kesan profesional pada setiap pembukaan konten video. Melalui penguasaan teknik motion graphics, karya ini berhasil memperkuat branding Ripple Studio sebagai pusat inovasi audio visual yang inspiratif di lingkungan sekolah.",
@@ -370,7 +370,7 @@
       "id": 23,
       "title": "Pacettoe Podcast Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video15-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video15-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/YiOfgfA2Umg?si=bzw-Dl2lhtwboCJk",
       "description": "Dalam proyek ini, saya mengeksekusi pembuatan bumper motion graphics yang berfungsi sebagai identitas pembuka visual bagi program siniar resmi SMKN 1 Pacet. Fokus utama saya adalah merancang pergerakan grafis yang dinamis dan modern agar selaras dengan atmosfer diskusi yang santai namun profesional. Dengan mengombinasikan transisi visual yang halus dan penyelarasan audio yang tepat, bumper ini berhasil memperkuat branding digital Pacettoe Podcast sebagai konten kreatif yang unggul di lingkungan sekolah.",
@@ -380,7 +380,7 @@
       "id": 24,
       "title": "SMKN 1 Pacet Bumper Motion",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video16-thumb.png",
+      "thumbnail": "/portfolio/vid-thumb/video16-thumb.webp",
       "type": "video-top",
       "videoUrl": "https://youtu.be/s5DtlujaeAA?si=y2KgnqzkoaC8-tq0",
       "description": "Dalam proyek ini, saya mengeksekusi pembuatan Bumper Motion Graphics resmi untuk SMKN 1 Pacet yang dirancang sebagai aset visual universal untuk berbagai kebutuhan konten sekolah. Fokus utama saya adalah menciptakan pergerakan grafis yang dinamis dan modern agar mudah diintegrasikan ke dalam berbagai format video, mulai dari pengumuman resmi hingga dokumentasi kegiatan. Dengan mengombinasikan transisi yang halus dan elemen visual yang merepresentasikan identitas sekolah, bumper ini berhasil menjadi standar pembukaan video yang memberikan kesan profesional, konsisten, dan memperkuat branding instansi di setiap publikasi digitalnya.",
@@ -390,7 +390,7 @@
       "id": 25,
       "title": "Server Monitoring",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
           { 
             "type": "text", 
@@ -406,7 +406,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -418,7 +418,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -426,7 +426,7 @@
       "id": 26,
       "title": "Greenhouse Monitoring",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
           { 
             "type": "text", 
@@ -442,7 +442,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -454,7 +454,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -462,7 +462,7 @@
       "id": 27,
       "title": "Penyiram Tanaman Otomatis",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
           { 
             "type": "text", 
@@ -478,7 +478,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -490,7 +490,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -498,7 +498,7 @@
       "id": 28,
       "title": "Eco Bug",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.jpg",
+      "thumbnail": "/portfolio/iot-thumb.webp",
       "type": "article",
       "content": [
           { 
@@ -515,7 +515,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/skema-wiring.jpg" 
+            "value": "/portfolio/skema-wiring.webp" 
           },
           { 
             "type": "subtitle", 
@@ -527,7 +527,7 @@
           },
           { 
             "type": "image", 
-            "value": "/portfolio/dashboard-iot.jpg" 
+            "value": "/portfolio/dashboard-iot.webp" 
           }
         ]
       },
@@ -535,7 +535,7 @@
       "id": 29,
             "title": "Gaming Centre",
             "category": "Networking",
-            "thumbnail": "/portfolio/net-thumb.jpg",
+            "thumbnail": "/portfolio/net-thumb.webp",
             "type": "article",
  "content": [
     { 
@@ -552,7 +552,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/skema-wiring.jpg" 
+      "value": "/portfolio/skema-wiring.webp" 
     },
     { 
       "type": "subtitle", 
@@ -564,7 +564,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/dashboard-iot.jpg" 
+      "value": "/portfolio/dashboard-iot.webp" 
     }
   ]
 },
@@ -572,14 +572,14 @@
         "id": 30,
         "title": "Karcis.in - Platform E-Ticketing Event Kampus & Komunitas",
         "category": "Web Development",
-        "thumbnail": "/portfolio/karcisin/thum.png",
+        "thumbnail": "/portfolio/karcisin/thum.webp",
         "description": "Peran: Full-Stack Developer",
         "tools": [],
         "type": "article",
         "content": [
     { 
       "type": "image", 
-      "value": "/portfolio/karcisin/header.png" 
+      "value": "/portfolio/karcisin/header.webp" 
     },
           { 
       "type": "text", 
@@ -636,19 +636,19 @@
 },
     { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok1.png" 
+      "value": "/portfolio/karcisin/dok1.webp" 
     },
         { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok2.png" 
+      "value": "/portfolio/karcisin/dok2.webp" 
     },
         { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok3.png" 
+      "value": "/portfolio/karcisin/dok3.webp" 
     },
         { 
       "type": "image", 
-      "value": "/portfolio/karcisin/dok4.png" 
+      "value": "/portfolio/karcisin/dok4.webp" 
     },
     { 
       "type": "subtitle", 
@@ -700,7 +700,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/karcisin/flow.png" 
+      "value": "/portfolio/karcisin/flow.webp" 
     },
     { 
       "type": "text", 
@@ -732,16 +732,16 @@
       "id": 31,
       "title": "SMKN 1 Pacet Pendikar 2022",
       "category": "Photography",
-      "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.png",
+      "thumbnail": "/portfolio/foto-pendikar/photo1-thumb.webp",
       "type": "seamless-image",
       "images": [
-        "/portfolio/foto-pendikar/photo-1.png",
-        "/portfolio/foto-pendikar/photo-2.png",
-        "/portfolio/foto-pendikar/photo-3.png",
-        "/portfolio/foto-pendikar/photo-4.png",
-        "/portfolio/foto-pendikar/photo-5.png",
-        "/portfolio/foto-pendikar/photo-6.png",
-        "/portfolio/foto-pendikar/photo-7.png"
+        "/portfolio/foto-pendikar/photo-1.webp",
+        "/portfolio/foto-pendikar/photo-2.webp",
+        "/portfolio/foto-pendikar/photo-3.webp",
+        "/portfolio/foto-pendikar/photo-4.webp",
+        "/portfolio/foto-pendikar/photo-5.webp",
+        "/portfolio/foto-pendikar/photo-6.webp",
+        "/portfolio/foto-pendikar/photo-7.webp"
       ],
       "description": "Dalam proyek dokumentasi fotografi untuk kegiatan Pendikar (Pendidikan Karakter) SMKN 1 Pacet, saya bertanggung jawab penuh untuk menangkap esensi kedisiplinan, ketangguhan, dan kebersamaan para siswa. Melalui serangkaian bidikan lensa, saya mengabadikan berbagai momen berharga, mulai dari intensitas pelatihan fisik dan mental bersama instruktur TNI, dinamika kerja sama tim dalam berbagai permainan, hingga kehangatan solidaritas antar siswa. Untuk memperkuat penceritaan visualnya, saya mengaplikasikan color grading bergaya cinematic dan earthy pada proses pasca-produksi, sehingga setiap foto tampil dengan nuansa yang dramatis, berkarakter, dan mampu membangkitkan memori perjuangan bagi para peserta.",
       "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
@@ -751,7 +751,7 @@
       "id": 32,
             "title": "SmileMush",
             "category": "Networking",
-            "thumbnail": "/portfolio/smilemush/smilemush-thumb.png",
+            "thumbnail": "/portfolio/smilemush/smilemush-thumb.webp",
             "type": "article",
  "content": [
     { 
@@ -768,7 +768,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/skema-wiring.jpg" 
+      "value": "/portfolio/skema-wiring.webp" 
     },
     { 
       "type": "subtitle", 
@@ -780,7 +780,7 @@
     },
     { 
       "type": "image", 
-      "value": "/portfolio/dashboard-iot.jpg" 
+      "value": "/portfolio/dashboard-iot.webp" 
     }
   ]
 }
