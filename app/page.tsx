@@ -1,65 +1,95 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll } from "framer-motion";
+import React, { useState, useEffect, memo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Mail, X, MapPin, ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaYoutube, FaBehance } from "react-icons/fa";
 
 import dataEN from "@/data/portfolio.json";
 import dataID from "@/data/portfolio-id.json";
 
-// --- Ambient Animations ---
-const AmbientGeometry = () => (
-  <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-20">
-    <motion.div 
-      animate={{ rotate: 360, scale: [1, 1.05, 1] }} transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-      className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[2px] border-white/10 rounded-full border-dashed"
-    />
-    <motion.div 
-      animate={{ rotate: -360, scale: [1, 1.1, 1] }} transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-      className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[1px] border-white/10 rounded-full"
-    />
-    <motion.div 
-      animate={{ y: ["-100vh", "100vh"] }} transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
-    />
-  </div>
-);
+// --- Pure CSS Keyframes for 0-Lag Ambient Animations ---
+const ambientStyles = `
+  @keyframes spin-slow { 100% { transform: rotate(360deg); } }
+  @keyframes spin-slow-reverse { 100% { transform: rotate(-360deg); } }
+  @keyframes float-1 { 0%, 100% { transform: translate(0, 0); opacity: 0.1; } 50% { transform: translate(30px, -60px); opacity: 0.5; } }
+  @keyframes float-2 { 0%, 100% { transform: translate(0, 0); opacity: 0.1; } 50% { transform: translate(-40px, 80px); opacity: 0.4; } }
+  @keyframes beam { 0% { transform: translateY(-100vh); } 100% { transform: translateY(100vh); } }
+`;
 
-const AmbientParticles = () => (
-  <div className="absolute inset-0 pointer-events-none z-0">
-    <motion.div 
-      animate={{ y: [0, -60, 0], x: [0, 30, 0], opacity: [0.1, 0.5, 0.1], scale: [1, 1.5, 1] }} 
-      transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-[20%] left-[10%] w-3 h-3 bg-white rounded-full shadow-[0_0_40px_10px_rgba(255,255,255,0.4)]"
-    />
-    <motion.div 
-      animate={{ y: [0, 80, 0], x: [0, -40, 0], opacity: [0.1, 0.4, 0.1], scale: [1, 1.2, 1] }} 
-      transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-gray-300 rounded-full shadow-[0_0_50px_15px_rgba(255,255,255,0.3)]"
-    />
-    <motion.div 
-      animate={{ x: [0, 50, 0], y: [0, 20, 0], opacity: [0.05, 0.3, 0.05] }} 
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      className="absolute top-[60%] left-[70%] w-2 h-2 bg-white rounded-full shadow-[0_0_30px_5px_rgba(255,255,255,0.2)]"
-    />
+// --- Ambient Animations (Optimized to Pure CSS for 0 JS Load) ---
+const AmbientGeometry = memo(() => (
+  <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-40">
+    <style dangerouslySetInnerHTML={{ __html: ambientStyles }} />
+    <div className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[2px] border-white/20 rounded-full border-solid" style={{ animation: "spin-slow 90s linear infinite" }} />
+    <div className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[1px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 120s linear infinite" }} />
+    <div className="absolute top-[-10vw] right-[-10vw] w-[70vw] h-[70vw] border-[2px] border-white/10 rounded-full border-solid" style={{ animation: "spin-slow 150s linear infinite" }} />
+    <div className="absolute bottom-[-20vw] left-[-10vw] w-[60vw] h-[60vw] border-[1px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 100s linear infinite" }} />
+    <div className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" style={{ animation: "beam 15s linear infinite" }} />
   </div>
-);
+));
+AmbientGeometry.displayName = "AmbientGeometry";
+
+const AmbientParticles = memo(() => (
+  <div className="absolute inset-0 pointer-events-none z-0">
+    <div className="absolute top-[20%] left-[10%] w-4 h-4 bg-white rounded-full shadow-[0_0_15px_white]" style={{ animation: "float-1 8s ease-in-out infinite" }} />
+    <div className="absolute bottom-[30%] right-[15%] w-5 h-5 bg-gray-300 rounded-full shadow-[0_0_20px_gray]" style={{ animation: "float-2 12s ease-in-out infinite 1s" }} />
+    <div className="absolute top-[60%] right-[20%] w-3 h-3 bg-white/50 rounded-full shadow-[0_0_10px_white]" style={{ animation: "float-1 10s ease-in-out infinite 2s" }} />
+  </div>
+));
+AmbientParticles.displayName = "AmbientParticles";
+
+// --- Isolated Highlight Widget (Prevents full page re-renders every 4s) ---
+const ProjectHighlightWidget = memo(({ projects, setSelectedProject }: { projects: any[], setSelectedProject: (p: any) => void }) => {
+  const [currentHighlight, setCurrentHighlight] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHighlight((prev) => (prev + 1) % projects.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [projects.length]);
+
+  if (projects.length === 0) return null;
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
+      whileHover={{ scale: 1.05, rotate: -2, y: -10 }}
+      className="absolute bottom-10 right-6 md:right-10 z-30 w-64 md:w-80 h-40 md:h-48 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group hidden md:block bg-black" 
+      onClick={() => setSelectedProject(projects[currentHighlight])}
+    >
+      <AnimatePresence mode="wait">
+         <motion.img 
+            key={currentHighlight} 
+            initial={{ opacity: 0, scale: 1.2 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}
+            src={projects[currentHighlight]?.thumbnail} 
+            loading="lazy" decoding="async"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-125 transition-transform duration-1000" 
+            alt="Highlight"
+         />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-60 transition-opacity" />
+      <div className="absolute bottom-5 left-5 right-5 z-10">
+        <div className="flex items-center gap-2 mb-2">
+           <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+           <p className="text-[9px] text-white/90 uppercase tracking-widest font-black bg-white/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+             {projects[currentHighlight]?.category}
+           </p>
+        </div>
+        <p className="text-white font-black text-sm md:text-base leading-tight drop-shadow-md">{projects[currentHighlight]?.title}</p>
+      </div>
+    </motion.div>
+  );
+});
+ProjectHighlightWidget.displayName = "ProjectHighlightWidget";
 
 export default function AestheticPortfolio() {
   const [activeTab, setActiveTab] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
-  const [currentHighlight, setCurrentHighlight] = useState(0);
   
   const [lang, setLang] = useState<"en" | "id">("en");
   const data = lang === "en" ? dataEN : dataID;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHighlight((prev) => (prev + 1) % data.projects.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [data.projects]);
 
   const t = {
     en: {
@@ -116,7 +146,12 @@ export default function AestheticPortfolio() {
       return (
         <div className="flex flex-col w-full">
           {project.images?.map((img: string, i: number) => (
-            <motion.img key={i} initial={{opacity:0, y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} src={img} className="w-full h-auto block m-0 p-0" alt={`Portfolio ${i}`} />
+            <motion.img 
+              key={i} initial={{opacity:0, y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} 
+              src={img} 
+              loading="lazy" decoding="async"
+              className="w-full h-auto block m-0 p-0" alt={`Portfolio ${i}`} 
+            />
           ))}
         </div>
       );
@@ -128,13 +163,13 @@ export default function AestheticPortfolio() {
         const embedUrl = `https://www.youtube.com/embed/${videoId?.split('&')[0]}`;
         return (
           <div className="w-full aspect-video overflow-hidden border border-white/5">
-            <iframe className="w-full h-full" src={embedUrl} allowFullScreen />
+            <iframe className="w-full h-full" src={embedUrl} allowFullScreen loading="lazy" />
           </div>
         );
       }
       return (
         <div className="w-full border border-white/5">
-          <video controls className="w-full aspect-video bg-black" src={url} />
+          <video controls className="w-full aspect-video bg-black" src={url} preload="none" />
         </div>
       );
     }
@@ -151,7 +186,7 @@ export default function AestheticPortfolio() {
                 ))}
               </ul>
             );
-            if (item.type === "image") return <motion.img initial={{scale:0.9, opacity:0}} whileInView={{scale:1, opacity:1}} transition={{duration:0.8}} key={i} src={item.value} className="w-full rounded-2xl my-10 border border-white/5 shadow-2xl" alt="Article Content" />;
+            if (item.type === "image") return <motion.img initial={{scale:0.9, opacity:0}} whileInView={{scale:1, opacity:1}} transition={{duration:0.8}} key={i} src={item.value} loading="lazy" decoding="async" className="w-full rounded-2xl my-10 border border-white/5 shadow-2xl" alt="Article Content" />;
             return null;
           })}
         </div>
@@ -160,20 +195,9 @@ export default function AestheticPortfolio() {
     return null;
   };
 
-  // Lag-free Cinematic Animation Variants
   const cinematicReveal: any = {
-    hidden: { opacity: 0, y: 100, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", bounce: 0.3, duration: 1.2 } }
-  };
-  
-  const fastReveal: any = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
-
-  const staggerContainer: any = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } }
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1.2 } }
   };
 
   return (
@@ -181,28 +205,27 @@ export default function AestheticPortfolio() {
       
       {/* GLOBAL NAVBAR */}
       <motion.nav 
-        variants={staggerContainer} initial="hidden" animate="visible"
-        className="fixed top-0 left-0 w-full z-50 px-6 py-5 flex items-center justify-between mix-blend-difference backdrop-blur-sm bg-transparent"
+        initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
+        className="fixed top-0 left-0 w-full z-50 px-6 py-5 flex items-center justify-between bg-[#030303]/95 border-b border-white/5"
       >
-        <motion.div variants={fastReveal} className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollTo("about")}>
+        <div className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollTo("about")}>
           <motion.img whileHover={{ rotate: 180, scale: 1.2 }} transition={{ duration: 0.6 }} src="/logo-navbar.png" alt="Logo" className="w-6 h-6 object-contain filter invert" onError={(e) => e.currentTarget.style.display = 'none'} />
           <span className="font-bold tracking-widest text-xs uppercase hidden sm:block">Ganabitz</span>
-        </motion.div>
+        </div>
         
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-6">
             {t[lang].nav.map((item) => (
-              <motion.button variants={fastReveal} key={item.id} onClick={() => scrollTo(item.id)} className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors relative group">
+              <button key={item.id} onClick={() => scrollTo(item.id)} className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors relative group">
                 {item.label}
-                <motion.span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
-              </motion.button>
+                <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
+              </button>
             ))}
           </div>
           <motion.button 
-            variants={fastReveal}
             whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }}
             onClick={() => setLang(lang === "en" ? "id" : "en")} 
-            className="px-4 py-2 border border-white/20 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+            className="px-4 py-2 border border-white/20 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 shadow-lg"
           >
             {lang === "en" ? "ID" : "EN"}
           </motion.button>
@@ -217,48 +240,47 @@ export default function AestheticPortfolio() {
           <AmbientParticles />
 
           <div className="w-full max-w-7xl mx-auto text-center relative z-20 mt-10">
-            <motion.p initial={{ opacity: 0, y: 20, letterSpacing: "0.1em" }} animate={{ opacity: 1, y: 0, letterSpacing: "0.5em" }} transition={{ duration: 1.5, ease: "easeOut" }} className="text-gray-400 font-bold uppercase text-xs md:text-sm mb-6">
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }} className="text-gray-400 font-bold uppercase text-xs md:text-sm mb-6 tracking-[0.5em]">
               {data.profile.title}
             </motion.p>
             
-            <motion.h1 
-              variants={staggerContainer} initial="hidden" animate="visible"
-              className="text-[15vw] sm:text-[13vw] md:text-[11vw] leading-[0.85] font-black tracking-tighter uppercase mb-8"
-            >
+            <h1 className="text-[15vw] sm:text-[13vw] md:text-[11vw] leading-[0.85] font-black tracking-tighter uppercase mb-8 flex flex-wrap justify-center drop-shadow-xl">
               {data.profile.name.split(" ").map((word: string, i: number) => (
                 <motion.span 
-                  key={i} variants={cinematicReveal} 
-                  whileHover={{ color: "#ffffff", scale: 1.05, y: -5, textShadow: "0px 10px 30px rgba(255,255,255,0.8)" }} 
-                  transition={{ duration: 0.8, ease: "easeOut" }} 
+                  key={i} 
+                  initial={{ opacity: 0, y: 100, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ type: "spring", bounce: 0.3, duration: 1.2, delay: i * 0.15 }}
+                  whileHover={{ color: "#ffffff", scale: 1.05, y: -10, textShadow: "0px 0px 25px rgba(255,255,255,0.8)" }} 
                   className="inline-block mr-[2vw] last:mr-0 text-white cursor-default"
                 >
                   {word}
                 </motion.span>
               ))}
-            </motion.h1>
+            </h1>
             
-            <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="max-w-2xl mx-auto text-sm md:text-lg text-gray-400 font-light leading-relaxed mb-10 overflow-hidden">
+            <div className="max-w-2xl mx-auto text-sm md:text-lg text-gray-400 font-light leading-relaxed mb-10 overflow-hidden flex flex-wrap justify-center">
                {data.profile.description.split(" ").map((word, i) => (
-                 <motion.span key={i} variants={{hidden:{opacity:0, y:20}, visible:{opacity:1,y:0}}} className="inline-block mr-1">{word}</motion.span>
+                 <motion.span key={i} initial={{opacity:0, y:20}} animate={{opacity:1,y:0}} transition={{delay: 0.5 + (i * 0.05)}} className="inline-block mr-1">{word}</motion.span>
                ))}
-            </motion.div>
+            </div>
           </div>
           
           <motion.div 
-            animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, -20, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute left-10 md:left-20 top-[60%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3"
           >
-            <motion.div whileHover={{ scale: 1.3, rotate: 180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center backdrop-blur-sm bg-white/5 shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer">
+            <motion.div whileHover={{ scale: 1.3, rotate: 180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center bg-white/5 shadow-xl cursor-pointer">
               <span className="text-white text-2xl">✦</span>
             </motion.div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold">Creative</span>
           </motion.div>
           
           <motion.div 
-            animate={{ y: [0, 20, 0], rotate: [0, -10, 10, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            animate={{ y: [0, 20, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             className="absolute right-10 md:right-20 top-[40%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3"
           >
-            <motion.div whileHover={{ scale: 1.3, rotate: -180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center backdrop-blur-sm bg-white/5 shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer">
+            <motion.div whileHover={{ scale: 1.3, rotate: -180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center bg-white/5 shadow-xl cursor-pointer">
               <span className="text-white text-2xl">⚡</span>
             </motion.div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold">Engineer</span>
@@ -272,46 +294,22 @@ export default function AestheticPortfolio() {
             <motion.img 
               whileHover={{ scale: 1.05, y: -20, filter: "brightness(1.2)" }} transition={{ duration: 0.8, type: "spring" }}
               src={data.profile.photo} alt="Profile" 
-              className="w-full h-auto max-h-[75vh] object-contain object-bottom relative z-10 grayscale-[30%] hover:grayscale-0 drop-shadow-[0_[-20px]_50px_rgba(255,255,255,0.05)]" 
+              className="w-full h-auto max-h-[75vh] object-contain object-bottom relative z-10 grayscale-[30%] hover:grayscale-0 shadow-2xl" 
               onError={(e) => e.currentTarget.style.display = 'none'}
             />
           </motion.div>
 
-          {data.projects.length > 0 && (
-            <motion.div 
-              initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
-              whileHover={{ scale: 1.05, rotate: -2, y: -10 }}
-              className="absolute bottom-10 right-6 md:right-10 z-30 w-64 md:w-80 h-40 md:h-48 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer group hidden md:block" 
-              onClick={() => setSelectedProject(data.projects[currentHighlight])}
-            >
-              <AnimatePresence mode="wait">
-                 <motion.img 
-                    key={currentHighlight} 
-                    initial={{ opacity: 0, scale: 1.2 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}
-                    src={data.projects[currentHighlight]?.thumbnail} className="absolute inset-0 w-full h-full object-cover group-hover:scale-125 transition-transform duration-1000" 
-                    alt="Highlight"
-                 />
-              </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-60 transition-opacity" />
-              <div className="absolute bottom-5 left-5 right-5 z-10">
-                <div className="flex items-center gap-2 mb-2">
-                   <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_10px_red]" />
-                   <motion.p key={data.projects[currentHighlight]?.category} initial={{opacity:0, y:10}} animate={{opacity:1,y:0}} className="text-[9px] text-white/90 uppercase tracking-widest font-black bg-white/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
-                     {data.projects[currentHighlight]?.category}
-                   </motion.p>
-                </div>
-                <motion.p key={data.projects[currentHighlight]?.title} initial={{opacity:0, x:-20}} animate={{opacity:1,x:0}} className="text-white font-black text-sm md:text-base leading-tight drop-shadow-md">{data.projects[currentHighlight]?.title}</motion.p>
-              </div>
-            </motion.div>
-          )}
+          {/* Isolate the Highlight Widget to prevent full page re-renders */}
+          <ProjectHighlightWidget projects={data.projects} setSelectedProject={setSelectedProject} />
+
         </section>
 
         {/* 2. EXPERIENCE SECTION */}
-        <section id="experience" className="min-h-screen py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
+        <section id="experience" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }} className="min-h-screen py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
           <AmbientParticles />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="max-w-7xl mx-auto w-full relative z-10">
+          <div className="max-w-7xl mx-auto w-full relative z-10">
             
-            <motion.div variants={cinematicReveal} className="mb-32 text-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-32 text-center">
               <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
@@ -324,12 +322,17 @@ export default function AestheticPortfolio() {
                   const isLeft = i % 2 === 0;
                   return (
                     <motion.div 
-                      key={i} variants={cinematicReveal}
+                      key={i} 
+                      initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }}
+                      variants={{
+                        hidden: { opacity: 0, y: 80 },
+                        visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1.2, delay: (i % 2) * 0.2 } }
+                      } as any}
                       className={`relative flex w-full group ${isLeft ? "md:col-start-1 md:justify-end md:pr-20" : "md:col-start-2 md:justify-start md:pl-20 mt-10 md:mt-32"}`}
                     >
-                      <motion.div whileHover={{ scale: 2 }} className={`hidden md:flex absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-[#070707] border-[3px] border-white/50 group-hover:border-white transition-all duration-500 z-20 group-hover:shadow-[0_0_30px_rgba(255,255,255,1)] ${isLeft ? "right-[-10px]" : "left-[-10px]"}`} />
+                      <motion.div whileHover={{ scale: 2 }} className={`hidden md:flex absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-[#070707] border-[3px] border-white/50 group-hover:border-white transition-all duration-500 z-20 shadow-lg ${isLeft ? "right-[-10px]" : "left-[-10px]"}`} />
 
-                      <motion.div whileHover={{ scale: 1.05, y: -15, rotate: isLeft ? -2 : 2 }} transition={{ type: "spring", bounce: 0.4 }} className={`max-w-xl w-full bg-white/[0.02] hover:bg-white/[0.08] p-10 rounded-[2.5rem] border border-white/10 hover:border-white/50 transition-colors duration-500 shadow-2xl backdrop-blur-sm ${isLeft ? "md:text-right" : "md:text-left"}`}>
+                      <motion.div whileHover={{ scale: 1.05, y: -15, rotate: isLeft ? -2 : 2 }} transition={{ type: "spring", bounce: 0.4 }} className={`max-w-xl w-full bg-[#111] hover:bg-[#1a1a1a] p-10 rounded-[2.5rem] border border-white/10 hover:border-white/50 transition-colors duration-500 shadow-xl ${isLeft ? "md:text-right" : "md:text-left"}`}>
                         <span className="text-sm font-mono font-bold text-gray-500 mb-4 block tracking-[0.2em]">{exp.year}</span>
                         <h3 className="text-3xl font-black text-white mb-3 tracking-tight">{exp.role}</h3>
                         <p className="text-lg font-bold text-gray-400 mb-6 uppercase tracking-wider">{exp.company}</p>
@@ -340,15 +343,15 @@ export default function AestheticPortfolio() {
                 })}
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* 3. EDUCATION SECTION */}
-        <section id="education" className="min-h-screen py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
+        <section id="education" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }} className="min-h-screen py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
           <AmbientGeometry />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="max-w-7xl mx-auto w-full relative z-10">
+          <div className="max-w-7xl mx-auto w-full relative z-10">
             
-            <motion.div variants={cinematicReveal} className="mb-32 text-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-32 text-center">
               <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
@@ -356,16 +359,20 @@ export default function AestheticPortfolio() {
             <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
               {data.education.map((edu: any, i: number) => (
                 <motion.div 
-                  key={i} variants={cinematicReveal}
+                  key={i} 
+                  initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }}
+                  variants={{
+                    hidden: { opacity: 0, y: 80 },
+                    visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1.2, delay: i * 0.2 } }
+                  } as any}
                   whileHover={{ scale: 1.05, rotateX: 10, rotateY: -10, y: -20 }} transition={{ type: "spring", bounce: 0.4 }}
-                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-12 md:p-16 rounded-[3rem] border border-white/10 hover:border-white/50 transition-colors duration-700 flex flex-col h-full relative overflow-hidden shadow-2xl"
-                  style={{ transformStyle: "preserve-3d" }}
+                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-12 md:p-16 rounded-[3rem] border border-white/10 hover:border-white/50 transition-colors duration-700 flex flex-col h-full relative overflow-hidden shadow-xl"
                 >
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.05] transition-opacity duration-700" />
                   <motion.div className="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-40 group-hover:scale-150 group-hover:-rotate-12 transition-all duration-1000 pointer-events-none z-0">
-                    {edu.logo && <img src={edu.logo} className="w-48 h-48 object-contain grayscale" onError={(e) => e.currentTarget.style.display = 'none'} />}
+                    {edu.logo && <img src={edu.logo} loading="lazy" decoding="async" className="w-48 h-48 object-contain grayscale" onError={(e) => e.currentTarget.style.display = 'none'} />}
                   </motion.div>
-                  <div className="relative z-10" style={{ transform: "translateZ(50px)" }}>
+                  <div className="relative z-10">
                     <span className="text-sm font-mono font-bold text-gray-400 mb-6 block tracking-widest">{edu.year}</span>
                     <h3 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tighter">{edu.degree}</h3>
                     <p className="text-xl text-gray-500 font-bold uppercase tracking-wider">{edu.institution}</p>
@@ -373,87 +380,92 @@ export default function AestheticPortfolio() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* 4. SKILLS SECTION */}
-        <section id="skills" className="min-h-screen py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
+        <section id="skills" style={{ contentVisibility: "auto", containIntrinsicSize: "600px" }} className="min-h-screen py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
           <AmbientParticles />
-          <motion.div variants={cinematicReveal} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="mb-24 text-center relative z-10">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-24 text-center relative z-10">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
             <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
           </motion.div>
           
-          <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.5, type: "spring" }} className="w-full flex animate-marquee gap-10 items-center mb-10 hover:!animation-play-state-paused py-4">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-full flex animate-marquee gap-8 items-center mb-10 hover:!animation-play-state-paused py-4">
             {[...data.skills, ...data.skills].map((skill: any, i: number) => (
-              <div key={i} className="w-72 h-80 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:scale-110 hover:-translate-y-5 hover:rotate-2">
+              <div key={i} className="w-64 h-72 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-lg hover:scale-110 hover:-translate-y-5 hover:rotate-2">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-24 h-24 mb-8 z-10">
-                   <img src={skill.logo} alt={skill.name} className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <div className="w-20 h-20 mb-6 z-10">
+                   <img src={skill.logo} alt={skill.name} loading="lazy" decoding="async" className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
-                <h3 className="text-2xl font-black mb-3 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
+                <h3 className="text-xl font-black mb-2 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
               </div>
             ))}
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.5, type: "spring" }} className="w-full flex animate-marquee gap-10 items-center flex-row-reverse hover:!animation-play-state-paused py-4" style={{ animationDirection: 'reverse' }}>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-full flex animate-marquee gap-8 items-center flex-row-reverse hover:!animation-play-state-paused py-4" style={{ animationDirection: 'reverse' }}>
             {[...data.skills].reverse().concat([...data.skills].reverse()).map((skill: any, i: number) => (
-              <div key={i} className="w-72 h-80 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:scale-110 hover:-translate-y-5 hover:-rotate-2">
+              <div key={i} className="w-64 h-72 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-lg hover:scale-110 hover:-translate-y-5 hover:-rotate-2">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-24 h-24 mb-8 z-10">
-                   <img src={skill.logo} alt={skill.name} className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <div className="w-20 h-20 mb-6 z-10">
+                   <img src={skill.logo} alt={skill.name} loading="lazy" decoding="async" className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
-                <h3 className="text-2xl font-black mb-3 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
+                <h3 className="text-xl font-black mb-2 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
               </div>
             ))}
           </motion.div>
         </section>
 
         {/* 5. PORTFOLIO SECTION */}
-        <section id="portofolio" className="min-h-screen py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
+        <section id="portofolio" style={{ contentVisibility: "auto", containIntrinsicSize: "1200px" }} className="min-h-screen py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
           <AmbientGeometry />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="max-w-[1600px] mx-auto w-full relative z-10">
+          <div className="max-w-[1600px] mx-auto w-full relative z-10">
             
             <div className="flex flex-col xl:flex-row justify-between items-end mb-24 gap-10">
-              <motion.div variants={cinematicReveal}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal}>
                 <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
                 <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white shadow-[0_0_15px_white]" />
               </motion.div>
               
-              <motion.div variants={cinematicReveal} className="flex flex-wrap gap-4">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-wrap gap-4">
                 {data.categories.map((cat: string) => (
-                  <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-8 py-3 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.6)]" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
+                  <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-8 py-3 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-lg" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
                     {cat}
                   </motion.button>
                 ))}
               </motion.div>
             </div>
 
-            <motion.div layout className="columns-1 md:columns-2 xl:columns-3 gap-10 space-y-10">
+            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
               <AnimatePresence>
-                {filteredProjects.map((project: any) => (
+                {filteredProjects.map((project: any, i: number) => (
                   <motion.div 
-                    key={project.id} layout initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9 }} 
-                    whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-10%" }}
-                    transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+                    key={project.id} 
+                    layout="position" 
+                    initial={{ opacity: 0, y: 80 }} 
+                    whileInView={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0, scale: 0.9 }} 
+                    viewport={{ once: true, amount: 0.05 }}
+                    transition={{ type: "spring", bounce: 0.3, duration: 1, delay: (i % 3) * 0.15 }}
                     whileHover={{ scale: 1.05, y: -15, rotate: 1 }}
                     onClick={() => setSelectedProject(project)} 
-                    className="relative group overflow-hidden cursor-pointer bg-black border border-white/10 break-inside-avoid rounded-[2.5rem] hover:border-white/50 transition-colors shadow-2xl"
+                    className="relative group overflow-hidden cursor-pointer bg-black border border-white/10 break-inside-avoid rounded-[2.5rem] hover:border-white/50 transition-colors shadow-lg"
                   >
-                    <div className="w-full relative overflow-hidden aspect-[4/5] sm:aspect-auto">
-                      <motion.img 
-                        whileHover={{ scale: 1.2, rotate: -2 }} transition={{ duration: 1, type: "spring" }}
-                        src={project.thumbnail} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 grayscale-[40%] group-hover:grayscale-0" onError={(e) => e.currentTarget.style.display = 'none'} 
+                    <div className="w-full relative overflow-hidden aspect-[4/5] sm:aspect-auto bg-[#111]">
+                      <img 
+                        src={project.thumbnail} loading="lazy" decoding="async" 
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2 opacity-90 group-hover:opacity-100" 
+                        onError={(e) => e.currentTarget.style.display = 'none'} 
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none" />
                     </div>
                     
-                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 pointer-events-none flex flex-col justify-end bg-gradient-to-t from-black via-black/80 to-transparent">
+                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-out pointer-events-none flex flex-col justify-end bg-gradient-to-t from-black via-black/80 to-transparent">
                       <span className="text-xs font-black text-white/50 uppercase tracking-[0.2em] mb-4 block drop-shadow-md group-hover:text-white transition-colors">{project.category}</span>
                       <h3 className="text-xl md:text-2xl font-black text-white leading-tight mb-5 drop-shadow-xl">{project.title}</h3>
-                      <div className="flex items-center gap-3 text-sm font-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 uppercase tracking-widest bg-white/20 w-fit px-6 py-2 rounded-full backdrop-blur-md border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                      <div className="flex items-center gap-3 text-sm font-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 uppercase tracking-widest bg-white/10 w-fit px-6 py-2 rounded-full border border-white/20">
                         {t[lang].viewProject} <ArrowUpRight size={18} />
                       </div>
                     </div>
@@ -461,15 +473,15 @@ export default function AestheticPortfolio() {
                 ))}
               </AnimatePresence>
             </motion.div>
-          </motion.div>
+          </div>
         </section>
 
         {/* 6. CERTIFICATIONS LIST SECTION */}
-        <section id="more" className="min-h-screen py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
+        <section id="more" style={{ contentVisibility: "auto", containIntrinsicSize: "1000px" }} className="min-h-screen py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
           <AmbientParticles />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="w-full max-w-6xl relative z-10">
+          <div className="w-full max-w-6xl relative z-10">
             
-            <motion.div variants={cinematicReveal} className="mb-32 text-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-32 text-center">
               <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
@@ -477,7 +489,12 @@ export default function AestheticPortfolio() {
             <div className="flex flex-col border-t border-white/10">
                {data.more.map((item: any, i: number) => (
                   <motion.div 
-                    key={i} variants={cinematicReveal} 
+                    key={i} 
+                    initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }}
+                    variants={{
+                      hidden: { opacity: 0, y: 50 },
+                      visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1, delay: i * 0.1 } }
+                    } as any}
                     whileHover={{ scale: 1.02, x: 20, backgroundColor: "rgba(255,255,255,0.05)" }} transition={{ type: "spring", bounce: 0.6 }}
                     className="group border-b border-white/10 py-10 flex flex-col md:flex-row md:items-start justify-between gap-6 transition-colors duration-500 cursor-default rounded-lg relative overflow-hidden px-6"
                   >
@@ -491,22 +508,22 @@ export default function AestheticPortfolio() {
                   </motion.div>
                ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* 7. MASSIVE FOOTER / CONTACT SECTION */}
         <section id="contacts" className="min-h-screen pt-32 pb-16 px-6 border-t border-white/10 overflow-hidden relative flex flex-col justify-center items-center bg-[#050505]">
           <AmbientGeometry />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="w-full flex flex-col items-center relative z-10">
-            <motion.h2 variants={cinematicReveal} className="text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-20 text-center w-full drop-shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+          <div className="w-full flex flex-col items-center relative z-10">
+            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-20 text-center w-full">
               {t[lang].contactTitle}
             </motion.h2>
             
-            <motion.div variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-base md:text-lg font-black mb-32 uppercase tracking-[0.2em] border border-white/20 px-10 py-5 rounded-full bg-white/5 backdrop-blur-md shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-base md:text-lg font-black mb-32 uppercase tracking-[0.2em] border border-white/20 px-10 py-5 rounded-full bg-white/5 backdrop-blur-md shadow-2xl">
               <MapPin size={20} className="text-white animate-bounce" /> {t[lang].based} Bogor, Indonesia
             </motion.div>
 
-            <motion.div variants={staggerContainer} className="flex flex-wrap justify-center gap-8 md:gap-12">
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
               {[
                 { isLocal: true, imgSrc: "/icon-cv.png", url: "https://drive.google.com/drive/folders/1RKlbgk_HDLakO0m1zsU_JJ88LgZ3Xdmq?usp=sharing", label: "CV" },
                 { icon: Mail, url: "mailto:ganadzikri@gmail.com", label: "Email" },
@@ -518,14 +535,18 @@ export default function AestheticPortfolio() {
                 { icon: FaBehance, url: "https://www.behance.net/ganadzikri", label: "Behance" }
               ].map((item: any, i: number) => (
                 <motion.a 
-                  variants={cinematicReveal}
+                  initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }}
+                  variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.4, duration: 1, delay: i * 0.1 } }
+                  } as any}
                   key={i} href={item.url} target="_blank" rel="noopener noreferrer" 
                   whileHover={{ y: -25, scale: 1.2, rotate: i % 2 === 0 ? 5 : -5 }} 
                   className="group flex flex-col items-center gap-5"
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[2px] border-white/20 flex items-center justify-center text-gray-400 group-hover:text-black group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-2xl bg-[#0a0a0a] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[2px] border-white/20 flex items-center justify-center text-gray-400 group-hover:text-black group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-xl bg-[#0a0a0a]">
                     {item.isLocal ? (
-                      <img src={item.imgSrc} alt="CV" className="w-8 h-8 md:w-10 md:h-10 object-contain filter invert-0 group-hover:invert transition-all duration-300" />
+                      <img src={item.imgSrc} alt="CV" loading="lazy" decoding="async" className="w-8 h-8 md:w-10 md:h-10 object-contain filter invert-0 group-hover:invert transition-all duration-300" />
                     ) : (
                       item.icon && <item.icon className="w-8 h-8 md:w-10 md:h-10" />
                     )}
@@ -533,12 +554,12 @@ export default function AestheticPortfolio() {
                   <span className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors">{item.label}</span>
                 </motion.a>
               ))}
-            </motion.div>
+            </div>
             
-            <motion.p variants={cinematicReveal} className="text-gray-600 text-xs md:text-sm mt-48 uppercase tracking-[0.3em] text-center font-bold">
+            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={cinematicReveal} className="text-gray-600 text-xs md:text-sm mt-48 uppercase tracking-[0.3em] text-center font-bold">
               © {new Date().getFullYear()} Ganabitz. All Rights Reserved.
             </motion.p>
-          </motion.div>
+          </div>
         </section>
       </main>
 
@@ -547,7 +568,7 @@ export default function AestheticPortfolio() {
         {selectedProject && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-3xl overflow-y-auto overflow-x-hidden">
             <div className="max-w-7xl mx-auto w-full relative min-h-screen flex flex-col pt-10">
-              <div className="sticky top-6 w-full px-6 flex justify-end z-[210] mix-blend-difference">
+              <div className="sticky top-6 w-full px-6 flex justify-end z-[210]">
                  <motion.button whileHover={{ scale: 1.2, rotate: 180 }} onClick={() => setSelectedProject(null)} className="w-16 h-16 rounded-full flex items-center justify-center text-white border-2 border-white/20 hover:bg-white hover:text-black transition-all duration-500 shadow-2xl">
                     <X size={28} />
                  </motion.button>
@@ -559,7 +580,7 @@ export default function AestheticPortfolio() {
                   <h2 className="text-5xl md:text-7xl lg:text-[7rem] font-black text-white mb-16 leading-none uppercase tracking-tighter drop-shadow-2xl">{selectedProject.title}</h2>
                 </div>
                 
-                <div className="mb-24 w-full overflow-hidden bg-[#050505] rounded-[3rem] border border-white/10 shadow-[0_0_50px_rgba(255,255,255,0.05)]">
+                <div className="mb-24 w-full overflow-hidden bg-[#050505] rounded-[3rem] border border-white/10 shadow-2xl">
                    {renderProjectContent(selectedProject)}
                 </div>
 
