@@ -196,8 +196,8 @@ export default function AestheticPortfolio() {
   };
 
   const cinematicReveal: any = {
-    hidden: { opacity: 0, y: 80 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1.2 } }
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0, transition: { type: "tween", ease: "easeOut", duration: 0.8 } }
   };
 
   return (
@@ -305,7 +305,7 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 2. EXPERIENCE SECTION */}
-        <section id="experience" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }} className="min-h-screen py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
+        <section id="experience" className="min-h-screen py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
           <AmbientParticles />
           <div className="max-w-7xl mx-auto w-full relative z-10">
             
@@ -347,7 +347,7 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 3. EDUCATION SECTION */}
-        <section id="education" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }} className="min-h-screen py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
+        <section id="education" className="min-h-screen py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
           <AmbientGeometry />
           <div className="max-w-7xl mx-auto w-full relative z-10">
             
@@ -384,7 +384,7 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 4. SKILLS SECTION */}
-        <section id="skills" style={{ contentVisibility: "auto", containIntrinsicSize: "600px" }} className="min-h-screen py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
+        <section id="skills" className="min-h-screen py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
           <AmbientParticles />
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-24 text-center relative z-10">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
@@ -419,8 +419,8 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 5. PORTFOLIO SECTION */}
-        <section id="portofolio" style={{ contentVisibility: "auto", containIntrinsicSize: "1200px" }} className="min-h-screen py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
-          <AmbientGeometry />
+        <section id="portofolio" className="min-h-screen py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
+          <AmbientParticles />
           <div className="max-w-[1600px] mx-auto w-full relative z-10">
             
             <div className="flex flex-col xl:flex-row justify-between items-end mb-24 gap-10">
@@ -438,18 +438,18 @@ export default function AestheticPortfolio() {
               </motion.div>
             </div>
 
-            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
               <AnimatePresence>
                 {filteredProjects.map((project: any, i: number) => (
                   <motion.div 
                     key={project.id} 
                     layout="position" 
-                    initial={{ opacity: 0, y: 80 }} 
+                    initial={{ opacity: 0, y: 60 }} 
                     whileInView={{ opacity: 1, y: 0 }} 
                     exit={{ opacity: 0, scale: 0.9 }} 
-                    viewport={{ once: true, amount: 0.05 }}
-                    transition={{ type: "spring", bounce: 0.3, duration: 1, delay: (i % 3) * 0.15 }}
-                    whileHover={{ scale: 1.05, y: -15, rotate: 1 }}
+                    viewport={{ once: true, margin: "200px" }}
+                    transition={{ type: "tween", ease: "easeOut", duration: 0.7, delay: (i % 3) * 0.1 }}
+                    whileHover={{ scale: 1.05, y: -10, rotate: 1 }}
                     onClick={() => setSelectedProject(project)} 
                     className="relative group overflow-hidden cursor-pointer bg-black border border-white/10 break-inside-avoid rounded-[2.5rem] hover:border-white/50 transition-colors shadow-lg"
                   >
@@ -472,12 +472,12 @@ export default function AestheticPortfolio() {
                   </motion.div>
                 ))}
               </AnimatePresence>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* 6. CERTIFICATIONS LIST SECTION */}
-        <section id="more" style={{ contentVisibility: "auto", containIntrinsicSize: "1000px" }} className="min-h-screen py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
+        <section id="more" className="min-h-screen py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
           <AmbientParticles />
           <div className="w-full max-w-6xl relative z-10">
             
