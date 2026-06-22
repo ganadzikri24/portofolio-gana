@@ -3,7 +3,7 @@
     "name": "Muhamad Ganabitz Dzikri",
     "title": "Creative Technologist & Network Engineer",
     "description": "Computer Engineering student at IPB University with specific expertise in two areas: IT (IoT, Networking, Web Development) and Multimedia (Design, Motion Graphics, Video, Broadcasting). I am a fast-paced worker, highly adaptable to new technologies, and dedicated to delivering functional, high quality results.",
-    "photo": "/foto-hero.webp"
+    "photo": "/foto-hero.png"
   },
   "education": [
     {
@@ -77,24 +77,84 @@
       "company": "Balai Besar Pelatihan Kesehatan (BBPK) Ciloto",
       "year": "JAN 2022 - APR 2022",
       "description": "IT Service Management • Network Configuration • Networking & Infrasturcture • Troubleshooting"
-    }    
+    }
   ],
   "skills": [
-    { "name": "Adobe Photoshop", "category": "Graphic Design", "logo": "/skills/ps.png" },
-    { "name": "Adobe Illustrator", "category": "Illustrator & Design", "logo": "/skills/ai.png" },
-    { "name": "Adobe Premiere Pro", "category": "Video Editing", "logo": "/skills/pr.png" },
-    { "name": "Davinci Resolve", "category": "Video Editing", "logo": "/skills/resolve.png" },
-    { "name": "After Effects", "category": "VFX, Motion Graphics, Animation", "logo": "/skills/ae.png" },
-    { "name": "Capcut", "category": "Video Editing", "logo": "/skills/capcut.png" },
-    { "name": "VMIX", "category": "Broadcasting", "logo": "/skills/vmix.png" },
-    { "name": "OBS", "category": "Broadcasting", "logo": "/skills/obs.png" },
-    { "name": "Resolume", "category": "Video Jockey", "logo": "/skills/resolume.png" },
-    { "name": "IoT & Hardware Design", "category": "KiCad, Fusion, Arduino IDE, ESP32", "logo": "/skills/iot.png" },
-    { "name": "Web Development", "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java", "logo": "/skills/web.png" },
-    { "name": "Networking & Infrastructure", "category": "MikroTik, Cisco, Routing, LAN/WAN", "logo": "/skills/net.png" },
-    { "name": "Electromechanical", "category": "Soldering, PCB Assembly, Wiring, Welding", "logo": "/skills/electro.png" },
-    { "name": "Linux", "category": "Ubuntu/Debian, CLI, Server Management", "logo": "/skills/linux.png" },
-    { "name": "Language", "category": "Indonesia (Native)  •  English (Conversational)", "logo": "/skills/bahasa.png" }
+    {
+      "name": "Adobe Photoshop",
+      "category": "Graphic Design",
+      "logo": "/skills/ps.png"
+    },
+    {
+      "name": "Adobe Illustrator",
+      "category": "Illustrator & Design",
+      "logo": "/skills/ai.png"
+    },
+    {
+      "name": "Adobe Premiere Pro",
+      "category": "Video Editing",
+      "logo": "/skills/pr.png"
+    },
+    {
+      "name": "Davinci Resolve",
+      "category": "Video Editing",
+      "logo": "/skills/resolve.png"
+    },
+    {
+      "name": "After Effects",
+      "category": "VFX, Motion Graphics, Animation",
+      "logo": "/skills/ae.png"
+    },
+    {
+      "name": "Capcut",
+      "category": "Video Editing",
+      "logo": "/skills/capcut.png"
+    },
+    {
+      "name": "VMIX",
+      "category": "Broadcasting",
+      "logo": "/skills/vmix.png"
+    },
+    {
+      "name": "OBS",
+      "category": "Broadcasting",
+      "logo": "/skills/obs.png"
+    },
+    {
+      "name": "Resolume",
+      "category": "Video Jockey",
+      "logo": "/skills/resolume.png"
+    },
+    {
+      "name": "IoT & Hardware Design",
+      "category": "KiCad, Fusion, Arduino IDE, ESP32",
+      "logo": "/skills/iot.png"
+    },
+    {
+      "name": "Web Development",
+      "category": "HTML, CSS, JS, Bootstrap, PHP, Laravel, Java",
+      "logo": "/skills/web.png"
+    },
+    {
+      "name": "Networking & Infrastructure",
+      "category": "MikroTik, Cisco, Routing, LAN/WAN",
+      "logo": "/skills/net.png"
+    },
+    {
+      "name": "Electromechanical",
+      "category": "Soldering, PCB Assembly, Wiring, Welding",
+      "logo": "/skills/electro.png"
+    },
+    {
+      "name": "Linux",
+      "category": "Ubuntu/Debian, CLI, Server Management",
+      "logo": "/skills/linux.png"
+    },
+    {
+      "name": "Language",
+      "category": "Indonesia (Native)  •  English (Conversational)",
+      "logo": "/skills/bahasa.png"
+    }
   ],
   "categories": [
     "All",
@@ -125,7 +185,10 @@
         "/portfolio/sumo/design-projek1-part8.webp"
       ],
       "description": "Sumo Ramen is a culinary visual identity project designed to break away from traditional ramen shop conventions by replacing the typical dominant red with a deep blue palette. This color choice not only exudes a modern and fresh vibe but also cleverly creates a strong complementary contrast, making the warm tones of the ramen dishes stand out and look even more appetizing. This design approach is reinforced by a playful, thick line-art sumo wrestler mascot representing generous portions and dining satisfaction, paired with solid, rounded sans-serif typography. The final result is a friendly, dynamic, and highly standout branding system when applied across various media, from ceramic bowls to packaging.",
-      "tools": ["Photoshop", "Illustrator"]
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
     },
     {
       "id": 2,
@@ -145,7 +208,10 @@
         "/portfolio/trawana/design-projek2-part9.webp"
       ],
       "description": "Trawana is an outdoor gear brand identity project that embraces the harmony between adventure and nature through minimalist yet functional visuals. The logo utilizes stacked geometric pine tree shapes to represent hiking trails and resilience, combined with a dominant Forest Green color palette for an organic feel and bright orange accents as a symbol of vitality and safety in the wild. Featuring clean and modern Futura typography, this identity is designed to convey a professional and reliable impression, applied consistently from branding on tents and jackets to technical equipment such as folding knives and other hiking gear.",
-      "tools": ["Photoshop", "Illustrator"]
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
     },
     {
       "id": 3,
@@ -172,7 +238,10 @@
         "/portfolio/matchaby/design-projek3-part16.webp"
       ],
       "description": "Matchaby's brand identity design embraces an Urban & Daily Lifestyle concept, positioning matcha beverages as a modern lifestyle choice and an everyday energy source (YOUR Daily Green Boost). Adapting a Modern Retro visual style and a casual yet clean streetwear aesthetic, the design is dominated by a fresh monochromatic green palette (Hunter, Moss, and Sage Green) alongside warm Off-White accents. The overall look is balanced by a combination of friendly, bubbly typography in the logo and sharp, bold headlines. Meanwhile, the presence of a cool, sunglasses-wearing mascot and die-cut sticker-style graphic elements provides a dynamic, trendy, and highly Instagrammable visual character across various packaging media.",
-      "tools": ["Photoshop", "Illustrator"]
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
     },
     {
       "id": 4,
@@ -191,7 +260,10 @@
         "/portfolio/roseva/design-projek4-part8.webp"
       ],
       "description": "The Roseva Skincare brand identity embraces the concept of elegant natural beauty, focusing on a rose silhouette element ('bloom with elegance'). The visuals combine a minimalist logomark with classic serif typography, supported by a captivating feminine color palette ranging from a premium crimson red to a soft peach. The application of the design across packaging, products, and retail spaces appears extremely clean, modern, and luxurious, reinforcing the image of a skincare brand that is exclusive and gentle, yet full of character.",
-      "tools": ["Photoshop", "Illustrator"]
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
     },
     {
       "id": 6,
@@ -205,7 +277,10 @@
         "/portfolio/teksos/design-projek6-part3.webp"
       ],
       "description": "This project is an Instagram feed design for the @tekom_ipb (Computer Engineering Technology IPB) account, where I served as the visual designer responsible for creating a cohesive social media content system. Carrying the theme Infinite Connection with Technology, I utilized a dominant electric blue color palette combined with bright yellow accents to deliver a modern, futuristic, and academic impression. The design integrates various types of content—ranging from educational infographics (such as essential components for computer engineering students) and campus administrative information, to holiday greetings—all unified by a clean layout and the use of minimalist geometric graphics to ensure the feed remains neat, informative, and professional.",
-      "tools": ["Photoshop", "Illustrator"]
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
     },
     {
       "id": 7,
@@ -220,7 +295,9 @@
         "/portfolio/digital-imaging/design-projek7-part4.webp"
       ],
       "description": "In this project, I created a series of photo manipulation artworks focusing on football themes, highlighting epic moments from renowned clubs and players. This project demanded technical expertise in compositing, lighting manipulation, and color grading to produce cinematic and dramatic matchday posters and tribute visuals. By blending surreal elements with sports realism, these artworks are designed to evoke emotion and heroism, while demonstrating my ability to craft compelling visual storytelling within the sports design industry.",
-      "tools": ["Photoshop"]
+      "tools": [
+        "Photoshop"
+      ]
     },
     {
       "id": 8,
@@ -234,7 +311,10 @@
         "/portfolio/logofolio/design-projek8-part3.webp"
       ],
       "description": "This project is a compilation of visual identity design works spanning various categories, from logotypes, monograms, combination marks, and mascot logos to logomarks. Each logo is designed to represent the unique characteristics of various sectors, such as culinary (Sumo Ramen, Matchaby), technology and services (Karcisin, Zevo), and construction and lifestyle (Jiwa Karya, AkarNusa). Through an explorative and varied design approach—including the use of expressive mascots and strong typography—this collection demonstrates creative flexibility in translating a brand's vision into a visual identity that is functional, iconic, and has broad market appeal.",
-      "tools": ["Photoshop", "Illustrator"]
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
     },
     {
       "id": 10,
@@ -244,7 +324,11 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/v4mg5vFAZ6Q",
       "description": "In the Portal 7 IPB Company Profile project, an international-scale digital creative competition, I was entrusted to lead the entire multimedia production line end-to-end. Acting as Director and Video Editor, I took full responsibility for directing the creative vision from conceptualization and shooting to directly executing the post-production process. This project required comprehensive technical management and dynamic visual storytelling to ensure the final video appeared professional, characterful, and capable of representing the competition's value to a global audience.",
-      "tools": ["Premiere Pro", "After Effects", "Davinci Resolve"]
+      "tools": [
+        "Premiere Pro",
+        "After Effects",
+        "Davinci Resolve"
+      ]
     },
     {
       "id": 11,
@@ -254,7 +338,10 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/4rbYOlxJOQg?si=yftYZmIQW1Sjyzmx",
       "description": "As the Video Editor for the TEK Gather 2025 After Movie project, I was responsible for summarizing the moments of togetherness from the gathering event for new students of the Computer Engineering Technology (TRK) study program, Vocational School of IPB University, batch 61. Through a dynamic editing process, color grading adjustments, and careful selection of background music, this project was focused on capturing the euphoria, warmth, and spirit of solidarity of the participants into a visual work that is engaging, emotional, and memorable.",
-      "tools": ["Premiere Pro", "After Effects"]
+      "tools": [
+        "Premiere Pro",
+        "After Effects"
+      ]
     },
     {
       "id": 12,
@@ -264,7 +351,9 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=nv0_3QseIbY",
       "description": "In the production of a documentary video for the Carita Cianjur competition organized by the Indonesian Television Journalists Association (IJTI) Korda Cianjur, I had comprehensive responsibilities as a Videographer, Drone Pilot, and Video Editor. This project highlighted the charm of hidden tourist destinations Candi Tridharma and Curug Dengdeng through ground visual exploration and cinematic aerial footage. Thanks to strong visual storytelling and a neat post-production process, this documentary successfully won 2nd Place and brought pride to SMKN 1 Pacet.",
-      "tools": ["Premiere Pro"]
+      "tools": [
+        "Premiere Pro"
+      ]
     },
     {
       "id": 13,
@@ -274,7 +363,9 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=v3Nz-WxLMkg",
       "description": "In the production of the SMKN 1 Pacet 2022 Last Ceremony After Movie, I played a comprehensive role as a Videographer, Drone Pilot, and Video Editor. This project aimed to immortalize an emotional and historic farewell moment through a combination of ground shots and cinematic aerial footage. Through meticulous video editing and precise audio-visual synchronization, I wove all those memories into a documentary that is moving, memorable, and full of nostalgia for the entire school community.",
-      "tools": ["Premiere Pro"]
+      "tools": [
+        "Premiere Pro"
+      ]
     },
     {
       "id": 14,
@@ -284,7 +375,9 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=FAn_QFzsCaM",
       "description": "In the production of the SMKN 1 Pacet 2023 Last Ceremony After Movie, I played a comprehensive role as a Videographer, Drone Pilot, and Video Editor. This project aimed to immortalize an emotional and historic farewell moment through a combination of ground shots and cinematic aerial footage. Through meticulous video editing and precise audio-visual synchronization, I wove all those memories into a documentary that is moving, memorable, and full of nostalgia for the entire school community.",
-      "tools": ["Premiere Pro"]
+      "tools": [
+        "Premiere Pro"
+      ]
     },
     {
       "id": 15,
@@ -294,8 +387,10 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=IpVsoafgn9E",
       "description": "In the production of the Ripple Studio profile video, I was fully responsible from the shooting process to the editing stage to introduce the identity of the multimedia extracurricular at SMKN 1 Pacet. This project was designed to highlight the creativity, facilities, and technical expertise of the members in the audio-visual field through dynamic storytelling and professional visual quality. By combining slick cinematography techniques and strong editing, this video successfully represents Ripple Studio as a hub for inspiring digital innovation within the school environment.",
-      "tools": ["Premiere Pro"]
-    },  
+      "tools": [
+        "Premiere Pro"
+      ]
+    },
     {
       "id": 16,
       "title": "Pacettoe Podcast",
@@ -304,8 +399,11 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=isEPEF6Pjcc",
       "description": "In the production of the Pacettoe Podcast, the official podcast program of SMKN 1 Pacet, I played a multifunctional role as technical operator, videographer, audio mixer, and video editor. This project involved managing the technical production in real-time as well as a detailed post-production process to ensure audio and visual quality remained clear and professional. By combining dynamic shooting techniques and neat editing, I succeeded in creating discussion content that is engaging, informative, and able to strengthen the digital media identity within the school.",
-      "tools": ["Premiere Pro", "OBS"]
-    },  
+      "tools": [
+        "Premiere Pro",
+        "OBS"
+      ]
+    },
     {
       "id": 17,
       "title": "Portal 7 Mascot Animation",
@@ -314,8 +412,11 @@
       "type": "video-top",
       "videoUrl": "https://www.instagram.com/p/DMKiuaaSMev/?img_index=2",
       "description": "In this project, I was responsible for executing the creation of a mascot animation through editing, motion graphics, and sound design to bring the main visual icon of the competition to life. My main focus was transforming the character assets into dynamic and expressive entities to strengthen the brand identity of this international-scale digital creative event. By combining smooth animation techniques and precise audio design, I successfully created visual elements capable of increasing the interaction and appeal of the Portal 7 to a global audience.",
-      "tools": ["After Effects", "Illustrator"]
-    },  
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 18,
       "title": "300+ Motion Loop Animations – Contributor Project",
@@ -324,8 +425,11 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/CC4FkcNl4bY",
       "description": "As a Creative Contributor, I was fully responsible for the editing and production of over 300 motion loop animation assets. This large-scale project required visual consistency, technical precision, and efficient time management to ensure every animation featured a seamless looping transition. Through this project, I successfully demonstrated my ability to execute high-volume production of motion graphic assets while maintaining top-tier quality standards for diverse digital content needs.",
-      "tools": ["After Effects", "Illustrator"]
-    }, 
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 19,
       "title": "Satya Networks Bumper Animation",
@@ -334,8 +438,11 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/km-S9C3aTGc",
       "description": "",
-      "tools": ["After Effects","Illustrator"]
-    },  
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 20,
       "title": "Company C Bumper",
@@ -344,8 +451,12 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
       "description": "lorem ipsum.",
-      "tools": ["After Effects", "Premiere Pro", "Illustrator"]
-    },  
+      "tools": [
+        "After Effects",
+        "Premiere Pro",
+        "Illustrator"
+      ]
+    },
     {
       "id": 21,
       "title": "Portal 6 Bumper Motion",
@@ -354,8 +465,11 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/Ij6V7aEwWkE",
       "description": "In this project, I was responsible for executing the creation of a motion graphics bumper that serves as an iconic visual opening to reinforce the event's brand identity. I managed the entire post-production process, from crafting dynamic graphic movements to designing synchronized sound design to create a futuristic and professional impression. The final result of this project focuses on delivering strong competitive energy through smooth visual transitions and immersive audio to grab the audience's attention from the very first second.",
-      "tools": ["After Effects", "Illustrator"]
-    },       
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 22,
       "title": "Ripple Studio Bumper Motion",
@@ -364,8 +478,11 @@
       "type": "video-top",
       "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
       "description": "In this project, I was responsible for executing the creation of a motion graphics bumper as the main visual identity element for the multimedia creative hub of SMKN 1 Pacet. My main focus was to design dynamic and modern graphic movements, paired with synchronized sound design to create a professional impression at the opening of every video content. Through mastery of motion graphics techniques, this work successfully strengthened Ripple Studio's branding as an inspiring center for audio-visual innovation within the school.",
-      "tools": ["After Effects", "Illustrator"]
-    },   
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 23,
       "title": "Pacettoe Podcast Bumper Motion",
@@ -374,8 +491,11 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/YiOfgfA2Umg?si=bzw-Dl2lhtwboCJk",
       "description": "In this project, I executed the creation of a motion graphics bumper that serves as the opening visual identity for the official podcast program of SMKN 1 Pacet. My main focus was designing dynamic and modern graphic movements to align with the relaxed yet professional atmosphere of the discussions. By combining smooth visual transitions and precise audio synchronization, this bumper successfully strengthened the digital branding of Pacettoe Podcast as outstanding creative content within the school environment.",
-      "tools": ["After Effects", "Illustrator"]
-    },   
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 24,
       "title": "SMKN 1 Pacet Bumper Motion",
@@ -384,350 +504,353 @@
       "type": "video-top",
       "videoUrl": "https://youtu.be/s5DtlujaeAA?si=y2KgnqzkoaC8-tq0",
       "description": "In this project, I executed the creation of the official Motion Graphics Bumper for SMKN 1 Pacet, designed as a universal visual asset for various school content needs. My main focus was to create dynamic and modern graphic movements so they could be easily integrated into various video formats, from official announcements to activity documentation. By combining smooth transitions and visual elements that represent the school's identity, this bumper successfully became a standard video opening that gives a professional, consistent impression and strengthens the institution's branding in every digital publication.",
-      "tools": ["After Effects", "Illustrator"]
-    },  
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    },
     {
       "id": 25,
       "title": "Server Monitoring",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
-          { 
-            "type": "text", 
-            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "1. Hardware Design" 
-          },
-          { 
-            "type": "text", 
-            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/skema-wiring.webp" 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "2. Network & Dashboard Implementation" 
-          },
-          { 
-            "type": "text", 
-            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/dashboard-iot.png" 
-          }
-        ]
-      },
+        {
+          "type": "text",
+          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
+        },
+        {
+          "type": "subtitle",
+          "value": "1. Hardware Design"
+        },
+        {
+          "type": "text",
+          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/skema-wiring.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "2. Network & Dashboard Implementation"
+        },
+        {
+          "type": "text",
+          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/dashboard-iot.png"
+        }
+      ]
+    },
     {
       "id": 26,
       "title": "Greenhouse Monitoring",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
-          { 
-            "type": "text", 
-            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "1. Hardware Design" 
-          },
-          { 
-            "type": "text", 
-            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/skema-wiring.webp" 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "2. Network & Dashboard Implementation" 
-          },
-          { 
-            "type": "text", 
-            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/dashboard-iot.webp" 
-          }
-        ]
-      },
+        {
+          "type": "text",
+          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
+        },
+        {
+          "type": "subtitle",
+          "value": "1. Hardware Design"
+        },
+        {
+          "type": "text",
+          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/skema-wiring.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "2. Network & Dashboard Implementation"
+        },
+        {
+          "type": "text",
+          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/dashboard-iot.webp"
+        }
+      ]
+    },
     {
       "id": 27,
       "title": "Penyiram Tanaman Otomatis",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.webp",
       "content": [
-          { 
-            "type": "text", 
-            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "1. Hardware Design" 
-          },
-          { 
-            "type": "text", 
-            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/skema-wiring.webp" 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "2. Network & Dashboard Implementation" 
-          },
-          { 
-            "type": "text", 
-            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/dashboard-iot.webp" 
-          }
-        ]
-      },
-      {
+        {
+          "type": "text",
+          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
+        },
+        {
+          "type": "subtitle",
+          "value": "1. Hardware Design"
+        },
+        {
+          "type": "text",
+          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/skema-wiring.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "2. Network & Dashboard Implementation"
+        },
+        {
+          "type": "text",
+          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/dashboard-iot.webp"
+        }
+      ]
+    },
+    {
       "id": 28,
       "title": "Eco Bug",
       "category": "IoT Projects",
       "thumbnail": "/portfolio/iot-thumb.webp",
       "type": "article",
       "content": [
-          { 
-            "type": "text", 
-            "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "1. Hardware Design" 
-          },
-          { 
-            "type": "text", 
-            "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/skema-wiring.webp" 
-          },
-          { 
-            "type": "subtitle", 
-            "value": "2. Network & Dashboard Implementation" 
-          },
-          { 
-            "type": "text", 
-            "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
-          },
-          { 
-            "type": "image", 
-            "value": "/portfolio/dashboard-iot.webp" 
-          }
-        ]
-      },
+        {
+          "type": "text",
+          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
+        },
+        {
+          "type": "subtitle",
+          "value": "1. Hardware Design"
+        },
+        {
+          "type": "text",
+          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/skema-wiring.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "2. Network & Dashboard Implementation"
+        },
+        {
+          "type": "text",
+          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/dashboard-iot.webp"
+        }
+      ]
+    },
     {
       "id": 29,
-            "title": "Gaming Centre",
-            "category": "Networking",
-            "thumbnail": "/portfolio/net-thumb.webp",
-            "type": "article",
- "content": [
-    { 
-      "type": "text", 
-      "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification." 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "1. Hardware Design" 
-    },
-    { 
-      "type": "text", 
-      "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor." 
-    },
-    { 
-      "type": "image", 
-      "value": "/portfolio/skema-wiring.webp" 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "2. Network & Dashboard Implementation" 
-    },
-    { 
-      "type": "text", 
-      "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely." 
-    },
-    { 
-      "type": "image", 
-      "value": "/portfolio/dashboard-iot.webp" 
-    }
-  ]
-},
-      {
-        "id": 30,
-        "title": "Karcis.in - Platform E-Ticketing Event Kampus & Komunitas",
-        "category": "Web Development",
-        "thumbnail": "/portfolio/karcisin/thum.webp",
-        "description": "Role: Full-Stack Developer",
-        "tools": [],
-        "type": "article",
-        "content": [
-    { 
-      "type": "image", 
-      "value": "/portfolio/karcisin/header.webp" 
-    },
-          { 
-      "type": "text", 
-      "value": "Karcis.in is a comprehensive E-Ticketing web platform focused on digitizing the student event ecosystem—from seminar committees and campus concerts to student association workshops. Although designed with a workflow perfectly suited for student needs, the system is professionally scaled and highly flexible, allowing it to be used for various commercial events outside of campus. This application facilitates event creation, online ticket sales, automatic E-Ticket issuance (PDF & Email), and attendee attendance validation using an integrated QR Code Scanner." 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "Project Objectives" 
-    },
-    { 
-      "type": "text", 
-      "value": "This project aims to solve the hassle of student event registration, which is generally still manual (e.g., data collection via Google Forms or selling physical paper tickets) by presenting a modern paperless system. Karcis.in helps campus committees and general organizers prevent fake tickets and double ticket usage (double scan) through QR Code validation, while also providing neat governance by separating access rights between the Committee (Creator), Participants (User), and Administrator (Developer)." 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "Tech Stack" 
-    },
-    { 
-      "type": "text", 
-      "value": "Backend & Architecture:" 
+      "title": "Gaming Centre",
+      "category": "Networking",
+      "thumbnail": "/portfolio/net-thumb.webp",
+      "type": "article",
+      "content": [
+        {
+          "type": "text",
+          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
+        },
+        {
+          "type": "subtitle",
+          "value": "1. Hardware Design"
+        },
+        {
+          "type": "text",
+          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/skema-wiring.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "2. Network & Dashboard Implementation"
+        },
+        {
+          "type": "text",
+          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/dashboard-iot.webp"
+        }
+      ]
     },
     {
-  "type": "list",
-  "value": [
-    "Framework: Laravel 10/11 (PHP) - MVC Architecture",
-    "Database: MySQL",
-    "Authentication: Laravel UI (Session-based Auth) with a Multi-Role system (User, Creator, Developer)."
-  ]
-},
-    { 
-      "type": "text", 
-      "value": "Frontend (UI/UX):" 
+      "id": 30,
+      "title": "Karcis.in - Platform E-Ticketing Event Kampus & Komunitas",
+      "category": "Web Development",
+      "thumbnail": "/portfolio/karcisin/thum.webp",
+      "description": "Role: Full-Stack Developer",
+      "tools": [],
+      "type": "article",
+      "content": [
+        {
+          "type": "image",
+          "value": "/portfolio/karcisin/header.webp"
+        },
+        {
+          "type": "text",
+          "value": "Karcis.in is a comprehensive E-Ticketing web platform focused on digitizing the student event ecosystem—from seminar committees and campus concerts to student association workshops. Although designed with a workflow perfectly suited for student needs, the system is professionally scaled and highly flexible, allowing it to be used for various commercial events outside of campus. This application facilitates event creation, online ticket sales, automatic E-Ticket issuance (PDF & Email), and attendee attendance validation using an integrated QR Code Scanner."
+        },
+        {
+          "type": "subtitle",
+          "value": "Project Objectives"
+        },
+        {
+          "type": "text",
+          "value": "This project aims to solve the hassle of student event registration, which is generally still manual (e.g., data collection via Google Forms or selling physical paper tickets) by presenting a modern paperless system. Karcis.in helps campus committees and general organizers prevent fake tickets and double ticket usage (double scan) through QR Code validation, while also providing neat governance by separating access rights between the Committee (Creator), Participants (User), and Administrator (Developer)."
+        },
+        {
+          "type": "subtitle",
+          "value": "Tech Stack"
+        },
+        {
+          "type": "text",
+          "value": "Backend & Architecture:"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Framework: Laravel 10/11 (PHP) - MVC Architecture",
+            "Database: MySQL",
+            "Authentication: Laravel UI (Session-based Auth) with a Multi-Role system (User, Creator, Developer)."
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Frontend (UI/UX):"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Markup & Styling: HTML5, CSS3, Bootstrap 5 (Responsive Design).",
+            "Interactivity: JavaScript (Vanilla & jQuery).",
+            "Icons & Fonts: Bootstrap Icons, Font Awesome."
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Supporting Libraries (Key Features):"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Barryvdh/DomPDF: Auto-generate E-Tickets in PDF format.",
+            "HTML5-QRCode (Mebjas): Implementation of a web-based camera scanner for ticket validation.",
+            "Laravel Mail / SMTP (Mailtrap/Gmail): Sending email notifications and PDF files to participants.",
+            "Laravel Storage: File upload management (Event Banners & Payment Proofs)."
+          ]
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/karcisin/dok1.webp"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/karcisin/dok2.webp"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/karcisin/dok3.webp"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/karcisin/dok4.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "Key Features"
+        },
+        {
+          "type": "text",
+          "value": "Public & Participant Features (User Mode)"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Dynamic Landing Page: Displays a list of Approved events based on categories (Concert, Seminar, Tour, etc.), complete with hero banners and responsive design.",
+            "Search System: Users can search for event names directly from the navbar.",
+            "Dynamic Registration Form: A smart registration form that changes according to the selected account type (Regular User or Creator with additional NIK/Phone No. verification).",
+            "Checkout & Payment Upload: Ticket purchase process with automatically updated quotas and a form to upload proof of transfer.",
+            "My Tickets Management: A dashboard to view transaction status (Pending/Approved/Rejected) and download PDF tickets.",
+            "Email Notifications: Receive PDF E-Tickets directly to the participant's email after payment is approved."
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Event Organizer Features (Creator Mode)"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Creator Dashboard (Minimal CMS): A dedicated panel to monitor created events and buyer transaction history.",
+            "CRUD Events with Approval: Creators can create events (Name, Price, Quota, Date, Banner, Category), which will be Pending until approved by the Admin. Edit and Delete events are supported with database security logic (deleting related transactions).",
+            "Participant Transaction Management: Creators validate participants' proof of payment. Upon Approval, the system automatically generates a Unique Code, creates a PDF, and sends an email.",
+            "Smart QR Scanner (Web-Camera): A dedicated page per event to scan participants' tickets at the venue in real-time.",
+            "Anti-Double Scan Logic: The system prevents the same ticket (QR Code) from being used twice by locking the is_checked_in status."
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Administrator Features (Developer Mode)"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Role-Based Access Control (RBAC): Access to Developer mode is secured and can only be accessed using a specific administrator email address.",
+            "Approval System (Quality Control): Developers review new events submitted by Creators. Only events with an Approved status will go live on the public page."
+          ]
+        },
+        {
+          "type": "subtitle",
+          "value": "System Workflow"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/karcisin/flow.webp"
+        },
+        {
+          "type": "text",
+          "value": "System Steps:"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Creator registers, then creates an Event. (Status: Pending).",
+            "Developer/Admin reviews and approves the event. (Status: Approved -> Appears on Homepage).",
+            "User registers, selects an event, proceeds to checkout, and uploads proof of payment.",
+            "Creator receives a transaction notification, checks the payment proof, then clicks Approve.",
+            "The Backend system automatically creates a Ticket row, generates a Unique QR Code, renders the PDF, and sends an email to the User.",
+            "On the day of the event, the User shows the QR Code (on their phone or printed).",
+            "Creator scans the QR Code using the web Scanner feature. The system validates authenticity and prevents double tickets."
+          ]
+        },
+        {
+          "type": "subtitle",
+          "value": "Access the full details at the GitHub link below:"
+        },
+        {
+          "type": "text",
+          "value": "<a href='https://github.com/ganadzikri24/karcisin' target='_blank' class='text-primary hover:text-white underline decoration-primary/50 transition-colors'>click this link</a>"
+        }
+      ]
     },
-    {
-  "type": "list",
-  "value": [
-    "Markup & Styling: HTML5, CSS3, Bootstrap 5 (Responsive Design).",
-    "Interactivity: JavaScript (Vanilla & jQuery).",
-    "Icons & Fonts: Bootstrap Icons, Font Awesome."
-  ]
-},
-    { 
-      "type": "text", 
-      "value": "Supporting Libraries (Key Features):" 
-    },
-    {
-  "type": "list",
-  "value": [
-    "Barryvdh/DomPDF: Auto-generate E-Tickets in PDF format.",
-    "HTML5-QRCode (Mebjas): Implementation of a web-based camera scanner for ticket validation.",
-    "Laravel Mail / SMTP (Mailtrap/Gmail): Sending email notifications and PDF files to participants.",
-    "Laravel Storage: File upload management (Event Banners & Payment Proofs)."
-  ]
-},
-    { 
-      "type": "image", 
-      "value": "/portfolio/karcisin/dok1.webp" 
-    },
-        { 
-      "type": "image", 
-      "value": "/portfolio/karcisin/dok2.webp" 
-    },
-        { 
-      "type": "image", 
-      "value": "/portfolio/karcisin/dok3.webp" 
-    },
-        { 
-      "type": "image", 
-      "value": "/portfolio/karcisin/dok4.webp" 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "Key Features" 
-    },
-    { 
-      "type": "text", 
-      "value": "Public & Participant Features (User Mode)" 
-    },
-    {
-  "type": "list",
-  "value": [
-    "Dynamic Landing Page: Displays a list of Approved events based on categories (Concert, Seminar, Tour, etc.), complete with hero banners and responsive design.",
-    "Search System: Users can search for event names directly from the navbar.",
-    "Dynamic Registration Form: A smart registration form that changes according to the selected account type (Regular User or Creator with additional NIK/Phone No. verification).",
-    "Checkout & Payment Upload: Ticket purchase process with automatically updated quotas and a form to upload proof of transfer.",
-    "My Tickets Management: A dashboard to view transaction status (Pending/Approved/Rejected) and download PDF tickets.",
-    "Email Notifications: Receive PDF E-Tickets directly to the participant's email after payment is approved."
-  ]
-},
-    { 
-      "type": "text", 
-      "value": "Event Organizer Features (Creator Mode)" 
-    },
-    {
-  "type": "list",
-  "value": [
-    "Creator Dashboard (Minimal CMS): A dedicated panel to monitor created events and buyer transaction history.",
-    "CRUD Events with Approval: Creators can create events (Name, Price, Quota, Date, Banner, Category), which will be Pending until approved by the Admin. Edit and Delete events are supported with database security logic (deleting related transactions).",
-    "Participant Transaction Management: Creators validate participants' proof of payment. Upon Approval, the system automatically generates a Unique Code, creates a PDF, and sends an email.",
-    "Smart QR Scanner (Web-Camera): A dedicated page per event to scan participants' tickets at the venue in real-time.",
-    "Anti-Double Scan Logic: The system prevents the same ticket (QR Code) from being used twice by locking the is_checked_in status."
-  ]
-},
-    { 
-      "type": "text", 
-      "value": "Administrator Features (Developer Mode)" 
-    },
-    {
-  "type": "list",
-  "value": [
-    "Role-Based Access Control (RBAC): Access to Developer mode is secured and can only be accessed using a specific administrator email address.",
-    "Approval System (Quality Control): Developers review new events submitted by Creators. Only events with an Approved status will go live on the public page."
-  ]
-},
-    { 
-      "type": "subtitle", 
-      "value": "System Workflow" 
-    },
-    { 
-      "type": "image", 
-      "value": "/portfolio/karcisin/flow.webp" 
-    },
-    { 
-      "type": "text", 
-      "value": "System Steps:" 
-    },
-    {
-  "type": "list",
-  "value": [
-    "Creator registers, then creates an Event. (Status: Pending).",
-    "Developer/Admin reviews and approves the event. (Status: Approved -> Appears on Homepage).",
-    "User registers, selects an event, proceeds to checkout, and uploads proof of payment.",
-    "Creator receives a transaction notification, checks the payment proof, then clicks Approve.",
-    "The Backend system automatically creates a Ticket row, generates a Unique QR Code, renders the PDF, and sends an email to the User.",
-    "On the day of the event, the User shows the QR Code (on their phone or printed).",
-    "Creator scans the QR Code using the web Scanner feature. The system validates authenticity and prevents double tickets."
-  ]
-},
-    { 
-      "type": "subtitle", 
-      "value": "Access the full details at the GitHub link below:" 
-    },
-    { 
-      "type": "text", 
-      "value": "<a href='https://github.com/ganadzikri24/karcisin' target='_blank' class='text-primary hover:text-white underline decoration-primary/50 transition-colors'>click this link</a>"
-    }
-  ]
-},
     {
       "id": 31,
       "title": "SMKN 1 Pacet Pendikar 2022",
@@ -744,47 +867,49 @@
         "/portfolio/foto-pendikar/photo-7.webp"
       ],
       "description": "In the photography documentation project for the Pendikar (Character Education) SMKN 1 Pacet, I was fully responsible for capturing the essence of the students' discipline, resilience, and camaraderie. Through my lens, I immortalized invaluable moments, ranging from the intensity of physical and mental training alongside military instructors and the dynamics of teamwork during group activities, to the warmth of student solidarity. To enhance the visual storytelling, I applied a cinematic and earthy color grading during post-production, giving each photograph a dramatic, distinct character that powerfully evokes the participants' memorable journey and perseverance.",
-      "tools": ["Canon EOS 70D", "Adobe Lightroom", "Adobe Photoshop"]
+      "tools": [
+        "Canon EOS 70D",
+        "Adobe Lightroom",
+        "Adobe Photoshop"
+      ]
     },
-
     {
       "id": 32,
-            "title": "SmileMush",
-            "category": "Networking",
-            "thumbnail": "/portfolio/smilemush/smilemush-thumb.webp",
-            "type": "article",
- "content": [
-    { 
-      "type": "text", 
-      "value": "Project ini dirancang untuk memantau suhu dan keamanan ruang server secara <b>real-time</b> 24 jam penuh. Jika terdeteksi anomali, sistem akan mengirimkan notifikasi." 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "1. Desain Perangkat Keras (Hardware)" 
-    },
-    { 
-      "type": "text", 
-      "value": "Otak dari sistem ini menggunakan <b>Mikrokontroler ESP32</b>. Saya mengintegrasikan beberapa sensor, antara lain sensor suhu <b>DHT22</b>, sensor gas/asap <b>MQ2</b>, dan sensor gerak PIR." 
-    },
-    { 
-      "type": "image", 
-      "value": "/portfolio/skema-wiring.webp" 
-    },
-    { 
-      "type": "subtitle", 
-      "value": "2. Implementasi Jaringan & Dashboard" 
-    },
-    { 
-      "type": "text", 
-      "value": "Data dari sensor dikirimkan melalui jaringan WiFi ke platform <b>ThingsBoard</b> menggunakan protokol MQTT, sehingga visualisasi data dapat dipantau dari jarak jauh." 
-    },
-    { 
-      "type": "image", 
-      "value": "/portfolio/dashboard-iot.webp" 
+      "title": "SmileMush",
+      "category": "Networking",
+      "thumbnail": "/portfolio/smilemush/smilemush-thumb.webp",
+      "type": "article",
+      "content": [
+        {
+          "type": "text",
+          "value": "Project ini dirancang untuk memantau suhu dan keamanan ruang server secara <b>real-time</b> 24 jam penuh. Jika terdeteksi anomali, sistem akan mengirimkan notifikasi."
+        },
+        {
+          "type": "subtitle",
+          "value": "1. Desain Perangkat Keras (Hardware)"
+        },
+        {
+          "type": "text",
+          "value": "Otak dari sistem ini menggunakan <b>Mikrokontroler ESP32</b>. Saya mengintegrasikan beberapa sensor, antara lain sensor suhu <b>DHT22</b>, sensor gas/asap <b>MQ2</b>, dan sensor gerak PIR."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/skema-wiring.webp"
+        },
+        {
+          "type": "subtitle",
+          "value": "2. Implementasi Jaringan & Dashboard"
+        },
+        {
+          "type": "text",
+          "value": "Data dari sensor dikirimkan melalui jaringan WiFi ke platform <b>ThingsBoard</b> menggunakan protokol MQTT, sehingga visualisasi data dapat dipantau dari jarak jauh."
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/dashboard-iot.webp"
+        }
+      ]
     }
-  ]
-}
-  
   ],
   "more": [
     {
@@ -799,25 +924,25 @@
       "issuer": "Cisco Networking Academy",
       "year": "2024"
     },
-        {
+    {
       "id": 3,
       "title": "Top 15 Best Poster Works in the Vocational Sector - Prestasi Goes To You Chapter OMB",
       "issuer": "Directorate of Student Affairs (Ditmawa) IPB University",
       "year": "2024"
     },
-            {
+    {
       "id": 4,
       "title": "Certificate of Competence in Computer and Network Engineering",
       "issuer": "National Professional Certification Agency (BNSP)",
       "year": "2023"
     },
-        {
+    {
       "id": 5,
       "title": "E-Sports Team Manager & Coach - Valorant SMKN 1 Pacet Team",
       "issuer": "SBAC Thailand",
       "year": "2022"
     },
-            {
+    {
       "id": 6,
       "title": "2nd Place, Carita Cianjur Inspirational Video Competition (High School/Vocational School Level, Cianjur Regency)",
       "issuer": "Indonesian Television Journalists Association (IJTI), Cianjur Regional Chapter",

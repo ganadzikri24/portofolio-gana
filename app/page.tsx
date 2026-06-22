@@ -1,149 +1,157 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { Mail, Download, X, ExternalLink, MapPin, Award, BookOpen, Briefcase, Code, FolderGit2 } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { Mail, X, MapPin, ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaYoutube, FaBehance } from "react-icons/fa";
 
 import dataEN from "@/data/portfolio.json";
 import dataID from "@/data/portfolio-id.json";
 
+// --- Ambient Animations ---
+const AmbientGeometry = () => (
+  <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-20">
+    <motion.div 
+      animate={{ rotate: 360, scale: [1, 1.05, 1] }} transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+      className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[2px] border-white/10 rounded-full border-dashed"
+    />
+    <motion.div 
+      animate={{ rotate: -360, scale: [1, 1.1, 1] }} transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+      className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[1px] border-white/10 rounded-full"
+    />
+    <motion.div 
+      animate={{ y: ["-100vh", "100vh"] }} transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+    />
+  </div>
+);
+
+const AmbientParticles = () => (
+  <div className="absolute inset-0 pointer-events-none z-0">
+    <motion.div 
+      animate={{ y: [0, -60, 0], x: [0, 30, 0], opacity: [0.1, 0.5, 0.1], scale: [1, 1.5, 1] }} 
+      transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      className="absolute top-[20%] left-[10%] w-3 h-3 bg-white rounded-full shadow-[0_0_40px_10px_rgba(255,255,255,0.4)]"
+    />
+    <motion.div 
+      animate={{ y: [0, 80, 0], x: [0, -40, 0], opacity: [0.1, 0.4, 0.1], scale: [1, 1.2, 1] }} 
+      transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-gray-300 rounded-full shadow-[0_0_50px_15px_rgba(255,255,255,0.3)]"
+    />
+    <motion.div 
+      animate={{ x: [0, 50, 0], y: [0, 20, 0], opacity: [0.05, 0.3, 0.05] }} 
+      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      className="absolute top-[60%] left-[70%] w-2 h-2 bg-white rounded-full shadow-[0_0_30px_5px_rgba(255,255,255,0.2)]"
+    />
+  </div>
+);
+
 export default function AestheticPortfolio() {
   const [activeTab, setActiveTab] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [currentHighlight, setCurrentHighlight] = useState(0);
   
   const [lang, setLang] = useState<"en" | "id">("en");
   const data = lang === "en" ? dataEN : dataID;
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHighlight((prev) => (prev + 1) % data.projects.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [data.projects]);
+
   const t = {
     en: {
       nav: [
-        { id: "about", label: "About" }, { id: "education", label: "Education" }, 
-        { id: "experience", label: "Experience" }, { id: "skills", label: "Skills" }, 
+        { id: "about", label: "About" }, { id: "experience", label: "Experience" }, 
+        { id: "education", label: "Education" }, { id: "skills", label: "Skills" }, 
         { id: "portofolio", label: "Portfolio" }, { id: "more", label: "More" }, 
         { id: "contacts", label: "Contacts" }
       ],
       explore: "Explore Work",
       eduTitle: "Education",
       expTitle: "Experience",
-      skillTitle: "Skills",
-      portTitle: "Portofolio Project",
-      moreTitle: "Certifications & Achievements",
-      contactTitle: "Let's Connect",
+      skillTitle: "Core Expertise",
+      portTitle: "Selected Works",
+      moreTitle: "Certifications",
+      contactTitle: "LET'S CONNECT",
       based: "Based in",
       desc: "Description",
-      tools: "Tech Stack / Tools"
+      tools: "Tech Stack",
+      viewProject: "View Project"
     },
     id: {
       nav: [
-        { id: "about", label: "Tentang" }, { id: "education", label: "Pendidikan" }, 
-        { id: "experience", label: "Pengalaman" }, { id: "skills", label: "Keahlian" }, 
+        { id: "about", label: "Tentang" }, { id: "experience", label: "Pengalaman" }, 
+        { id: "education", label: "Pendidikan" }, { id: "skills", label: "Keahlian" }, 
         { id: "portofolio", label: "Portofolio" }, { id: "more", label: "Lainnya" }, 
         { id: "contacts", label: "Kontak" }
       ],
       explore: "Jelajahi Karya",
-      eduTitle: "Riwayat Pendidikan",
+      eduTitle: "Pendidikan",
       expTitle: "Pengalaman",
-      skillTitle: "Keahlian",
-      portTitle: "Portofolio Project",
-      moreTitle: "Sertifikat & Prestasi",
-      contactTitle: "Mari Berkolaborasi",
+      skillTitle: "Keahlian Inti",
+      portTitle: "Karya Pilihan",
+      moreTitle: "Sertifikasi",
+      contactTitle: "MARI TERHUBUNG",
       based: "Berbasis di",
       desc: "Deskripsi",
-      tools: "Teknologi & Tools"
+      tools: "Teknologi",
+      viewProject: "Lihat Proyek"
     }
   };
-
-  const { scrollYProgress } = useScroll();
-  
-  const bgGradientY1 = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const bgGradientY2 = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
-  const blobRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
-  const blobScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 1]);
-
-  const filteredProjects = activeTab === "All" 
-    ? data.projects 
-    : data.projects.filter((p: any) => p.category === activeTab);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const filteredProjects = activeTab === "All" 
+    ? data.projects 
+    : data.projects.filter((p: any) => p.category === activeTab);
+
   const renderProjectContent = (project: any) => {
     if (project.type === "seamless-image") {
       return (
         <div className="flex flex-col w-full">
           {project.images?.map((img: string, i: number) => (
-            <img key={i} src={img} className="w-full h-auto block m-0 p-0" alt={`Portfolio ${i}`} />
+            <motion.img key={i} initial={{opacity:0, y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} src={img} className="w-full h-auto block m-0 p-0" alt={`Portfolio ${i}`} />
           ))}
         </div>
       );
     }
-
     if (project.type === "video-top") {
       const url = project.videoUrl || "";
-      
       if (url.includes("youtube.com") || url.includes("youtu.be")) {
         const videoId = url.split('v=')[1] || url.split('youtu.be/')[1];
         const embedUrl = `https://www.youtube.com/embed/${videoId?.split('&')[0]}`;
         return (
-          <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+          <div className="w-full aspect-video overflow-hidden border border-white/5">
             <iframe className="w-full h-full" src={embedUrl} allowFullScreen />
           </div>
         );
       }
-
-      if (url.includes("instagram.com")) {
-        const cleanUrl = url.split('?')[0]; 
-        const embedUrl = `${cleanUrl.endsWith('/') ? cleanUrl : cleanUrl + '/'}embed`;
-        return (
-          <div className="w-full flex justify-center bg-[#0a0a0a] rounded-2xl py-8 border border-white/5 shadow-2xl">
-            <div className="w-full max-w-[540px] aspect-[9/16] md:aspect-square overflow-hidden">
-              <iframe 
-                className="w-full h-full" 
-                src={embedUrl} 
-                frameBorder="0" 
-                scrolling="no" 
-                allowTransparency={true}
-              />
-            </div>
-          </div>
-        );
-      }
-      
       return (
-        <div className="w-full">
-          <video controls className="w-full aspect-video bg-black rounded-2xl shadow-2xl border border-white/5" src={url} />
+        <div className="w-full border border-white/5">
+          <video controls className="w-full aspect-video bg-black" src={url} />
         </div>
       );
     }
-
     if (project.type === "article") {
       return (
-        <div className="w-full space-y-6 p-6 md:p-10">
+        <div className="w-full space-y-8 p-6 md:p-16 bg-[#0a0a0a]">
           {project.content?.map((item: any, i: number) => {
-            if (item.type === "subtitle") {
-              return <h3 key={i} className="text-2xl font-black text-white mt-10 mb-2 border-b border-white/10 pb-3">{item.value}</h3>;
-            }
-            if (item.type === "text") {
-              return <p key={i} className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: item.value }} />;
-            }
-            if (item.type === "list") {
-              return (
-                <ul key={i} className="list-disc list-outside ml-6 space-y-3">
-                  {item.value?.map((point: string, idx: number) => (
-                    <li key={idx} className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: point }} />
-                  ))}
-                </ul>
-              );
-            }
-            if (item.type === "image") {
-              return <img key={i} src={item.value} className="w-full rounded-2xl shadow-2xl my-8 border border-white/5" alt="Article Content" />;
-            }
-            if (item.type === "video") {
-              return <video key={i} controls src={item.value} className="w-full rounded-2xl shadow-2xl my-8 border border-white/5" />;
-            }
+            if (item.type === "subtitle") return <motion.h3 initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} transition={{duration:0.5}} key={i} className="text-3xl font-bold text-white mt-12 mb-4 tracking-tight">{item.value}</motion.h3>;
+            if (item.type === "text") return <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.5}} key={i} className="text-lg md:text-xl text-gray-400 leading-relaxed font-light" dangerouslySetInnerHTML={{ __html: item.value }} />;
+            if (item.type === "list") return (
+              <ul key={i} className="list-disc list-outside ml-6 space-y-4">
+                {item.value?.map((point: string, idx: number) => (
+                  <motion.li initial={{opacity:0,x:-20}} whileInView={{opacity:1,x:0}} transition={{duration:0.5, delay:idx*0.1}} key={idx} className="text-lg md:text-xl text-gray-400 leading-relaxed font-light" dangerouslySetInnerHTML={{ __html: point }} />
+                ))}
+              </ul>
+            );
+            if (item.type === "image") return <motion.img initial={{scale:0.9, opacity:0}} whileInView={{scale:1, opacity:1}} transition={{duration:0.8}} key={i} src={item.value} className="w-full rounded-2xl my-10 border border-white/5 shadow-2xl" alt="Article Content" />;
             return null;
           })}
         </div>
@@ -152,292 +160,419 @@ export default function AestheticPortfolio() {
     return null;
   };
 
-  return (
-    <div className="relative min-h-screen selection:bg-primary selection:text-white bg-[#050505] overflow-x-hidden w-full">
-      
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden opacity-10">
-        <motion.div 
-          style={{ y: bgGradientY1, rotate: blobRotate, scale: blobScale }}
-          className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-primary/20 rounded-full blur-[150px] transform-gpu will-change-transform"
-        />
-        <motion.div 
-          style={{ y: bgGradientY2, rotate: blobRotate, scale: blobScale }}
-          className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-secondary/15 rounded-full blur-[150px] transform-gpu will-change-transform"
-        />
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.4, 0.1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[30vw] bg-fuchsia-500/10 rounded-full blur-[200px] transform-gpu will-change-transform"
-        />
-      </div>
+  // Lag-free Cinematic Animation Variants
+  const cinematicReveal: any = {
+    hidden: { opacity: 0, y: 100, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", bounce: 0.3, duration: 1.2 } }
+  };
+  
+  const fastReveal: any = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  };
 
-      <nav className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 glass-nav rounded-full px-4 md:px-6 py-3 flex items-center justify-between w-[95%] max-w-5xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border-white/10">
-        <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 flex items-center gap-3 cursor-pointer" onClick={() => scrollTo("about")}>
-          <img src="/logo-navbar.png" alt="Logo" className="w-8 h-8 object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
-          <span className="font-extrabold tracking-widest text-white text-lg drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]"></span>
+  const staggerContainer: any = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } }
+  };
+
+  return (
+    <div className="relative min-h-screen selection:bg-white selection:text-black bg-[#050505] text-white overflow-x-hidden w-full font-sans">
+      
+      {/* GLOBAL NAVBAR */}
+      <motion.nav 
+        variants={staggerContainer} initial="hidden" animate="visible"
+        className="fixed top-0 left-0 w-full z-50 px-6 py-5 flex items-center justify-between mix-blend-difference backdrop-blur-sm bg-transparent"
+      >
+        <motion.div variants={fastReveal} className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollTo("about")}>
+          <motion.img whileHover={{ rotate: 180, scale: 1.2 }} transition={{ duration: 0.6 }} src="/logo-navbar.png" alt="Logo" className="w-6 h-6 object-contain filter invert" onError={(e) => e.currentTarget.style.display = 'none'} />
+          <span className="font-bold tracking-widest text-xs uppercase hidden sm:block">Ganabitz</span>
         </motion.div>
         
-        <div className="flex items-center flex-nowrap gap-5 md:gap-6 overflow-x-auto w-full ml-4 md:ml-0 justify-start md:justify-end pr-4 md:pr-0 pb-1 md:pb-0" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-          {t[lang].nav.map((item) => (
-            <button key={item.id} onClick={() => scrollTo(item.id)} className="flex-shrink-0 relative group text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-gray-300 hover:text-white transition-colors">
-              {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full shadow-[0_0_10px_rgba(139,92,246,0.8)]" />
-            </button>
-          ))}
-          <button 
+        <div className="flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
+            {t[lang].nav.map((item) => (
+              <motion.button variants={fastReveal} key={item.id} onClick={() => scrollTo(item.id)} className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors relative group">
+                {item.label}
+                <motion.span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
+              </motion.button>
+            ))}
+          </div>
+          <motion.button 
+            variants={fastReveal}
+            whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }}
             onClick={() => setLang(lang === "en" ? "id" : "en")} 
-            className="flex-shrink-0 ml-1 md:ml-2 px-3 md:px-4 py-1.5 rounded-full bg-white/10 hover:bg-primary border border-white/20 text-xs font-black text-white transition-all duration-300 flex items-center gap-1 md:gap-2"
+            className="px-4 py-2 border border-white/20 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
           >
-            <span>{lang === "en" ? "ID" : "EN"}</span>
-          </button>
+            {lang === "en" ? "ID" : "EN"}
+          </motion.button>
         </div>
-      </nav>
+      </motion.nav>
 
-      <main className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 space-y-20 md:space-y-32 pb-24">
+      <main className="relative z-10 w-full">
         
-        <section id="about" className="min-h-screen flex flex-col md:flex-row justify-between items-center pt-28 md:pt-32 pb-16 relative gap-10 md:gap-8">
-          
-          <div className="w-full md:w-[55%] text-center md:text-left z-20 flex flex-col items-center md:items-start order-2 md:order-1 mt-8 md:mt-0">
-            <motion.h1 
-              initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-[5.5rem] leading-[1.1] font-black tracking-tight text-white mb-4 md:mb-6 drop-shadow-2xl cursor-default"
-            >
-              {data.profile.name.split(" ").map((word: string, i: number) => {
-                const hoverColors = ["hover:text-primary", "hover:text-fuchsia-500", "hover:text-secondary"];
-                return (
-                  <span key={i} className={`transition-colors duration-300 ease-in-out inline-block ${hoverColors[i % hoverColors.length]}`}>
-                    {word}&nbsp;
-                  </span>
-                );
-              })}
-            </motion.h1>
-            <motion.h2
-              initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}
-              className="text-lg md:text-3xl font-bold mb-6 md:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary via-fuchsia-400 to-secondary animate-pulse"
-            >
+        {/* 1. HERO SECTION */}
+        <section id="about" className="min-h-screen flex flex-col justify-between px-4 relative overflow-hidden pt-32 pb-0">
+          <AmbientGeometry />
+          <AmbientParticles />
+
+          <div className="w-full max-w-7xl mx-auto text-center relative z-20 mt-10">
+            <motion.p initial={{ opacity: 0, y: 20, letterSpacing: "0.1em" }} animate={{ opacity: 1, y: 0, letterSpacing: "0.5em" }} transition={{ duration: 1.5, ease: "easeOut" }} className="text-gray-400 font-bold uppercase text-xs md:text-sm mb-6">
               {data.profile.title}
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}
-              className="text-sm md:text-lg text-gray-300 leading-relaxed font-medium mb-8 md:mb-10 max-w-2xl glass-card p-5 md:p-6 rounded-3xl bg-[#0a0a0a]/50 text-left"
-            >
-              {data.profile.description}
             </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4 }}
-              className="flex flex-wrap justify-center md:justify-start gap-6"
+            
+            <motion.h1 
+              variants={staggerContainer} initial="hidden" animate="visible"
+              className="text-[15vw] sm:text-[13vw] md:text-[11vw] leading-[0.85] font-black tracking-tighter uppercase mb-8"
             >
-              <button onClick={() => scrollTo("portofolio")} className="relative group px-8 md:px-10 py-3 md:py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs transition-all duration-300">
-                <span className="relative z-10 group-hover:text-white transition-colors">{t[lang].explore}</span>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+              {data.profile.name.split(" ").map((word: string, i: number) => (
+                <motion.span 
+                  key={i} variants={cinematicReveal} 
+                  whileHover={{ color: "#ffffff", scale: 1.05, y: -5, textShadow: "0px 10px 30px rgba(255,255,255,0.8)" }} 
+                  transition={{ duration: 0.8, ease: "easeOut" }} 
+                  className="inline-block mr-[2vw] last:mr-0 text-white cursor-default"
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </motion.h1>
+            
+            <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="max-w-2xl mx-auto text-sm md:text-lg text-gray-400 font-light leading-relaxed mb-10 overflow-hidden">
+               {data.profile.description.split(" ").map((word, i) => (
+                 <motion.span key={i} variants={{hidden:{opacity:0, y:20}, visible:{opacity:1,y:0}}} className="inline-block mr-1">{word}</motion.span>
+               ))}
             </motion.div>
           </div>
+          
+          <motion.div 
+            animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute left-10 md:left-20 top-[60%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3"
+          >
+            <motion.div whileHover={{ scale: 1.3, rotate: 180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center backdrop-blur-sm bg-white/5 shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer">
+              <span className="text-white text-2xl">✦</span>
+            </motion.div>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold">Creative</span>
+          </motion.div>
+          
+          <motion.div 
+            animate={{ y: [0, 20, 0], rotate: [0, -10, 10, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute right-10 md:right-20 top-[40%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3"
+          >
+            <motion.div whileHover={{ scale: 1.3, rotate: -180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center backdrop-blur-sm bg-white/5 shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer">
+              <span className="text-white text-2xl">⚡</span>
+            </motion.div>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold">Engineer</span>
+          </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 100 }}
-            className="w-full md:w-[45%] relative flex justify-center md:justify-end items-center group cursor-pointer order-1 md:order-2"
+            initial={{ opacity: 0, y: 150, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: 0.8, duration: 1.5, type: "spring", bounce: 0.2 }}
+            className="w-full max-w-3xl md:max-w-4xl mt-[-5vh] relative z-10 mx-auto flex justify-center items-end flex-grow"
           >
-            <div className="absolute inset-[-15px] rounded-[3rem] md:rounded-[4rem] bg-gradient-to-r from-primary via-secondary to-fuchsia-500 opacity-20 group-hover:opacity-60 blur-2xl transition-opacity duration-500 animate-[spin_6s_linear_infinite]" />
-            <div className="absolute inset-[-4px] rounded-[3rem] md:rounded-[4rem] bg-gradient-to-r from-primary to-secondary animate-[spin_4s_linear_infinite]" />
-            
-            <motion.div whileHover={{ scale: 1.03 }} className="w-[240px] h-[300px] sm:w-[280px] sm:h-[340px] md:w-[380px] md:h-[480px] rounded-[3rem] md:rounded-[4rem] relative overflow-hidden bg-[#0a0a0a] z-10 flex items-center justify-center p-1 border-4 border-transparent shadow-[0_0_50px_rgba(139,92,246,0.3)]">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
-              <img 
-                src={data.profile.photo} 
-                alt="Ganabitz" 
-                className="w-full h-full object-cover rounded-[2.8rem] md:rounded-[3.8rem] grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100 relative z-20" 
-                onError={(e) => e.currentTarget.src = 'https://ui-avatars.com/api/?name=MG&background=8b5cf6&color=fff&size=512'}
-              />
-            </motion.div>
+            <div className="absolute inset-x-0 bottom-0 h-[40vh] bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent z-20 pointer-events-none" />
+            <motion.img 
+              whileHover={{ scale: 1.05, y: -20, filter: "brightness(1.2)" }} transition={{ duration: 0.8, type: "spring" }}
+              src={data.profile.photo} alt="Profile" 
+              className="w-full h-auto max-h-[75vh] object-contain object-bottom relative z-10 grayscale-[30%] hover:grayscale-0 drop-shadow-[0_[-20px]_50px_rgba(255,255,255,0.05)]" 
+              onError={(e) => e.currentTarget.style.display = 'none'}
+            />
           </motion.div>
 
-        </section>
-
-        <section id="education" className="scroll-mt-20">
-          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4 drop-shadow-lg">
-            <BookOpen className="text-primary w-8 h-8 md:w-10 md:h-10" /> {t[lang].eduTitle}
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {data.education.map((edu: any, i: number) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative group rounded-[2rem] p-[2px] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[spin_4s_linear_infinite]" />
-                <div className="relative h-full glass-card p-6 md:p-8 rounded-[2rem] flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 bg-[#0a0a0a]/90 backdrop-blur-xl z-10">
-                  <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-white/5 rounded-2xl p-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <img src={edu.logo} alt="Logo" className="max-w-full max-h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" onError={(e) => e.currentTarget.style.display = 'none'} />
-                  </div>
-                  <div>
-                    <span className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-widest mb-1 block drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]">{edu.year}</span>
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{edu.degree}</h3>
-                    <p className="text-sm md:text-base text-gray-300 font-medium">{edu.institution}</p>
-                  </div>
+          {data.projects.length > 0 && (
+            <motion.div 
+              initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
+              whileHover={{ scale: 1.05, rotate: -2, y: -10 }}
+              className="absolute bottom-10 right-6 md:right-10 z-30 w-64 md:w-80 h-40 md:h-48 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer group hidden md:block" 
+              onClick={() => setSelectedProject(data.projects[currentHighlight])}
+            >
+              <AnimatePresence mode="wait">
+                 <motion.img 
+                    key={currentHighlight} 
+                    initial={{ opacity: 0, scale: 1.2 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}
+                    src={data.projects[currentHighlight]?.thumbnail} className="absolute inset-0 w-full h-full object-cover group-hover:scale-125 transition-transform duration-1000" 
+                    alt="Highlight"
+                 />
+              </AnimatePresence>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-60 transition-opacity" />
+              <div className="absolute bottom-5 left-5 right-5 z-10">
+                <div className="flex items-center gap-2 mb-2">
+                   <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_10px_red]" />
+                   <motion.p key={data.projects[currentHighlight]?.category} initial={{opacity:0, y:10}} animate={{opacity:1,y:0}} className="text-[9px] text-white/90 uppercase tracking-widest font-black bg-white/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                     {data.projects[currentHighlight]?.category}
+                   </motion.p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        <section id="experience" className="scroll-mt-20">
-          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4">
-            <Briefcase className="text-secondary w-8 h-8 md:w-10 md:h-10" /> {t[lang].expTitle}
-          </motion.h2>
-          <div className="space-y-6 md:space-y-8">
-            {data.experience.map((exp: any, i: number) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative group rounded-[2rem] md:rounded-[2.5rem] p-[2px] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[spin_4s_linear_infinite]" />
-                <div className="relative glass-card p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] flex flex-col md:flex-row gap-4 md:gap-8 bg-[#0a0a0a]/90 backdrop-blur-xl z-10">
-                  <div className="md:w-1/4 shrink-0">
-                    <span className="text-secondary font-bold text-xs md:text-sm mb-1 md:mb-2 block drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">{exp.year}</span>
-                    <span className="text-white font-bold text-base md:text-lg">{exp.company}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-black text-white mb-2 md:mb-4 group-hover:text-secondary transition-colors">{exp.role}</h3>
-                    <p className="text-sm md:text-base text-gray-300 leading-relaxed font-medium">{exp.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        <section id="skills" className="scroll-mt-20">
-          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4">
-            <Code className="text-primary w-8 h-8 md:w-10 md:h-10" /> {t[lang].skillTitle}
-          </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {data.skills.map((skill: any, i: number) => (
-              <motion.div key={i} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} whileHover={{ scale: 1.05, y: -10 }} className="relative group rounded-3xl p-[2px] overflow-hidden cursor-pointer opacity-80 hover:opacity-100 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative glass-card p-5 md:p-6 rounded-3xl flex flex-col items-center text-center bg-[#0a0a0a]/90 backdrop-blur-md h-full z-10">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6 group-hover:scale-125 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                    <img src={skill.logo} alt={skill.name} className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
-                  </div>
-                  <h3 className="text-base md:text-lg font-bold text-white mb-1 md:mb-2 group-hover:text-primary transition-colors">{skill.name}</h3>
-                  <p className="text-[8px] md:text-[10px] font-bold text-gray-400 uppercase tracking-widest">{skill.category}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        <section id="portofolio" className="scroll-mt-20">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8 mb-10 md:mb-16">
-            <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black flex items-center gap-4">
-              <FolderGit2 className="text-secondary w-8 h-8 md:w-10 md:h-10" /> {t[lang].portTitle}
-            </motion.h2>
-            <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex flex-wrap gap-2">
-              {data.categories.map((cat: string) => (
-                <button key={cat} onClick={() => setActiveTab(cat)} className={`px-4 md:px-5 py-1.5 md:py-2 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-widest transition-all ${activeTab === cat ? "bg-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.6)]" : "glass-card text-gray-400 hover:text-white hover:border-white/30"}`}>
-                  {cat}
-                </button>
-              ))}
-            </motion.div>
-          </div>
-
-          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project: any) => (
-                <motion.div key={project.id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} whileHover={{ y: -10 }} onClick={() => setSelectedProject(project)} className="relative group rounded-[2rem] md:rounded-[2.5rem] p-[2px] overflow-hidden cursor-pointer transition-all duration-300 shadow-xl hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)]">
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative glass-card rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-[#0a0a0a] z-10 h-full flex flex-col">
-                    <div className="aspect-square bg-[#111] relative overflow-hidden">
-                      <img src={project.thumbnail} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-90" />
-                      <div className="absolute top-4 md:top-6 left-4 md:left-6 px-3 md:px-4 py-1.5 md:py-2 glass-nav rounded-full text-[8px] md:text-[10px] font-bold text-white uppercase tracking-widest shadow-[0_0_15px_rgba(0,0,0,0.5)]">
-                        {project.category}
-                      </div>
-                    </div>
-                    <div className="p-6 md:p-8 flex-grow">
-                      <h3 className="text-xl md:text-2xl font-black text-white group-hover:text-primary transition-colors">{project.title}</h3>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        </section>
-
-        <section id="more" className="scroll-mt-20">
-          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black mb-10 md:mb-16 flex items-center gap-4">
-            <Award className="text-primary w-8 h-8 md:w-10 md:h-10" /> {t[lang].moreTitle}
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-             {data.more.map((item: any, i: number) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative group rounded-[1.5rem] md:rounded-[2rem] p-[2px] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative glass-card p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-[#0a0a0a]/90 z-10 h-full">
-                    <span className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-widest mb-1 md:mb-2 block drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]">{item.year}</span>
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
-                    <p className="text-sm md:text-base text-gray-400 font-medium">{item.issuer}</p>
-                  </div>
-                </motion.div>
-             ))}
-          </div>
-        </section>
-
-        <section id="contacts" className="py-20 md:py-32 scroll-mt-20 border-t border-white/10">
-          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative group rounded-[3rem] md:rounded-[4rem] p-[2px] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-fuchsia-500 animate-[spin_6s_linear_infinite]" />
-            <div className="relative glass-card p-8 sm:p-12 md:p-24 rounded-[3rem] md:rounded-[4rem] text-center bg-[#0a0a0a]/95 backdrop-blur-2xl z-10">
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-4 md:mb-6 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">{t[lang].contactTitle}</h2>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-gray-300 text-sm md:text-base font-medium mb-8 md:mb-12">
-                <MapPin size={18} className="text-secondary" /> {t[lang].based} Bogor, West Java, Indonesia
+                <motion.p key={data.projects[currentHighlight]?.title} initial={{opacity:0, x:-20}} animate={{opacity:1,x:0}} className="text-white font-black text-sm md:text-base leading-tight drop-shadow-md">{data.projects[currentHighlight]?.title}</motion.p>
               </div>
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                {[
-                  { isLocal: true, imgSrc: "/icon-cv.png", url: "https://drive.google.com/drive/folders/1RKlbgk_HDLakO0m1zsU_JJ88LgZ3Xdmq?usp=sharing", color: "hover:bg-amber-500 hover:shadow-[0_0_20px_rgba(245,158,11,0.6)]" },
-                  { icon: Mail, url: "mailto:ganadzikri@gmail.com", color: "hover:bg-red-500 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)]" },
-                  { icon: FaWhatsapp, url: "https://wa.me/6281380731465", color: "hover:bg-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.6)]" },
-                  { icon: FaLinkedin, url: "https://www.linkedin.com/in/muhamadgana/", color: "hover:bg-blue-600 hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]" },
-                  { icon: FaGithub, url: "https://github.com/ganadzikri24", color: "hover:bg-gray-800 hover:shadow-[0_0_20px_rgba(31,41,55,0.6)]" },
-                  { icon: FaInstagram, url: "https://www.instagram.com/ganadzkriii/", color: "hover:bg-pink-600 hover:shadow-[0_0_20px_rgba(219,39,119,0.6)]" },
-                  { icon: FaYoutube, url: "https://www.youtube.com/@ganadzikri7788", color: "hover:bg-red-600 hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]" },
-                  { icon: FaBehance, url: "https://www.behance.net/ganadzikri", color: "hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]" }
-                ].map((item: any, i: number) => (
-                  <motion.a key={i} href={item.url} target="_blank" rel="noopener noreferrer" whileHover={{ y: -10, scale: 1.15 }} className={`w-12 h-12 md:w-16 md:h-16 rounded-full glass-card flex items-center justify-center text-white transition-all duration-300 ${item.color}`}>
-                    {item.isLocal ? (
-                      <img src={item.imgSrc} alt="CV" className="w-[20px] h-[20px] md:w-[26px] md:h-[26px] object-contain drop-shadow-md" />
-                    ) : (
-                      item.icon && <item.icon className="w-5 h-5 md:w-[26px] md:h-[26px]" />
-                    )}
-                  </motion.a>
-                ))}
+            </motion.div>
+          )}
+        </section>
+
+        {/* 2. EXPERIENCE SECTION */}
+        <section id="experience" className="min-h-screen py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
+          <AmbientParticles />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="max-w-7xl mx-auto w-full relative z-10">
+            
+            <motion.div variants={cinematicReveal} className="mb-32 text-center">
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            </motion.div>
+            
+            <div className="relative w-full">
+              <motion.div initial={{ height: 0 }} whileInView={{ height: "100%" }} transition={{ duration: 2, ease: "easeInOut" }} className="hidden md:block absolute left-1/2 top-4 w-px bg-gradient-to-b from-white via-white/20 to-transparent -translate-x-1/2" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 w-full">
+                {data.experience.map((exp: any, i: number) => {
+                  const isLeft = i % 2 === 0;
+                  return (
+                    <motion.div 
+                      key={i} variants={cinematicReveal}
+                      className={`relative flex w-full group ${isLeft ? "md:col-start-1 md:justify-end md:pr-20" : "md:col-start-2 md:justify-start md:pl-20 mt-10 md:mt-32"}`}
+                    >
+                      <motion.div whileHover={{ scale: 2 }} className={`hidden md:flex absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-[#070707] border-[3px] border-white/50 group-hover:border-white transition-all duration-500 z-20 group-hover:shadow-[0_0_30px_rgba(255,255,255,1)] ${isLeft ? "right-[-10px]" : "left-[-10px]"}`} />
+
+                      <motion.div whileHover={{ scale: 1.05, y: -15, rotate: isLeft ? -2 : 2 }} transition={{ type: "spring", bounce: 0.4 }} className={`max-w-xl w-full bg-white/[0.02] hover:bg-white/[0.08] p-10 rounded-[2.5rem] border border-white/10 hover:border-white/50 transition-colors duration-500 shadow-2xl backdrop-blur-sm ${isLeft ? "md:text-right" : "md:text-left"}`}>
+                        <span className="text-sm font-mono font-bold text-gray-500 mb-4 block tracking-[0.2em]">{exp.year}</span>
+                        <h3 className="text-3xl font-black text-white mb-3 tracking-tight">{exp.role}</h3>
+                        <p className="text-lg font-bold text-gray-400 mb-6 uppercase tracking-wider">{exp.company}</p>
+                        <p className="text-base text-gray-500 leading-relaxed font-light">{exp.description}</p>
+                      </motion.div>
+                    </motion.div>
+                  );
+                })}
               </div>
             </div>
           </motion.div>
         </section>
+
+        {/* 3. EDUCATION SECTION */}
+        <section id="education" className="min-h-screen py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
+          <AmbientGeometry />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="max-w-7xl mx-auto w-full relative z-10">
+            
+            <motion.div variants={cinematicReveal} className="mb-32 text-center">
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
+              {data.education.map((edu: any, i: number) => (
+                <motion.div 
+                  key={i} variants={cinematicReveal}
+                  whileHover={{ scale: 1.05, rotateX: 10, rotateY: -10, y: -20 }} transition={{ type: "spring", bounce: 0.4 }}
+                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-12 md:p-16 rounded-[3rem] border border-white/10 hover:border-white/50 transition-colors duration-700 flex flex-col h-full relative overflow-hidden shadow-2xl"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.05] transition-opacity duration-700" />
+                  <motion.div className="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-40 group-hover:scale-150 group-hover:-rotate-12 transition-all duration-1000 pointer-events-none z-0">
+                    {edu.logo && <img src={edu.logo} className="w-48 h-48 object-contain grayscale" onError={(e) => e.currentTarget.style.display = 'none'} />}
+                  </motion.div>
+                  <div className="relative z-10" style={{ transform: "translateZ(50px)" }}>
+                    <span className="text-sm font-mono font-bold text-gray-400 mb-6 block tracking-widest">{edu.year}</span>
+                    <h3 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tighter">{edu.degree}</h3>
+                    <p className="text-xl text-gray-500 font-bold uppercase tracking-wider">{edu.institution}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* 4. SKILLS SECTION */}
+        <section id="skills" className="min-h-screen py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
+          <AmbientParticles />
+          <motion.div variants={cinematicReveal} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="mb-24 text-center relative z-10">
+            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
+            <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+          </motion.div>
+          
+          <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.5, type: "spring" }} className="w-full flex animate-marquee gap-10 items-center mb-10 hover:!animation-play-state-paused py-4">
+            {[...data.skills, ...data.skills].map((skill: any, i: number) => (
+              <div key={i} className="w-72 h-80 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:scale-110 hover:-translate-y-5 hover:rotate-2">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-24 h-24 mb-8 z-10">
+                   <img src={skill.logo} alt={skill.name} className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
+                </div>
+                <h3 className="text-2xl font-black mb-3 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.5, type: "spring" }} className="w-full flex animate-marquee gap-10 items-center flex-row-reverse hover:!animation-play-state-paused py-4" style={{ animationDirection: 'reverse' }}>
+            {[...data.skills].reverse().concat([...data.skills].reverse()).map((skill: any, i: number) => (
+              <div key={i} className="w-72 h-80 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:scale-110 hover:-translate-y-5 hover:-rotate-2">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="w-24 h-24 mb-8 z-10">
+                   <img src={skill.logo} alt={skill.name} className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
+                </div>
+                <h3 className="text-2xl font-black mb-3 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
+              </div>
+            ))}
+          </motion.div>
+        </section>
+
+        {/* 5. PORTFOLIO SECTION */}
+        <section id="portofolio" className="min-h-screen py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
+          <AmbientGeometry />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="max-w-[1600px] mx-auto w-full relative z-10">
+            
+            <div className="flex flex-col xl:flex-row justify-between items-end mb-24 gap-10">
+              <motion.div variants={cinematicReveal}>
+                <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
+                <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white shadow-[0_0_15px_white]" />
+              </motion.div>
+              
+              <motion.div variants={cinematicReveal} className="flex flex-wrap gap-4">
+                {data.categories.map((cat: string) => (
+                  <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-8 py-3 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.6)]" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
+                    {cat}
+                  </motion.button>
+                ))}
+              </motion.div>
+            </div>
+
+            <motion.div layout className="columns-1 md:columns-2 xl:columns-3 gap-10 space-y-10">
+              <AnimatePresence>
+                {filteredProjects.map((project: any) => (
+                  <motion.div 
+                    key={project.id} layout initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9 }} 
+                    whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-10%" }}
+                    transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+                    whileHover={{ scale: 1.05, y: -15, rotate: 1 }}
+                    onClick={() => setSelectedProject(project)} 
+                    className="relative group overflow-hidden cursor-pointer bg-black border border-white/10 break-inside-avoid rounded-[2.5rem] hover:border-white/50 transition-colors shadow-2xl"
+                  >
+                    <div className="w-full relative overflow-hidden aspect-[4/5] sm:aspect-auto">
+                      <motion.img 
+                        whileHover={{ scale: 1.2, rotate: -2 }} transition={{ duration: 1, type: "spring" }}
+                        src={project.thumbnail} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 grayscale-[40%] group-hover:grayscale-0" onError={(e) => e.currentTarget.style.display = 'none'} 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none" />
+                    </div>
+                    
+                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 pointer-events-none flex flex-col justify-end bg-gradient-to-t from-black via-black/80 to-transparent">
+                      <span className="text-xs font-black text-white/50 uppercase tracking-[0.2em] mb-4 block drop-shadow-md group-hover:text-white transition-colors">{project.category}</span>
+                      <h3 className="text-xl md:text-2xl font-black text-white leading-tight mb-5 drop-shadow-xl">{project.title}</h3>
+                      <div className="flex items-center gap-3 text-sm font-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 uppercase tracking-widest bg-white/20 w-fit px-6 py-2 rounded-full backdrop-blur-md border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        {t[lang].viewProject} <ArrowUpRight size={18} />
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </motion.div>
+        </section>
+
+        {/* 6. CERTIFICATIONS LIST SECTION */}
+        <section id="more" className="min-h-screen py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
+          <AmbientParticles />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="w-full max-w-6xl relative z-10">
+            
+            <motion.div variants={cinematicReveal} className="mb-32 text-center">
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            </motion.div>
+            
+            <div className="flex flex-col border-t border-white/10">
+               {data.more.map((item: any, i: number) => (
+                  <motion.div 
+                    key={i} variants={cinematicReveal} 
+                    whileHover={{ scale: 1.02, x: 20, backgroundColor: "rgba(255,255,255,0.05)" }} transition={{ type: "spring", bounce: 0.6 }}
+                    className="group border-b border-white/10 py-10 flex flex-col md:flex-row md:items-start justify-between gap-6 transition-colors duration-500 cursor-default rounded-lg relative overflow-hidden px-6"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/[0.05] to-transparent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-0" />
+                    
+                    <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 w-full md:w-3/4 relative z-10">
+                      <span className="text-white/40 font-mono font-bold text-lg shrink-0 tracking-widest pt-1 group-hover:text-white transition-colors">{item.year}</span>
+                      <h3 className="text-xl md:text-2xl font-black text-gray-300 group-hover:text-white transition-colors tracking-tighter leading-snug">{item.title}</h3>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-500 font-bold shrink-0 md:w-1/4 text-left md:text-right uppercase tracking-widest pt-2 md:pt-1 leading-relaxed relative z-10 group-hover:text-gray-300 transition-colors">{item.issuer}</p>
+                  </motion.div>
+               ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* 7. MASSIVE FOOTER / CONTACT SECTION */}
+        <section id="contacts" className="min-h-screen pt-32 pb-16 px-6 border-t border-white/10 overflow-hidden relative flex flex-col justify-center items-center bg-[#050505]">
+          <AmbientGeometry />
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-10%" }} className="w-full flex flex-col items-center relative z-10">
+            <motion.h2 variants={cinematicReveal} className="text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-20 text-center w-full drop-shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+              {t[lang].contactTitle}
+            </motion.h2>
+            
+            <motion.div variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-base md:text-lg font-black mb-32 uppercase tracking-[0.2em] border border-white/20 px-10 py-5 rounded-full bg-white/5 backdrop-blur-md shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+              <MapPin size={20} className="text-white animate-bounce" /> {t[lang].based} Bogor, Indonesia
+            </motion.div>
+
+            <motion.div variants={staggerContainer} className="flex flex-wrap justify-center gap-8 md:gap-12">
+              {[
+                { isLocal: true, imgSrc: "/icon-cv.png", url: "https://drive.google.com/drive/folders/1RKlbgk_HDLakO0m1zsU_JJ88LgZ3Xdmq?usp=sharing", label: "CV" },
+                { icon: Mail, url: "mailto:ganadzikri@gmail.com", label: "Email" },
+                { icon: FaWhatsapp, url: "https://wa.me/6281380731465", label: "WhatsApp" },
+                { icon: FaLinkedin, url: "https://www.linkedin.com/in/muhamadgana/", label: "LinkedIn" },
+                { icon: FaGithub, url: "https://github.com/ganadzikri24", label: "GitHub" },
+                { icon: FaInstagram, url: "https://www.instagram.com/ganadzkriii/", label: "Instagram" },
+                { icon: FaYoutube, url: "https://www.youtube.com/@ganadzikri7788", label: "YouTube" },
+                { icon: FaBehance, url: "https://www.behance.net/ganadzikri", label: "Behance" }
+              ].map((item: any, i: number) => (
+                <motion.a 
+                  variants={cinematicReveal}
+                  key={i} href={item.url} target="_blank" rel="noopener noreferrer" 
+                  whileHover={{ y: -25, scale: 1.2, rotate: i % 2 === 0 ? 5 : -5 }} 
+                  className="group flex flex-col items-center gap-5"
+                >
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[2px] border-white/20 flex items-center justify-center text-gray-400 group-hover:text-black group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-2xl bg-[#0a0a0a] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]">
+                    {item.isLocal ? (
+                      <img src={item.imgSrc} alt="CV" className="w-8 h-8 md:w-10 md:h-10 object-contain filter invert-0 group-hover:invert transition-all duration-300" />
+                    ) : (
+                      item.icon && <item.icon className="w-8 h-8 md:w-10 md:h-10" />
+                    )}
+                  </div>
+                  <span className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors">{item.label}</span>
+                </motion.a>
+              ))}
+            </motion.div>
+            
+            <motion.p variants={cinematicReveal} className="text-gray-600 text-xs md:text-sm mt-48 uppercase tracking-[0.3em] text-center font-bold">
+              © {new Date().getFullYear()} Ganabitz. All Rights Reserved.
+            </motion.p>
+          </motion.div>
+        </section>
       </main>
 
+      {/* PROJECT MODAL POPUP */}
       <AnimatePresence>
         {selectedProject && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[200] bg-[#050505]/95 backdrop-blur-3xl overflow-y-auto">
-            <div className="max-w-4xl mx-auto w-full relative min-h-screen flex flex-col">
-              <div className="sticky top-0 w-full p-4 md:p-6 flex justify-end z-[210]">
-                 <motion.button whileHover={{ scale: 1.1, rotate: 90 }} onClick={() => setSelectedProject(null)} className="w-12 h-12 md:w-14 md:h-14 glass-nav rounded-full flex items-center justify-center text-white hover:bg-primary shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-colors">
-                    <X size={24} className="md:w-7 md:h-7" />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-3xl overflow-y-auto overflow-x-hidden">
+            <div className="max-w-7xl mx-auto w-full relative min-h-screen flex flex-col pt-10">
+              <div className="sticky top-6 w-full px-6 flex justify-end z-[210] mix-blend-difference">
+                 <motion.button whileHover={{ scale: 1.2, rotate: 180 }} onClick={() => setSelectedProject(null)} className="w-16 h-16 rounded-full flex items-center justify-center text-white border-2 border-white/20 hover:bg-white hover:text-black transition-all duration-500 shadow-2xl">
+                    <X size={28} />
                  </motion.button>
               </div>
               
-              <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="px-4 md:px-6 pb-24 md:pb-32 flex-grow">
-                <span className="text-primary font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-3 md:mb-4 block drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]">{selectedProject.category}</span>
-                <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-8 md:mb-12">{selectedProject.title}</h2>
+              <motion.div initial={{ y: 80, opacity: 0, scale: 0.9 }} animate={{ y: 0, opacity: 1, scale: 1 }} transition={{ delay: 0.2, type: "spring", bounce: 0.3, duration: 1 }} className="px-6 md:px-12 pb-32 flex-grow mt-10">
+                <div className="max-w-5xl">
+                  <span className="text-white/50 font-black uppercase tracking-[0.3em] text-sm mb-6 block">{selectedProject.category}</span>
+                  <h2 className="text-5xl md:text-7xl lg:text-[7rem] font-black text-white mb-16 leading-none uppercase tracking-tighter drop-shadow-2xl">{selectedProject.title}</h2>
+                </div>
                 
-                <div className="mb-8 md:mb-12 w-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[#0a0a0a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/5">
+                <div className="mb-24 w-full overflow-hidden bg-[#050505] rounded-[3rem] border border-white/10 shadow-[0_0_50px_rgba(255,255,255,0.05)]">
                    {renderProjectContent(selectedProject)}
                 </div>
 
-                <div className="relative rounded-[1.5rem] md:rounded-[2rem] p-[2px] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-30" />
-                  <div className="relative glass-card p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] bg-[#0a0a0a]/90 z-10">
-                    <h3 className="text-lg md:text-xl font-black mb-3 md:mb-4 text-white uppercase tracking-widest">{t[lang].desc}</h3>
-                    <p className="text-sm md:text-lg text-gray-300 leading-relaxed font-medium mb-8 md:mb-10">{selectedProject.description}</p>
-                    
-                    <h3 className="text-xs md:text-sm font-black mb-3 md:mb-4 text-white uppercase tracking-widest">{t[lang].tools}</h3>
-                    <div className="flex flex-wrap gap-2 md:gap-3">
-                      {selectedProject.tools?.map((t: string, i: number) => (
-                        <span key={i} className="px-3 md:px-5 py-1.5 md:py-2 glass-card rounded-lg text-[10px] md:text-xs font-bold text-white hover:bg-primary transition-colors cursor-default border border-white/10 shadow-lg">{t}</span>
+                <div className="grid md:grid-cols-3 gap-20 border-t border-white/10 pt-24">
+                  <div className="md:col-span-2">
+                    <h3 className="text-base font-black mb-10 text-white/50 uppercase tracking-[0.2em]">{t[lang].desc}</h3>
+                    <p className="text-xl md:text-3xl text-gray-300 leading-relaxed font-light">{selectedProject.description}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-black mb-10 text-white/50 uppercase tracking-[0.2em]">{t[lang].tools}</h3>
+                    <div className="flex flex-col gap-5">
+                      {selectedProject.tools?.map((tool: string, i: number) => (
+                        <span key={i} className="text-lg font-bold text-white border-b border-white/10 pb-4">{tool}</span>
                       ))}
                     </div>
                   </div>
