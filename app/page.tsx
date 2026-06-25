@@ -21,11 +21,11 @@ const ambientStyles = `
 const AmbientGeometry = memo(() => (
   <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-40">
     <style dangerouslySetInnerHTML={{ __html: ambientStyles }} />
-    <div className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[2px] border-white/20 rounded-full border-solid" style={{ animation: "spin-slow 90s linear infinite" }} />
-    <div className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[1px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 120s linear infinite" }} />
-    <div className="absolute top-[-10vw] right-[-10vw] w-[70vw] h-[70vw] border-[2px] border-white/10 rounded-full border-solid" style={{ animation: "spin-slow 150s linear infinite" }} />
-    <div className="absolute bottom-[-20vw] left-[-10vw] w-[60vw] h-[60vw] border-[1px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 100s linear infinite" }} />
-    <div className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" style={{ animation: "beam 15s linear infinite" }} />
+    <div className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[3px] border-white/20 rounded-full border-solid" style={{ animation: "spin-slow 60s linear infinite" }} />
+    <div className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[2px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 80s linear infinite" }} />
+    <div className="absolute top-[-10vw] right-[-10vw] w-[70vw] h-[70vw] border-[3px] border-white/10 rounded-full border-solid" style={{ animation: "spin-slow 100s linear infinite" }} />
+    <div className="absolute bottom-[-20vw] left-[-10vw] w-[60vw] h-[60vw] border-[2px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 70s linear infinite" }} />
+    <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" style={{ animation: "beam 10s linear infinite" }} />
   </div>
 ));
 AmbientGeometry.displayName = "AmbientGeometry";
@@ -56,7 +56,7 @@ const ProjectHighlightWidget = memo(({ projects, setSelectedProject }: { project
     <motion.div
       initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
       whileHover={{ scale: 1.05, rotate: -2, y: -10 }}
-      className="absolute bottom-10 right-6 md:right-10 z-30 w-64 md:w-80 h-40 md:h-48 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group hidden md:block bg-black"
+      className="absolute bottom-6 md:bottom-10 right-4 md:right-10 z-30 w-48 md:w-80 h-28 md:h-48 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-black"
       onClick={() => setSelectedProject(projects[currentHighlight])}
     >
       <AnimatePresence mode="wait">
@@ -71,13 +71,13 @@ const ProjectHighlightWidget = memo(({ projects, setSelectedProject }: { project
       </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-60 transition-opacity" />
       <div className="absolute bottom-5 left-5 right-5 z-10">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-          <p className="text-[9px] text-white/90 uppercase tracking-widest font-black bg-white/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+        <div className="flex items-center gap-2 mb-1 md:mb-2">
+          <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500 animate-pulse" />
+          <p className="text-[7px] md:text-[9px] text-white/90 uppercase tracking-widest font-black bg-white/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
             {projects[currentHighlight]?.category}
           </p>
         </div>
-        <p className="text-white font-black text-sm md:text-base leading-tight drop-shadow-md">{projects[currentHighlight]?.title}</p>
+        <p className="text-white font-black text-xs md:text-base leading-tight drop-shadow-md line-clamp-2">{projects[currentHighlight]?.title}</p>
       </div>
     </motion.div>
   );
@@ -453,13 +453,13 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 2. EXPERIENCE SECTION */}
-        <section id="experience" className="min-h-screen py-20 md:py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
+        <section id="experience" className="min-h-screen py-16 md:py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
           <AmbientParticles />
           <div className="max-w-7xl mx-auto w-full relative z-10">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-20 md:mb-32 text-center">
-              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
-              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
+              <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
             <div className="relative w-full">
@@ -495,16 +495,16 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 3. EDUCATION SECTION */}
-        <section id="education" className="min-h-screen py-20 md:py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
+        <section id="education" className="min-h-screen py-16 md:py-32 px-4 md:px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
           <AmbientGeometry />
           <div className="max-w-7xl mx-auto w-full relative z-10">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-20 md:mb-32 text-center">
-              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
-              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
+              <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
               {eduData.map((edu: any, i: number) => (
                 <motion.div
                   key={i}
@@ -514,16 +514,16 @@ export default function AestheticPortfolio() {
                     visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1.2, delay: i * 0.2 } }
                   } as any}
                   whileHover={{ scale: 1.05, rotateX: 10, rotateY: -10, y: -20 }} transition={{ type: "spring", bounce: 0.4 }}
-                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-12 md:p-16 rounded-[3rem] border border-white/10 hover:border-white/50 transition-colors duration-700 flex flex-col h-full relative overflow-hidden shadow-xl"
+                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 hover:border-white/50 transition-colors duration-700 flex flex-col h-full relative overflow-hidden shadow-xl"
                 >
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.05] transition-opacity duration-700" />
                   <motion.div className="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-40 group-hover:scale-150 group-hover:-rotate-12 transition-all duration-1000 pointer-events-none z-0">
                     {edu.logo && <img src={edu.logo} loading="lazy" decoding="async" className="w-48 h-48 object-contain grayscale" onError={(e) => e.currentTarget.style.display = 'none'} />}
                   </motion.div>
                   <div className="relative z-10">
-                    <span className="text-sm font-mono font-bold text-gray-400 mb-6 block tracking-widest">{edu.year}</span>
-                    <h3 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tighter">{edu.degree}</h3>
-                    <p className="text-xl text-gray-500 font-bold uppercase tracking-wider">{edu.institution}</p>
+                    <span className="text-xs md:text-sm font-mono font-bold text-gray-400 mb-4 md:mb-6 block tracking-widest">{edu.year}</span>
+                    <h3 className="text-2xl md:text-5xl font-black text-white mb-4 md:mb-6 leading-tight tracking-tighter">{edu.degree}</h3>
+                    <p className="text-base md:text-xl text-gray-500 font-bold uppercase tracking-wider">{edu.institution}</p>
                   </div>
                 </motion.div>
               ))}
@@ -532,11 +532,11 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 4. SKILLS SECTION */}
-        <section id="skills" className="min-h-screen py-20 md:py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
+        <section id="skills" className="min-h-screen py-16 md:py-32 relative flex flex-col justify-center border-y border-white/5 bg-[#070707] overflow-hidden w-full max-w-[100vw]">
           <AmbientParticles />
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-24 text-center relative z-10">
-            <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
-            <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-12 md:mb-24 text-center relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
+            <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-full flex animate-marquee gap-8 items-center mb-10 hover:!animation-play-state-paused py-4">
@@ -567,19 +567,19 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 5. PORTFOLIO SECTION */}
-        <section id="portofolio" className="min-h-screen py-20 md:py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
+        <section id="portofolio" className="min-h-screen py-16 md:py-32 px-4 md:px-10 relative overflow-hidden bg-[#050505]">
           <AmbientParticles />
           <div className="max-w-[1600px] mx-auto w-full relative z-10">
 
-            <div className="flex flex-col xl:flex-row justify-between items-end mb-16 md:mb-24 gap-10">
+            <div className="flex flex-col xl:flex-row justify-between items-center xl:items-end mb-12 md:mb-24 gap-6 md:gap-10 text-center xl:text-left">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal}>
-                <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
-                <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white shadow-[0_0_15px_white]" />
+                <h2 className="text-3xl sm:text-4xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
+                <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white shadow-[0_0_15px_white] xl:mx-0 mx-auto" />
               </motion.div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-wrap gap-4">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-wrap justify-center xl:justify-end gap-2 md:gap-4">
                 {data.categories.map((cat: string) => (
-                  <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-8 py-3 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-lg" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
+                  <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-4 py-2 md:px-8 md:py-3 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-lg" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
                     {cat}
                   </motion.button>
                 ))}
@@ -625,13 +625,13 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 6. CERTIFICATIONS LIST SECTION */}
-        <section id="more" className="min-h-screen py-20 md:py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
+        <section id="more" className="min-h-screen py-16 md:py-32 px-4 md:px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
           <AmbientParticles />
           <div className="w-full max-w-6xl relative z-10">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-20 md:mb-32 text-center">
-              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
-              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
+              <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
             <div className="flex flex-col border-t border-white/10">
@@ -648,11 +648,11 @@ export default function AestheticPortfolio() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-white/[0.05] to-transparent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-0" />
 
-                  <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 w-full md:w-3/4 relative z-10">
-                    <span className="text-white/40 font-mono font-bold text-lg shrink-0 tracking-widest pt-1 group-hover:text-white transition-colors">{item.year}</span>
-                    <h3 className="text-xl md:text-2xl font-black text-gray-300 group-hover:text-white transition-colors tracking-tighter leading-snug">{item.title}</h3>
+                  <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 w-full md:w-3/4 relative z-10">
+                    <span className="text-white/40 font-mono font-bold text-sm md:text-lg shrink-0 tracking-widest pt-1 group-hover:text-white transition-colors">{item.year}</span>
+                    <h3 className="text-lg md:text-2xl font-black text-gray-300 group-hover:text-white transition-colors tracking-tighter leading-snug">{item.title}</h3>
                   </div>
-                  <p className="text-xs md:text-sm text-gray-500 font-bold shrink-0 md:w-1/4 text-left md:text-right uppercase tracking-widest pt-2 md:pt-1 leading-relaxed relative z-10 group-hover:text-gray-300 transition-colors">{item.issuer}</p>
+                  <p className="text-[10px] md:text-sm text-gray-500 font-bold shrink-0 md:w-1/4 text-left md:text-right uppercase tracking-widest pt-1 leading-relaxed relative z-10 group-hover:text-gray-300 transition-colors">{item.issuer}</p>
                 </motion.div>
               ))}
             </div>
@@ -660,15 +660,15 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 7. MASSIVE FOOTER / CONTACT SECTION */}
-        <section id="contacts" className="min-h-screen pt-24 md:pt-32 pb-16 px-6 border-t border-white/10 overflow-hidden relative flex flex-col justify-center items-center bg-[#050505]">
+        <section id="contacts" className="min-h-screen pt-16 md:pt-32 pb-16 px-4 md:px-6 border-t border-white/10 overflow-hidden relative flex flex-col justify-center items-center bg-[#050505]">
           <AmbientGeometry />
           <div className="w-full flex flex-col items-center relative z-10">
-            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-16 md:mb-20 text-center w-full">
+            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="text-[15vw] md:text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-12 md:mb-20 text-center w-full mt-10">
               {t[lang].contactTitle}
             </motion.h2>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-sm md:text-lg font-black mb-24 md:mb-32 uppercase tracking-[0.2em] border border-white/20 px-8 py-4 md:px-10 md:py-5 rounded-full bg-white/5 backdrop-blur-md shadow-2xl text-center">
-              <MapPin size={20} className="text-white animate-bounce shrink-0" /> {t[lang].based} Bogor, Indonesia
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-xs md:text-lg font-black mb-16 md:mb-32 uppercase tracking-[0.2em] border border-white/20 px-6 py-3 md:px-10 md:py-5 rounded-[2rem] md:rounded-full bg-white/5 backdrop-blur-md shadow-2xl text-center">
+              <MapPin size={18} className="text-white animate-bounce shrink-0" /> {t[lang].based} Bogor, Indonesia
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
