@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, X, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, X, MapPin, ArrowUpRight, Menu } from "lucide-react";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram, FaYoutube, FaBehance } from "react-icons/fa";
 
 import dataEN from "@/data/portfolio.json";
@@ -128,6 +128,7 @@ AnimatedDescription.displayName = "AnimatedDescription";
 export default function AestheticPortfolio() {
   const [activeTab, setActiveTab] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [lang, setLang] = useState<"en" | "id">("en");
   const data = lang === "en" ? dataEN : dataID;
@@ -290,6 +291,14 @@ export default function AestheticPortfolio() {
     }
     if (project.type === "video-top") {
       const url = project.videoUrl || "";
+      if (url.includes("instagram.com")) {
+        const embedUrl = url.split('?')[0].replace(/\/$/, '') + '/embed';
+        return (
+          <div className="w-full aspect-[4/5] md:aspect-video bg-[#050505] overflow-hidden border border-white/5 flex justify-center">
+            <iframe className="w-full max-w-lg h-full min-h-[400px] md:min-h-[500px]" src={embedUrl} allowFullScreen loading="lazy" />
+          </div>
+        );
+      }
       if (url.includes("youtube.com") || url.includes("youtu.be")) {
         const videoId = url.split('v=')[1] || url.split('youtu.be/')[1];
         const embedUrl = `https://www.youtube.com/embed/${videoId?.split('&')[0]}`;
@@ -344,8 +353,8 @@ export default function AestheticPortfolio() {
           <motion.img whileHover={{ rotate: 180, scale: 1.2 }} transition={{ duration: 0.6 }} src="/logo-navbar.png" alt="Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
         </div>
 
-        <div className="flex items-center gap-6">
-          <div className="hidden lg:flex items-center gap-6">
+        <div className="flex items-center gap-4 md:gap-6">
+          <div className="hidden xl:flex items-center gap-6">
             {t[lang].nav.map((item) => (
               <button key={item.id} onClick={() => scrollTo(item.id)} className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors relative group">
                 {item.label}
@@ -360,8 +369,29 @@ export default function AestheticPortfolio() {
           >
             {lang === "en" ? "ID" : "EN"}
           </motion.button>
+          <button onClick={() => setIsMobileMenuOpen(true)} className="xl:hidden text-white p-1 hover:text-gray-300 transition-colors">
+            <Menu size={28} />
+          </button>
         </div>
       </motion.nav>
+
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div initial={{ opacity: 0, x: "100%" }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: "100%" }} transition={{ type: "tween", duration: 0.4 }} className="fixed inset-0 bg-[#030303] z-[200] flex flex-col p-6 overflow-hidden">
+            <div className="flex justify-end mt-2">
+              <button onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-gray-400 transition-colors p-2"><X size={32} /></button>
+            </div>
+            <div className="flex flex-col items-center justify-center flex-grow gap-8">
+              {t[lang].nav.map(item => (
+                <button key={item.id} onClick={() => { setIsMobileMenuOpen(false); setTimeout(() => scrollTo(item.id), 300); }} className="text-3xl font-black uppercase tracking-widest text-white hover:text-gray-400 transition-colors">
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main className="relative z-10 w-full">
 
@@ -423,12 +453,12 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 2. EXPERIENCE SECTION */}
-        <section id="experience" className="min-h-screen py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
+        <section id="experience" className="min-h-screen py-20 md:py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
           <AmbientParticles />
           <div className="max-w-7xl mx-auto w-full relative z-10">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-32 text-center">
-              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-20 md:mb-32 text-center">
+              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
@@ -465,12 +495,12 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 3. EDUCATION SECTION */}
-        <section id="education" className="min-h-screen py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
+        <section id="education" className="min-h-screen py-20 md:py-32 px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
           <AmbientGeometry />
           <div className="max-w-7xl mx-auto w-full relative z-10">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-32 text-center">
-              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-20 md:mb-32 text-center">
+              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
@@ -502,10 +532,10 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 4. SKILLS SECTION */}
-        <section id="skills" className="min-h-screen py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
+        <section id="skills" className="min-h-screen py-20 md:py-32 relative overflow-hidden flex flex-col justify-center border-y border-white/5 bg-[#070707]">
           <AmbientParticles />
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-24 text-center relative z-10">
-            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-24 text-center relative z-10">
+            <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
             <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
           </motion.div>
 
@@ -537,13 +567,13 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 5. PORTFOLIO SECTION */}
-        <section id="portofolio" className="min-h-screen py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
+        <section id="portofolio" className="min-h-screen py-20 md:py-32 px-6 md:px-10 relative overflow-hidden bg-[#050505]">
           <AmbientParticles />
           <div className="max-w-[1600px] mx-auto w-full relative z-10">
 
-            <div className="flex flex-col xl:flex-row justify-between items-end mb-24 gap-10">
+            <div className="flex flex-col xl:flex-row justify-between items-end mb-16 md:mb-24 gap-10">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal}>
-                <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
+                <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
                 <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white shadow-[0_0_15px_white]" />
               </motion.div>
 
@@ -595,12 +625,12 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 6. CERTIFICATIONS LIST SECTION */}
-        <section id="more" className="min-h-screen py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
+        <section id="more" className="min-h-screen py-20 md:py-32 px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
           <AmbientParticles />
           <div className="w-full max-w-6xl relative z-10">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-32 text-center">
-              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-20 md:mb-32 text-center">
+              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
@@ -630,15 +660,15 @@ export default function AestheticPortfolio() {
         </section>
 
         {/* 7. MASSIVE FOOTER / CONTACT SECTION */}
-        <section id="contacts" className="min-h-screen pt-32 pb-16 px-6 border-t border-white/10 overflow-hidden relative flex flex-col justify-center items-center bg-[#050505]">
+        <section id="contacts" className="min-h-screen pt-24 md:pt-32 pb-16 px-6 border-t border-white/10 overflow-hidden relative flex flex-col justify-center items-center bg-[#050505]">
           <AmbientGeometry />
           <div className="w-full flex flex-col items-center relative z-10">
-            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-20 text-center w-full">
+            <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="text-[18vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] hover:to-white transition-colors duration-1000 cursor-default mb-16 md:mb-20 text-center w-full">
               {t[lang].contactTitle}
             </motion.h2>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-base md:text-lg font-black mb-32 uppercase tracking-[0.2em] border border-white/20 px-10 py-5 rounded-full bg-white/5 backdrop-blur-md shadow-2xl">
-              <MapPin size={20} className="text-white animate-bounce" /> {t[lang].based} Bogor, Indonesia
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-sm md:text-lg font-black mb-24 md:mb-32 uppercase tracking-[0.2em] border border-white/20 px-8 py-4 md:px-10 md:py-5 rounded-full bg-white/5 backdrop-blur-md shadow-2xl text-center">
+              <MapPin size={20} className="text-white animate-bounce shrink-0" /> {t[lang].based} Bogor, Indonesia
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
