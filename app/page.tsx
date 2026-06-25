@@ -539,28 +539,28 @@ export default function AestheticPortfolio() {
             <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-full flex animate-marquee gap-8 items-center mb-10 hover:!animation-play-state-paused py-4">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-max flex animate-marquee gap-8 items-center mb-10 hover:!animation-play-state-paused py-4">
             {[...skillData, ...skillData].map((skill: any, i: number) => (
-              <div key={i} className="w-64 h-72 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-lg hover:scale-110 hover:-translate-y-5 hover:rotate-2">
+              <div key={i} className="w-48 h-56 md:w-64 md:h-72 shrink-0 border border-white/10 hover:border-white/50 rounded-[2rem] md:rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-6 md:p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-lg hover:scale-110 hover:-translate-y-5 hover:rotate-2">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-20 h-20 mb-6 z-10">
+                <div className="w-16 h-16 md:w-20 md:h-20 mb-4 md:mb-6 z-10">
                   <img src={skill.logo} alt={skill.name} loading="lazy" decoding="async" className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
-                <h3 className="text-xl font-black mb-2 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
+                <h3 className="text-lg md:text-xl font-black mb-1 md:mb-2 text-white transition-colors z-10 tracking-tight text-center">{skill.name}</h3>
+                <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10 text-center">{skill.category}</p>
               </div>
             ))}
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-full flex animate-marquee gap-8 items-center flex-row-reverse hover:!animation-play-state-paused py-4" style={{ animationDirection: 'reverse' }}>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-max flex animate-marquee gap-8 items-center flex-row-reverse hover:!animation-play-state-paused py-4" style={{ animationDirection: 'reverse' }}>
             {[...skillData].reverse().concat([...skillData].reverse()).map((skill: any, i: number) => (
-              <div key={i} className="w-64 h-72 shrink-0 border border-white/10 hover:border-white/50 rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-lg hover:scale-110 hover:-translate-y-5 hover:-rotate-2">
+              <div key={i} className="w-48 h-56 md:w-64 md:h-72 shrink-0 border border-white/10 hover:border-white/50 rounded-[2rem] md:rounded-[2.5rem] bg-[#0a0a0a] hover:bg-[#1a1a1a] flex flex-col items-center justify-center p-6 md:p-8 group transition-all duration-500 relative overflow-hidden cursor-default shadow-lg hover:scale-110 hover:-translate-y-5 hover:-rotate-2">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-20 h-20 mb-6 z-10">
+                <div className="w-16 h-16 md:w-20 md:h-20 mb-4 md:mb-6 z-10">
                   <img src={skill.logo} alt={skill.name} loading="lazy" decoding="async" className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
-                <h3 className="text-xl font-black mb-2 text-white transition-colors z-10 tracking-tight">{skill.name}</h3>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10">{skill.category}</p>
+                <h3 className="text-lg md:text-xl font-black mb-1 md:mb-2 text-white transition-colors z-10 tracking-tight text-center">{skill.name}</h3>
+                <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-300 transition-colors z-10 text-center">{skill.category}</p>
               </div>
             ))}
           </motion.div>
