@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Muhamad Ganabitz Dzikri",
-    "title": "Creative Technologist & Network Engineer",
+    "title": "Creative & Technologist",
     "description": "Computer Engineering student at IPB University with specific expertise in two areas: IT (IoT, Networking, Web Development) and Multimedia (Design, Motion Graphics, Video, Broadcasting). I am a fast-paced worker, highly adaptable to new technologies, and dedicated to delivering functional, high quality results.",
     "photo": "/foto-hero.png"
   },
@@ -445,11 +445,11 @@
     },
     {
       "id": 20,
-      "title": "Company C Bumper",
+      "title": "Under Construction",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video12-thumb.webp",
+      "thumbnail": "/portfolio/vid-thumb/",
       "type": "video-top",
-      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+      "videoUrl": "",
       "description": "lorem ipsum.",
       "tools": [
         "After Effects",
@@ -619,75 +619,138 @@
     },
     {
       "id": 28,
-      "title": "Eco Bug",
+      "title": "Eco-BugBuster",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.webp",
+      "thumbnail": "/portfolio/eco/1.jpg",
       "type": "article",
       "content": [
         {
           "type": "text",
-          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
-        },
-        {
-          "type": "subtitle",
-          "value": "1. Hardware Design"
-        },
-        {
-          "type": "text",
-          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+          "value": "Rancang bangun purwarupa Eco BugBuster: inovasi alat pengendali hama bertenaga surya yang mengintegrasikan otomatisasi sinar UV, sensor penghitung populasi hama, dan penyemprot biopestisida ekstrak daun mimba."
         },
         {
           "type": "image",
-          "value": "/portfolio/skema-wiring.webp"
-        },
-        {
-          "type": "subtitle",
-          "value": "2. Network & Dashboard Implementation"
-        },
-        {
-          "type": "text",
-          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+          "value": "/portfolio/eco/1.jpg"
         },
         {
           "type": "image",
-          "value": "/portfolio/dashboard-iot.webp"
-        }
-      ]
-    },
-    {
-      "id": 29,
-      "title": "Gaming Centre",
-      "category": "Networking",
-      "thumbnail": "/portfolio/net-thumb.webp",
-      "type": "article",
-      "content": [
-        {
-          "type": "text",
-          "value": "This project is designed to monitor the temperature and security of the server room in <b>real-time</b> 24 hours a day. If an anomaly is detected, the system will send a notification."
-        },
-        {
-          "type": "subtitle",
-          "value": "1. Hardware Design"
-        },
-        {
-          "type": "text",
-          "value": "The brain of this system uses the <b>ESP32 Microcontroller</b>. I integrated several sensors, including a <b>DHT22</b> temperature sensor, an <b>MQ2</b> gas/smoke sensor, and a PIR motion sensor."
+          "value": "/portfolio/eco/2.jpg"
         },
         {
           "type": "image",
-          "value": "/portfolio/skema-wiring.webp"
-        },
-        {
-          "type": "subtitle",
-          "value": "2. Network & Dashboard Implementation"
-        },
-        {
-          "type": "text",
-          "value": "Sensor data is sent via a WiFi network to the <b>ThingsBoard</b> platform using the MQTT protocol, so data visualization can be monitored remotely."
+          "value": "/portfolio/eco/3.jpg"
         },
         {
           "type": "image",
-          "value": "/portfolio/dashboard-iot.webp"
+          "value": "/portfolio/eco/4.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/5.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/6.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/7.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/8.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/9.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/10.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/11.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/12.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/13.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/14.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/15.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/16.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/17.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/18.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/19.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/20.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/21.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/22.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/23.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/24.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/25.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/26.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/27.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/28.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/29.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/31.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/32.jpg"
         }
       ]
     },

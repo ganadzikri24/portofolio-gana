@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Muhamad Ganabitz Dzikri",
-    "title": "Creative Technologist & Network Engineer",
+    "title": "Creative & Technologist",
     "description": "Mahasiswa Teknologi Rekayasa Komputer di IPB University dengan keahlian spesifik di dua bidang: IT (IoT, Networking, Web Development) dan Multimedia (Desain, Motion Graphics, Video, Broadcasting). Saya adalah pekerja serba cepat, sangat mudah beradaptasi dengan teknologi baru, dan berdedikasi untuk memberikan hasil yang fungsional dan berkualitas tinggi.",
     "photo": "/foto-hero.png"
   },
@@ -445,11 +445,11 @@
     },
     {
       "id": 20,
-      "title": "Company C Bumper",
+      "title": "Under Construction",
       "category": "Motion Graphics & Animation",
-      "thumbnail": "/portfolio/vid-thumb/video12-thumb.webp",
+      "thumbnail": "/portfolio/vid-thumb/vi",
       "type": "video-top",
-      "videoUrl": "https://www.youtube.com/watch?v=57mI-ElXJDY",
+      "videoUrl": "",
       "description": "lorem ipsum.",
       "tools": [
         "After Effects",
@@ -619,38 +619,138 @@
     },
     {
       "id": 28,
-      "title": "Eco Bug",
+      "title": "Eco-BugBuster Rancang bangun purwarupa Eco BugBuster: inovasi alat pengendali hama bertenaga surya yang mengintegrasikan otomatisasi sinar UV, sensor penghitung populasi hama, dan penyemprot biopestisida ekstrak daun mimba.",
       "category": "IoT Projects",
-      "thumbnail": "/portfolio/iot-thumb.webp",
+      "thumbnail": "/portfolio/eco/1.jpg",
       "type": "article",
       "content": [
         {
           "type": "text",
-          "value": "Project ini dirancang untuk memantau suhu dan keamanan ruang server secara <b>real-time</b> 24 jam penuh. Jika terdeteksi anomali, sistem akan mengirimkan notifikasi."
-        },
-        {
-          "type": "subtitle",
-          "value": "1. Desain Perangkat Keras (Hardware)"
-        },
-        {
-          "type": "text",
-          "value": "Otak dari sistem ini menggunakan <b>Mikrokontroler ESP32</b>. Saya mengintegrasikan beberapa sensor, antara lain sensor suhu <b>DHT22</b>, sensor gas/asap <b>MQ2</b>, dan sensor gerak PIR."
+          "value": "Rancang bangun purwarupa Eco BugBuster: inovasi alat pengendali hama bertenaga surya yang mengintegrasikan otomatisasi sinar UV, sensor penghitung populasi hama, dan penyemprot biopestisida ekstrak daun mimba."
         },
         {
           "type": "image",
-          "value": "/portfolio/skema-wiring.webp"
-        },
-        {
-          "type": "subtitle",
-          "value": "2. Implementasi Jaringan & Dashboard"
-        },
-        {
-          "type": "text",
-          "value": "Data dari sensor dikirimkan melalui jaringan WiFi ke platform <b>ThingsBoard</b> menggunakan protokol MQTT, sehingga visualisasi data dapat dipantau dari jarak jauh."
+          "value": "/portfolio/eco/1.jpg"
         },
         {
           "type": "image",
-          "value": "/portfolio/dashboard-iot.webp"
+          "value": "/portfolio/eco/2.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/3.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/4.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/5.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/6.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/7.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/8.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/9.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/10.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/11.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/12.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/13.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/14.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/15.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/16.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/17.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/18.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/19.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/20.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/21.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/22.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/23.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/24.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/25.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/26.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/27.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/28.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/29.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/31.jpg"
+        },
+        {
+          "type": "image",
+          "value": "/portfolio/eco/32.jpg"
         }
       ]
     },

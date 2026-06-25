@@ -6,7 +6,7 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ganabitz Portfolio",
-  description: "Creative Technologist & Network Engineer Portfolio",
+  description: "Creative & Technologist",
 };
 
 export default function RootLayout({
