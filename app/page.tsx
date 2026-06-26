@@ -96,7 +96,7 @@ const AnimatedTitle = memo(({ text }: { text: string }) => {
     <>
       {text.split(" ").map((word: string, i: number) => (
         <motion.span
-          key={`${text}-${i}`}
+          key={i}
           initial={{ opacity: 0, y: 100, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "spring", bounce: 0.3, duration: 1.2, delay: i * 0.15 }}
@@ -108,7 +108,7 @@ const AnimatedTitle = memo(({ text }: { text: string }) => {
       ))}
     </>
   );
-}, areTextsEqual);
+});
 AnimatedTitle.displayName = "AnimatedTitle";
 
 const AnimatedDescription = memo(({ text }: { text: string }) => {
@@ -116,13 +116,19 @@ const AnimatedDescription = memo(({ text }: { text: string }) => {
   return (
     <>
       {text.split(" ").map((word: string, i: number) => (
-        <motion.span key={`${text}-${i}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + (i * 0.05) }} className="inline-block mr-1">
+        <motion.span 
+          key={i} 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ delay: 0.5 + (i * 0.05) }} 
+          className="inline-block mr-1"
+        >
           {word}
         </motion.span>
       ))}
     </>
   );
-}, areTextsEqual);
+});
 AnimatedDescription.displayName = "AnimatedDescription";
 
 export default function AestheticPortfolio() {
