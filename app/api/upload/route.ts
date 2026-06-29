@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { supabaseAdmin } from '@/lib/supabase';
 
 export async function POST(request: Request) {
   try {
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const filename = `${file.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
     const filePath = `${folder}/${uniqueSuffix}-${filename}`;
 
-    const { data, error } = await supabase.storage
+    const { data, error } = await supabaseAdmin.storage
       .from('portfolio-images')
       .upload(filePath, buffer, {
         contentType: file.type,
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     }
 
     // Get public URL
-    const { data: publicUrlData } = supabase.storage
+    const { data: publicUrlData } = supabaseAdmin.storage
       .from('portfolio-images')
       .getPublicUrl(filePath);
 
