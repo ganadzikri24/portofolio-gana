@@ -395,21 +395,43 @@ export default function ProjectsAdminPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-gray-400 mb-2">Kategori Utama</label>
-                    <select 
-                      required 
-                      value={formData.category} 
-                      onChange={e => {
-                        const selected = CATEGORY_OPTIONS.find(opt => opt.en === e.target.value);
-                        setFormData({...formData, category: selected?.en || "", category_id: selected?.id || ""});
-                      }}
-                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30"
-                    >
-                      <option value="" disabled>Pilih Kategori...</option>
-                      {CATEGORY_OPTIONS.map(opt => (
-                        <option key={opt.en} value={opt.en}>{opt.en} / {opt.id}</option>
-                      ))}
-                    </select>
+                    <label className="block text-sm font-bold text-gray-400 mb-2">Kategori Utama (Bisa pilih lebih dari satu)</label>
+                    <div className="flex flex-wrap gap-2">
+                      {CATEGORY_OPTIONS.map(opt => {
+                        const isSelected = formData.category?.split(',').map((c: string) => c.trim()).includes(opt.en);
+                        return (
+                          <button
+                            type="button"
+                            key={opt.en}
+                            onClick={() => {
+                              const currentEn = formData.category ? formData.category.split(',').map((c: string) => c.trim()).filter(Boolean) : [];
+                              const currentId = formData.category_id ? formData.category_id.split(',').map((c: string) => c.trim()).filter(Boolean) : [];
+                              
+                              if (isSelected) {
+                                setFormData({
+                                  ...formData,
+                                  category: currentEn.filter((c: string) => c !== opt.en).join(', '),
+                                  category_id: currentId.filter((c: string) => c !== opt.id).join(', ')
+                                });
+                              } else {
+                                setFormData({
+                                  ...formData,
+                                  category: [...currentEn, opt.en].join(', '),
+                                  category_id: [...currentId, opt.id].join(', ')
+                                });
+                              }
+                            }}
+                            className={`px-4 py-2 rounded-xl text-sm font-bold transition-all border ${
+                              isSelected 
+                                ? 'bg-white text-black border-white shadow-[0_0_10px_rgba(255,255,255,0.3)]' 
+                                : 'bg-[#111] text-gray-400 border-white/10 hover:border-white/30'
+                            }`}
+                          >
+                            {opt.id} <span className="text-[10px] opacity-50 ml-1">({opt.en})</span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
 
                   <div>
