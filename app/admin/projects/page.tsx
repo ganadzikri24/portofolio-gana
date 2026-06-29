@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Plus, Edit2, Trash2, Image as ImageIcon, Loader2, Video, List, ArrowUp, ArrowDown, GripVertical, CheckCircle, AlertCircle, X, ExternalLink, Youtube, Instagram } from "lucide-react";
+import { Plus, Edit2, Trash2, Image as ImageIcon, Loader2, Video, List, ArrowUp, ArrowDown, GripVertical, CheckCircle, AlertCircle, X, ExternalLink } from "lucide-react";
+import { FaYoutube, FaInstagram } from "react-icons/fa";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, rectSortingStrategy } from '@dnd-kit/sortable';
 import { useSortable } from '@dnd-kit/sortable';
@@ -596,14 +597,14 @@ export default function ProjectsAdminPage() {
                               
                               {block.type === 'youtube' && (
                                 <div className="grid grid-cols-1 gap-2">
-                                  <label className="text-xs text-gray-500 flex items-center gap-1"><Youtube size={12}/> Link YouTube (contoh: https://www.youtube.com/watch?v=...)</label>
+                                  <label className="text-xs text-gray-500 flex items-center gap-1"><FaYoutube size={12}/> Link YouTube (contoh: https://www.youtube.com/watch?v=...)</label>
                                   <input value={block.value} onChange={e => { updateBlock(idx, 'en', 'value', e.target.value); updateBlock(idx, 'id', 'value', e.target.value); }} placeholder="Paste link YouTube di sini..." className="w-full bg-[#111] border border-white/10 rounded-lg px-3 py-2 text-white font-bold" />
                                 </div>
                               )}
                               
                               {block.type === 'instagram' && (
                                 <div className="grid grid-cols-1 gap-2">
-                                  <label className="text-xs text-gray-500 flex items-center gap-1"><Instagram size={12}/> Link Postingan Instagram</label>
+                                  <label className="text-xs text-gray-500 flex items-center gap-1"><FaInstagram size={12}/> Link Postingan Instagram</label>
                                   <input value={block.value} onChange={e => { updateBlock(idx, 'en', 'value', e.target.value); updateBlock(idx, 'id', 'value', e.target.value); }} placeholder="Paste link Instagram di sini..." className="w-full bg-[#111] border border-white/10 rounded-lg px-3 py-2 text-white font-bold" />
                                 </div>
                               )}
@@ -632,8 +633,8 @@ export default function ProjectsAdminPage() {
                          <button type="button" onClick={() => addBlock('text')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Teks / Paragraf</button>
                          <button type="button" onClick={() => addBlock('list')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Point Text</button>
                          <button type="button" onClick={() => addBlock('image')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Gambar</button>
-                         <button type="button" onClick={() => addBlock('youtube')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#FF0000] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><Youtube size={14}/> YouTube</button>
-                         <button type="button" onClick={() => addBlock('instagram')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#E1306C] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><Instagram size={14}/> Instagram</button>
+                         <button type="button" onClick={() => addBlock('youtube')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#FF0000] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><FaYoutube size={14}/> YouTube</button>
+                         <button type="button" onClick={() => addBlock('instagram')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#E1306C] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><FaInstagram size={14}/> Instagram</button>
                          <button type="button" onClick={() => addBlock('link')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-blue-400 rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><ExternalLink size={14}/> Link</button>
                       </div>
 
