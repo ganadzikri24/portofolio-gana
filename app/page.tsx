@@ -56,7 +56,7 @@ const ProjectHighlightWidget = memo(({ projects, setSelectedProject }: { project
     <motion.div
       initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
       whileHover={{ scale: 1.05, rotate: -2, y: -10 }}
-      className="absolute bottom-6 md:bottom-10 right-4 md:right-10 z-30 w-48 md:w-80 h-28 md:h-48 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-black"
+      className="absolute top-[12vh] md:top-auto md:bottom-10 right-4 md:right-10 z-30 w-40 md:w-80 h-24 md:h-48 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-black"
       onClick={() => setSelectedProject(projects[currentHighlight])}
     >
       <AnimatePresence mode="wait">
@@ -94,7 +94,7 @@ const AnimatedTitle = memo(({ text }: { text: string }) => {
   if (!text) return null;
   return (
     <>
-      {text.split(" ").map((word: string, i: number) => (
+      {text.trim().split(/\s+/).map((word: string, i: number) => (
         <motion.span
           key={i}
           initial={{ opacity: 0, y: 100, scale: 0.95 }}
@@ -115,7 +115,7 @@ const AnimatedDescription = memo(({ text }: { text: string }) => {
   if (!text) return null;
   return (
     <>
-      {text.split(" ").map((word: string, i: number) => (
+      {text.trim().split(/\s+/).map((word: string, i: number) => (
         <motion.span 
           key={i} 
           initial={{ opacity: 0, y: 20 }} 
@@ -146,6 +146,7 @@ export default function AestheticPortfolio() {
   const [dbSkills, setDbSkills] = useState<any[]>([]);
   const [dbCertifications, setDbCertifications] = useState<any[]>([]);
   const [dbContacts, setDbContacts] = useState<any[]>([]);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -164,7 +165,8 @@ export default function AestheticPortfolio() {
       setDbSkills(skills);
       setDbCertifications(certifications);
       setDbContacts(contacts || []);
-    }).catch(err => console.error(err));
+    }).catch(err => console.error(err))
+      .finally(() => setIsDataLoaded(true));
   }, []);
 
   const t = {
@@ -221,9 +223,23 @@ export default function AestheticPortfolio() {
     content: lang === "en" ? p.content : p.content_id || p.content
   })) : data.projects;
 
+  const projectCategories = React.useMemo(() => {
+    const cats = new Set<string>();
+    cats.add(lang === "en" ? "All" : "Semua");
+    localizedProjects.forEach((p: any) => {
+      if (p.category) {
+        p.category.split(",").forEach((c: string) => {
+          const trimmed = c.trim();
+          if (trimmed) cats.add(trimmed);
+        });
+      }
+    });
+    return Array.from(cats);
+  }, [localizedProjects, lang]);
+
   const filteredProjects = (activeTab === "All" || activeTab === "Semua")
     ? localizedProjects
-    : localizedProjects.filter((p: any) => p.category === activeTab);
+    : localizedProjects.filter((p: any) => p.category?.split(",").map((c: string) => c.trim()).includes(activeTab));
 
   const pData = dbProfile && dbProfile.name ? {
     name: dbProfile.name,
@@ -411,12 +427,12 @@ export default function AestheticPortfolio() {
               {pData.title}
             </motion.p>
 
-            <h1 className="text-[15vw] sm:text-[13vw] md:text-[11vw] leading-[0.85] font-black tracking-tighter uppercase mb-8 flex flex-wrap justify-center drop-shadow-xl">
-              <AnimatedTitle text={pData.name} />
+            <h1 className="text-[15vw] sm:text-[13vw] md:text-[11vw] leading-[0.85] font-black tracking-tighter uppercase mb-8 flex flex-wrap justify-center drop-shadow-xl min-h-[1em]">
+              {isDataLoaded && <AnimatedTitle text={pData.name} />}
             </h1>
 
-            <div className="max-w-2xl mx-auto text-sm md:text-lg text-gray-400 font-light leading-relaxed mb-10 overflow-hidden flex flex-wrap justify-center">
-              <AnimatedDescription text={pData.description} />
+            <div className="max-w-2xl mx-auto text-sm md:text-lg text-gray-400 font-light leading-relaxed mb-10 overflow-hidden flex flex-wrap justify-center min-h-[60px]">
+              {isDataLoaded && <AnimatedDescription text={pData.description} />}
             </div>
           </div>
 
@@ -584,7 +600,7 @@ export default function AestheticPortfolio() {
               </motion.div>
 
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-wrap justify-center xl:justify-end gap-2 md:gap-4">
-                {data.categories.map((cat: string) => (
+                {projectCategories.map((cat: string) => (
                   <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-4 py-2 md:px-8 md:py-3 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-lg" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
                     {cat}
                   </motion.button>
