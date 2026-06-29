@@ -179,25 +179,31 @@ export default function ProjectsAdminPage() {
       };
 
       // 5. Save to DB
+      let dbRes;
       if (formData.id) {
-        await fetch(`/api/projects/${formData.id}`, {
+        dbRes = await fetch(`/api/projects/${formData.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
       } else {
-        await fetch("/api/projects", {
+        dbRes = await fetch("/api/projects", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
       }
 
+      if (!dbRes.ok) {
+        const errData = await dbRes.json();
+        throw new Error(`DB Error: ${errData.error || dbRes.statusText}`);
+      }
+
       await fetchProjects();
       closeModal();
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      alert("Error saving project");
+      alert(`Gagal menyimpan: ${err.message}`);
     } finally {
       setIsSubmitting(false);
     }
