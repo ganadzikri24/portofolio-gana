@@ -350,6 +350,35 @@ export default function AestheticPortfolio() {
               </ul>
             );
             if (item.type === "image") return <motion.img initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8 }} key={i} src={item.value} loading="lazy" decoding="async" className="w-full rounded-2xl my-10 border border-white/5 shadow-2xl" alt="Article Content" />;
+            if (item.type === "youtube") {
+              const videoId = item.value?.split('v=')[1]?.split('&')[0] || item.value?.split('youtu.be/')[1]?.split('?')[0];
+              const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+              return (
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} key={i} className="w-full aspect-video rounded-2xl overflow-hidden border border-white/5 my-10 shadow-2xl">
+                  <iframe className="w-full h-full" src={embedUrl} allowFullScreen loading="lazy" />
+                </motion.div>
+              );
+            }
+            if (item.type === "instagram") {
+              const embedUrl = item.value?.split('?')[0].replace(/\/$/, '') + '/embed';
+              return (
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} key={i} className="w-full aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 my-10 shadow-2xl bg-[#050505] flex justify-center">
+                  <iframe className="w-full h-full min-h-[500px]" src={embedUrl} allowFullScreen loading="lazy" />
+                </motion.div>
+              );
+            }
+            if (item.type === "link") {
+              return (
+                <motion.a 
+                  initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} 
+                  key={i} href={item.value} target="_blank" rel="noopener noreferrer" 
+                  className="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group my-6 shadow-lg"
+                >
+                  <span className="text-blue-400 font-bold break-all mr-4 group-hover:text-blue-300 transition-colors line-clamp-1">{item.value}</span>
+                  <ArrowUpRight className="text-gray-500 group-hover:text-white transition-colors flex-shrink-0" size={24} />
+                </motion.a>
+              );
+            }
             return null;
           })}
         </div>

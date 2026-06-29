@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Plus, Edit2, Trash2, Image as ImageIcon, Loader2, Video, List, ArrowUp, ArrowDown, GripVertical } from "lucide-react";
+import { Plus, Edit2, Trash2, Image as ImageIcon, Loader2, Video, List, ArrowUp, ArrowDown, GripVertical, CheckCircle, AlertCircle, X, ExternalLink, Youtube, Instagram } from "lucide-react";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, rectSortingStrategy } from '@dnd-kit/sortable';
 import { useSortable } from '@dnd-kit/sortable';
@@ -40,6 +40,12 @@ export default function ProjectsAdminPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [notification, setNotification] = useState<{type: 'success'|'error', text: string} | null>(null);
+
+  const showNotification = (type: 'success'|'error', text: string) => {
+    setNotification({ type, text });
+    setTimeout(() => setNotification(null), 5000);
+  };
   
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -201,9 +207,10 @@ export default function ProjectsAdminPage() {
 
       await fetchProjects();
       closeModal();
+      showNotification('success', 'Proyek berhasil disimpan!');
     } catch (err: any) {
       console.error(err);
-      alert(`Gagal menyimpan: ${err.message}`);
+      showNotification('error', `Gagal menyimpan: ${err.message}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -307,7 +314,14 @@ export default function ProjectsAdminPage() {
   };
 
   return (
-    <div>
+    <div className="p-8 pb-32">
+      {notification && (
+        <div className={`fixed top-4 right-4 z-[9999] p-4 rounded-xl shadow-2xl flex items-center gap-3 transition-all ${notification.type === 'success' ? 'bg-green-500/20 border border-green-500/50 text-green-100' : 'bg-red-500/20 border border-red-500/50 text-red-100'}`}>
+          {notification.type === 'success' ? <CheckCircle size={20} className="text-green-400" /> : <AlertCircle size={20} className="text-red-400" />}
+          <p className="font-medium text-sm">{notification.text}</p>
+          <button type="button" onClick={() => setNotification(null)} className="ml-2 hover:opacity-70"><X size={16} /></button>
+        </div>
+      )}
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-black text-white">Kelola Proyek</h1>
@@ -580,6 +594,27 @@ export default function ProjectsAdminPage() {
                                 </div>
                               )}
                               
+                              {block.type === 'youtube' && (
+                                <div className="grid grid-cols-1 gap-2">
+                                  <label className="text-xs text-gray-500 flex items-center gap-1"><Youtube size={12}/> Link YouTube (contoh: https://www.youtube.com/watch?v=...)</label>
+                                  <input value={block.value} onChange={e => { updateBlock(idx, 'en', 'value', e.target.value); updateBlock(idx, 'id', 'value', e.target.value); }} placeholder="Paste link YouTube di sini..." className="w-full bg-[#111] border border-white/10 rounded-lg px-3 py-2 text-white font-bold" />
+                                </div>
+                              )}
+                              
+                              {block.type === 'instagram' && (
+                                <div className="grid grid-cols-1 gap-2">
+                                  <label className="text-xs text-gray-500 flex items-center gap-1"><Instagram size={12}/> Link Postingan Instagram</label>
+                                  <input value={block.value} onChange={e => { updateBlock(idx, 'en', 'value', e.target.value); updateBlock(idx, 'id', 'value', e.target.value); }} placeholder="Paste link Instagram di sini..." className="w-full bg-[#111] border border-white/10 rounded-lg px-3 py-2 text-white font-bold" />
+                                </div>
+                              )}
+
+                              {block.type === 'link' && (
+                                <div className="grid grid-cols-1 gap-2">
+                                  <label className="text-xs text-gray-500 flex items-center gap-1"><ExternalLink size={12}/> Link Eksternal (Berita, Web, Artikel lain)</label>
+                                  <input value={block.value} onChange={e => { updateBlock(idx, 'en', 'value', e.target.value); updateBlock(idx, 'id', 'value', e.target.value); }} placeholder="Paste url link (contoh: https://google.com)" className="w-full bg-[#111] border border-white/10 rounded-lg px-3 py-2 text-white font-bold" />
+                                </div>
+                              )}
+
                             </div>
                           </div>
                         ))}
@@ -590,14 +625,16 @@ export default function ProjectsAdminPage() {
                           </div>
                         )}
                       </div>
-
-                      {/* Add Block Buttons */}
+                      
                       <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
                          <span className="text-sm text-gray-400 font-bold flex items-center mr-2">Tambah:</span>
                          <button type="button" onClick={() => addBlock('subtitle')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Subjudul</button>
                          <button type="button" onClick={() => addBlock('text')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Teks / Paragraf</button>
-                         <button type="button" onClick={() => addBlock('list')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Point Text (Daftar)</button>
-                         <button type="button" onClick={() => addBlock('image')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Gambar Konten</button>
+                         <button type="button" onClick={() => addBlock('list')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Point Text</button>
+                         <button type="button" onClick={() => addBlock('image')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Gambar</button>
+                         <button type="button" onClick={() => addBlock('youtube')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#FF0000] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><Youtube size={14}/> YouTube</button>
+                         <button type="button" onClick={() => addBlock('instagram')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#E1306C] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><Instagram size={14}/> Instagram</button>
+                         <button type="button" onClick={() => addBlock('link')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-blue-400 rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><ExternalLink size={14}/> Link</button>
                       </div>
 
                     </div>
