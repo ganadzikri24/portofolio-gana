@@ -224,8 +224,18 @@ export default function AestheticPortfolio() {
   })) : data.projects;
 
   const projectCategories = React.useMemo(() => {
-    const cats = new Set<string>();
-    cats.add(lang === "en" ? "All" : "Semua");
+    const defaultCats = [
+      lang === "en" ? "All" : "Semua",
+      lang === "en" ? "Video Editing" : "Editor Video",
+      lang === "en" ? "Design" : "Desain",
+      lang === "en" ? "Motion Graphics & Animation" : "Grafik Gerak & Animasi",
+      lang === "en" ? "IoT Projects" : "Proyek IoT",
+      lang === "en" ? "Networking" : "Jaringan",
+      lang === "en" ? "Photography" : "Fotografi",
+      lang === "en" ? "Web Development" : "Pengembangan Web",
+      lang === "en" ? "More" : "Lainnya"
+    ];
+    const cats = new Set<string>(defaultCats);
     localizedProjects.forEach((p: any) => {
       if (p.category) {
         p.category.split(",").forEach((c: string) => {
