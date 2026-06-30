@@ -152,7 +152,7 @@ export default function ProjectsAdminPage() {
       if (formData.type === 'article') {
          // Upload any pending image files inside blocks (if they are File objects)
          for (let i = 0; i < finalContent.length; i++) {
-            if (finalContent[i].type === 'image' && finalContent[i].file instanceof File) {
+            if ((finalContent[i].type === 'image' || finalContent[i].type === 'video_file') && finalContent[i].file instanceof File) {
                const url = await uploadFile(finalContent[i].file, "article-images");
                finalContent[i].value = url;
                delete finalContent[i].file;
@@ -160,7 +160,7 @@ export default function ProjectsAdminPage() {
          }
          // Sync ID images with EN images (since images are universal)
          for (let i = 0; i < finalContentId.length; i++) {
-            if (finalContentId[i].type === 'image') {
+            if (finalContentId[i].type === 'image' || finalContentId[i].type === 'video_file') {
                finalContentId[i].value = finalContent[i]?.value || '';
             }
          }
@@ -581,6 +581,22 @@ export default function ProjectsAdminPage() {
                                   />
                                 </div>
                               )}
+
+                              {block.type === 'video_file' && (
+                                <div>
+                                  {block.value && typeof block.value === 'string' && (
+                                    <video src={block.value} className="w-32 h-20 object-cover rounded mb-2 border border-white/10" muted autoPlay loop playsInline/>
+                                  )}
+                                  <input 
+                                    type="file" accept="video/mp4,video/webm"
+                                    onChange={e => {
+                                      if(e.target.files?.[0]) updateBlock(idx, 'en', 'file', e.target.files[0])
+                                    }}
+                                    className="text-xs text-gray-400 file:mr-2 file:py-1 file:px-3 file:rounded file:border-0 file:bg-white/10 file:text-white"
+                                  />
+                                  <p className="text-[10px] text-gray-500 mt-1">Maksimal 4.5 MB. Gunakan MP4/WebM.</p>
+                                </div>
+                              )}
                               
                               {block.type === 'list' && (
                                 <div className="grid grid-cols-2 gap-2">
@@ -633,6 +649,7 @@ export default function ProjectsAdminPage() {
                          <button type="button" onClick={() => addBlock('text')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Teks / Paragraf</button>
                          <button type="button" onClick={() => addBlock('list')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Point Text</button>
                          <button type="button" onClick={() => addBlock('image')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors">+ Gambar</button>
+                         <button type="button" onClick={() => addBlock('video_file')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><Video size={14}/> Video Singkat</button>
                          <button type="button" onClick={() => addBlock('youtube')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#FF0000] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><FaYoutube size={14}/> YouTube</button>
                          <button type="button" onClick={() => addBlock('instagram')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-[#E1306C] rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><FaInstagram size={14}/> Instagram</button>
                          <button type="button" onClick={() => addBlock('link')} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 text-blue-400 rounded-lg text-xs font-bold transition-colors flex items-center gap-1"><ExternalLink size={14}/> Link</button>

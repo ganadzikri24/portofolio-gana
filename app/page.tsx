@@ -360,6 +360,13 @@ export default function AestheticPortfolio() {
               </ul>
             );
             if (item.type === "image") return <motion.img initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8 }} key={i} src={item.value} loading="lazy" decoding="async" className="w-full rounded-2xl my-10 border border-white/5 shadow-2xl" alt="Article Content" />;
+            if (item.type === "video_file") return (
+              <motion.video 
+                initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8 }} 
+                key={i} src={item.value} autoPlay loop muted playsInline 
+                className="w-full rounded-2xl my-10 border border-white/5 shadow-2xl" 
+              />
+            );
             if (item.type === "youtube") {
               const videoId = item.value?.split('v=')[1]?.split('&')[0] || item.value?.split('youtu.be/')[1]?.split('?')[0];
               const embedUrl = `https://www.youtube.com/embed/${videoId}`;
