@@ -1,7 +1,7 @@
 import { supabaseAdmin } from "@/lib/supabase";
 import HomeClient from "@/components/HomeClient";
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default async function Page() {
   const [
