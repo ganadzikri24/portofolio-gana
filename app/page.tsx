@@ -13,13 +13,13 @@ export default async function Page() {
     { data: certifications },
     { data: contacts }
   ] = await Promise.all([
-    supabaseAdmin.from('projects').select('*').eq('is_hidden', false).order('display_order', { ascending: true }),
+    supabaseAdmin.from('projects').select('*').eq('is_hidden', false).order('order_index', { ascending: true }).order('id', { ascending: true }),
     supabaseAdmin.from('profile').select('*').limit(1).single(),
-    supabaseAdmin.from('education').select('*').order('display_order', { ascending: true }),
-    supabaseAdmin.from('experience').select('*').order('display_order', { ascending: true }),
-    supabaseAdmin.from('skills').select('*').order('display_order', { ascending: true }),
-    supabaseAdmin.from('certifications').select('*').order('display_order', { ascending: true }),
-    supabaseAdmin.from('contacts').select('*').order('display_order', { ascending: true })
+    supabaseAdmin.from('education').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
+    supabaseAdmin.from('experience').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
+    supabaseAdmin.from('skills').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
+    supabaseAdmin.from('certifications').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
+    supabaseAdmin.from('contacts').select('*').order('order_index', { ascending: true }).order('id', { ascending: true })
   ]);
 
   return (
