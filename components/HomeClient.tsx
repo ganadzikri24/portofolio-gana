@@ -56,8 +56,7 @@ const ProjectHighlightWidget = memo(({ projects, setSelectedProject }: { project
   return (
     <motion.div
       initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
-      whileHover={{ scale: 1.05, rotate: -2, y: -10 }}
-      className="absolute top-[12vh] md:top-auto md:bottom-10 right-4 md:right-10 z-30 w-40 md:w-80 h-24 md:h-48 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-black"
+      className="absolute top-[12vh] md:top-auto md:bottom-10 right-4 md:right-10 z-30 w-40 md:w-80 h-24 md:h-48 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-black hover:scale-105 hover:-rotate-2 hover:-translate-y-2.5 transition-transform duration-300 ease-out"
       onClick={() => setSelectedProject(projects[currentHighlight])}
     >
       <AnimatePresence mode="wait">
@@ -106,8 +105,7 @@ const AnimatedTitle = memo(({ text }: { text: string }) => {
           initial={{ opacity: 0, y: 100, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "spring", bounce: 0.3, duration: 1.2, delay: i * 0.15 }}
-          whileHover={{ color: "#ffffff", scale: 1.05, y: -10, textShadow: "0px 0px 25px rgba(255,255,255,0.8)" }}
-          className="inline-block mr-[2vw] last:mr-0 text-white cursor-default"
+          className="inline-block mr-[2vw] last:mr-0 text-white cursor-default hover:scale-105 hover:-translate-y-2.5 hover:[text-shadow:0px_0px_25px_rgba(255,255,255,0.8)] transition-all duration-200 ease-out"
         >
           {word}
         </motion.span>
@@ -553,14 +551,14 @@ export default function HomeClient({
                       } as any}
                       className={`relative flex w-full group ${isLeft ? "md:col-start-1 md:justify-end md:pr-20" : "md:col-start-2 md:justify-start md:pl-20 mt-10 md:mt-32"}`}
                     >
-                      <motion.div whileHover={{ scale: 2 }} className={`hidden md:flex absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-[#070707] border-[3px] border-white/50 group-hover:border-white transition-all duration-500 z-20 shadow-lg ${isLeft ? "right-[-10px]" : "left-[-10px]"}`} />
+                      <div className={`hidden md:flex absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-[#070707] border-[3px] border-white/50 group-hover:border-white group-hover:scale-[2] transition-all duration-500 z-20 shadow-lg ${isLeft ? "right-[-10px]" : "left-[-10px]"}`} />
 
-                      <motion.div whileHover={{ scale: 1.05, y: -15, rotate: isLeft ? -2 : 2 }} transition={{ type: "spring", bounce: 0.4 }} className={`max-w-xl w-full bg-[#111] hover:bg-[#1a1a1a] p-10 rounded-[2.5rem] border border-white/10 hover:border-white/50 transition-colors duration-500 shadow-xl ${isLeft ? "md:text-right" : "md:text-left"}`}>
+                      <div className={`max-w-xl w-full bg-[#111] hover:bg-[#1a1a1a] p-10 rounded-[2.5rem] border border-white/10 hover:border-white/50 transition-all duration-500 shadow-xl hover:scale-105 hover:-translate-y-4 ${isLeft ? "md:text-right hover:rotate-[-2deg]" : "md:text-left hover:rotate-[2deg]"}`}>
                         <span className="text-sm font-mono font-bold text-gray-500 mb-4 block tracking-[0.2em]">{exp.year}</span>
                         <h3 className="text-3xl font-black text-white mb-3 tracking-tight">{exp.role}</h3>
                         <p className="text-lg font-bold text-gray-400 mb-6 uppercase tracking-wider">{exp.company}</p>
                         <p className="text-base text-gray-500 leading-relaxed font-light">{exp.description}</p>
-                      </motion.div>
+                      </div>
                     </motion.div>
                   );
                 })}
@@ -571,7 +569,7 @@ export default function HomeClient({
 
         {/* 3. EDUCATION SECTION */}
         <section id="education" className="min-h-screen py-16 md:py-32 px-4 md:px-6 relative overflow-hidden flex flex-col justify-center bg-[#0a0a0a]">
-          <AmbientGeometry />
+          {/* AmbientGeometry removed - already rendered in Hero and Contact sections */}
           <div className="max-w-7xl mx-auto w-full relative z-10">
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
@@ -588,8 +586,7 @@ export default function HomeClient({
                     hidden: { opacity: 0, y: 80 },
                     visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1.2, delay: i * 0.2 } }
                   } as any}
-                  whileHover={{ scale: 1.05, rotateX: 10, rotateY: -10, y: -20 }} transition={{ type: "spring", bounce: 0.4 }}
-                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 hover:border-white/50 transition-colors duration-700 flex flex-col h-full relative overflow-hidden shadow-xl"
+                  className="group bg-gradient-to-br from-[#111] to-[#050505] p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 hover:border-white/50 transition-all duration-500 flex flex-col h-full relative overflow-hidden shadow-xl hover:scale-105 hover:-translate-y-5"
                 >
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.05] transition-opacity duration-700" />
                   <motion.div className="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-40 group-hover:scale-150 group-hover:-rotate-12 transition-all duration-1000 pointer-events-none z-0">
@@ -654,27 +651,25 @@ export default function HomeClient({
 
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-wrap justify-center xl:justify-end gap-2 md:gap-4">
                 {projectCategories.map((cat: string) => (
-                  <motion.button whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9 }} key={cat} onClick={() => setActiveTab(cat)} className={`px-4 py-2 md:px-8 md:py-3 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ${activeTab === cat ? "bg-white text-black shadow-lg" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
+                  <button key={cat} onClick={() => setActiveTab(cat)} className={`px-4 py-2 md:px-8 md:py-3 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-110 hover:-translate-y-1 active:scale-90 ${activeTab === cat ? "bg-white text-black shadow-lg" : "bg-transparent text-gray-500 hover:text-white border border-white/20 hover:border-white/50"}`}>
                     {cat}
-                  </motion.button>
+                  </button>
                 ))}
               </motion.div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-              <AnimatePresence>
+              <AnimatePresence mode="popLayout">
                 {filteredProjects.map((project: any, i: number) => (
                   <motion.div
                     key={project.id}
 
-                    initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    viewport={{ once: true, margin: "200px" }}
-                    transition={{ type: "tween", ease: "easeOut", duration: 0.7, delay: (i % 3) * 0.1 }}
-                    whileHover={{ scale: 1.05, y: -10, rotate: 1 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ type: "tween", ease: "easeOut", duration: 0.3 }}
                     onClick={() => setSelectedProject(project)}
-                    className="relative group overflow-hidden cursor-pointer bg-black border border-white/10 break-inside-avoid rounded-[2.5rem] hover:border-white/50 transition-colors shadow-lg"
+                    className="relative group overflow-hidden cursor-pointer bg-black border border-white/10 break-inside-avoid rounded-[2.5rem] hover:border-white/50 transition-all duration-300 shadow-lg hover:scale-[1.03] hover:-translate-y-2"
                   >
                     <div className="w-full relative overflow-hidden aspect-[4/5] sm:aspect-auto bg-[#111]">
                       <div className="w-full h-full relative min-h-[300px]">
@@ -722,8 +717,7 @@ export default function HomeClient({
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 1, delay: i * 0.1 } }
                   } as any}
-                  whileHover={{ scale: 1.02, x: 20, backgroundColor: "rgba(255,255,255,0.05)" }} transition={{ type: "spring", bounce: 0.6 }}
-                  className="group border-b border-white/10 py-10 flex flex-col md:flex-row md:items-start justify-between gap-6 transition-colors duration-500 cursor-default rounded-lg relative overflow-hidden px-6"
+                  className="group border-b border-white/10 py-10 flex flex-col md:flex-row md:items-start justify-between gap-6 transition-all duration-300 cursor-default rounded-lg relative overflow-hidden px-6 hover:scale-[1.02] hover:translate-x-5 hover:bg-white/5"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-white/[0.05] to-transparent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-0" />
 
@@ -746,7 +740,7 @@ export default function HomeClient({
               {t[lang].contactTitle}
             </motion.h2>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} whileHover={{ scale: 1.1, y: -10, rotate: 2 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-xs md:text-lg font-black mb-16 md:mb-32 uppercase tracking-[0.2em] border border-white/20 px-6 py-3 md:px-10 md:py-5 rounded-[2rem] md:rounded-full bg-white/5 backdrop-blur-md shadow-2xl text-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white text-xs md:text-lg font-black mb-16 md:mb-32 uppercase tracking-[0.2em] border border-white/20 px-6 py-3 md:px-10 md:py-5 rounded-[2rem] md:rounded-full bg-white/5 backdrop-blur-md shadow-2xl text-center hover:scale-110 hover:-translate-y-2.5 hover:rotate-2 transition-transform duration-300">
               <MapPin size={18} className="text-white animate-bounce shrink-0" /> {t[lang].based} Bogor, Indonesia
             </motion.div>
 
@@ -759,8 +753,7 @@ export default function HomeClient({
                     visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.4, duration: 1, delay: i * 0.1 } }
                   } as any}
                   key={i} href={item.url} target="_blank" rel="noopener noreferrer"
-                  whileHover={{ y: -25, scale: 1.2, rotate: i % 2 === 0 ? 5 : -5 }}
-                  className="group flex flex-col items-center gap-5"
+                  className={`group flex flex-col items-center gap-5 hover:-translate-y-6 hover:scale-110 transition-all duration-300 ${i % 2 === 0 ? 'hover:rotate-[5deg]' : 'hover:-rotate-[5deg]'}`}
                 >
                   <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl shrink-0">
                     {item.isLocal ? (
