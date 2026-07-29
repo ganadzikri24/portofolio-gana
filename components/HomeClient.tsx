@@ -22,20 +22,20 @@ const ambientStyles = `
 const AmbientGeometry = memo(() => (
   <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-40">
     <style dangerouslySetInnerHTML={{ __html: ambientStyles }} />
-    <div className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[3px] border-white/20 rounded-full border-solid" style={{ animation: "spin-slow 60s linear infinite" }} />
-    <div className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[2px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 80s linear infinite" }} />
-    <div className="absolute top-[-10vw] right-[-10vw] w-[70vw] h-[70vw] border-[3px] border-white/10 rounded-full border-solid" style={{ animation: "spin-slow 100s linear infinite" }} />
-    <div className="absolute bottom-[-20vw] left-[-10vw] w-[60vw] h-[60vw] border-[2px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 70s linear infinite" }} />
-    <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" style={{ animation: "beam 10s linear infinite" }} />
+    <div className="absolute top-[-30vw] left-[-20vw] w-[100vw] h-[100vw] border-[3px] border-white/20 rounded-full border-solid" style={{ animation: "spin-slow 60s linear infinite", willChange: "transform" }} />
+    <div className="absolute bottom-[-40vw] right-[-20vw] w-[120vw] h-[120vw] border-[2px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 80s linear infinite", willChange: "transform" }} />
+    <div className="absolute top-[-10vw] right-[-10vw] w-[70vw] h-[70vw] border-[3px] border-white/10 rounded-full border-solid" style={{ animation: "spin-slow 100s linear infinite", willChange: "transform" }} />
+    <div className="absolute bottom-[-20vw] left-[-10vw] w-[60vw] h-[60vw] border-[2px] border-white/15 rounded-full border-solid" style={{ animation: "spin-slow-reverse 70s linear infinite", willChange: "transform" }} />
+    <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" style={{ animation: "beam 10s linear infinite", willChange: "transform" }} />
   </div>
 ));
 AmbientGeometry.displayName = "AmbientGeometry";
 
 const AmbientParticles = memo(() => (
   <div className="absolute inset-0 pointer-events-none z-0">
-    <div className="absolute top-[20%] left-[10%] w-4 h-4 bg-white rounded-full shadow-[0_0_15px_white]" style={{ animation: "float-1 8s ease-in-out infinite" }} />
-    <div className="absolute bottom-[30%] right-[15%] w-5 h-5 bg-gray-300 rounded-full shadow-[0_0_20px_gray]" style={{ animation: "float-2 12s ease-in-out infinite 1s" }} />
-    <div className="absolute top-[60%] right-[20%] w-3 h-3 bg-white/50 rounded-full shadow-[0_0_10px_white]" style={{ animation: "float-1 10s ease-in-out infinite 2s" }} />
+    <div className="absolute top-[20%] left-[10%] w-4 h-4 bg-white rounded-full shadow-[0_0_15px_white]" style={{ animation: "float-1 8s ease-in-out infinite", willChange: "transform, opacity" }} />
+    <div className="absolute bottom-[30%] right-[15%] w-5 h-5 bg-gray-300 rounded-full shadow-[0_0_20px_gray]" style={{ animation: "float-2 12s ease-in-out infinite 1s", willChange: "transform, opacity" }} />
+    <div className="absolute top-[60%] right-[20%] w-3 h-3 bg-white/50 rounded-full shadow-[0_0_10px_white]" style={{ animation: "float-1 10s ease-in-out infinite 2s", willChange: "transform, opacity" }} />
   </div>
 ));
 AmbientParticles.displayName = "AmbientParticles";
@@ -488,25 +488,23 @@ export default function HomeClient({
             </div>
           </div>
 
-          <motion.div
-            animate={{ y: [0, -20, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute left-10 md:left-20 top-[60%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3"
+          <div
+            className="absolute left-10 md:left-20 top-[60%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3 hero-float-up"
           >
             <motion.div whileHover={{ scale: 1.3, rotate: 180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center bg-white/5 shadow-xl cursor-pointer">
               <span className="text-white text-2xl">✦</span>
             </motion.div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold">Creative</span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            animate={{ y: [0, 20, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute right-10 md:right-20 top-[40%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3"
+          <div
+            className="absolute right-10 md:right-20 top-[40%] -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-3 hero-float-down"
           >
             <motion.div whileHover={{ scale: 1.3, rotate: -180 }} className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center bg-white/5 shadow-xl cursor-pointer">
               <span className="text-white text-2xl">⚡</span>
             </motion.div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold">Technologist</span>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 150, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: 0.8, duration: 1.5, type: "spring", bounce: 0.2 }}
@@ -531,16 +529,16 @@ export default function HomeClient({
 
         {/* 2. EXPERIENCE SECTION */}
         <section id="experience" className="min-h-screen py-16 md:py-32 px-4 md:px-10 relative overflow-hidden flex flex-col justify-center bg-[#070707] border-y border-white/5">
-          <AmbientParticles />
+          {/* AmbientParticles removed - already rendered in Hero section */}
           <div className="max-w-7xl mx-auto w-full relative z-10">
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].expTitle}</h2>
-              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
             <div className="relative w-full">
-              <motion.div initial={{ height: 0 }} whileInView={{ height: "100%" }} transition={{ duration: 2, ease: "easeInOut" }} className="hidden md:block absolute left-1/2 top-4 w-px bg-gradient-to-b from-white via-white/20 to-transparent -translate-x-1/2" />
+              <motion.div initial={{ height: 0 }} whileInView={{ height: "100%" }} viewport={{ once: true }} transition={{ duration: 2, ease: "easeInOut" }} className="hidden md:block absolute left-1/2 top-4 w-px bg-gradient-to-b from-white via-white/20 to-transparent -translate-x-1/2" />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 w-full">
                 {expData.map((exp: any, i: number) => {
@@ -578,7 +576,7 @@ export default function HomeClient({
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].eduTitle}</h2>
-              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
@@ -610,10 +608,10 @@ export default function HomeClient({
 
         {/* 4. SKILLS SECTION */}
         <section id="skills" className="min-h-screen py-16 md:py-32 relative flex flex-col justify-center border-y border-white/5 bg-[#070707] overflow-hidden w-full max-w-[100vw]">
-          <AmbientParticles />
+          {/* AmbientParticles removed - already rendered in Hero section */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-12 md:mb-24 text-center relative z-10">
             <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].skillTitle}</h2>
-            <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+            <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true, amount: 0.05 }} className="w-max flex animate-marquee gap-8 items-center mb-10 hover:!animation-play-state-paused py-4">
@@ -645,13 +643,13 @@ export default function HomeClient({
 
         {/* 5. PORTFOLIO SECTION */}
         <section id="portofolio" className="min-h-screen py-16 md:py-32 px-4 md:px-10 relative overflow-hidden bg-[#050505]">
-          <AmbientParticles />
+          {/* AmbientParticles removed - already rendered in Hero section */}
           <div className="max-w-[1600px] mx-auto w-full relative z-10">
 
             <div className="flex flex-col xl:flex-row justify-between items-center xl:items-end mb-12 md:mb-24 gap-6 md:gap-10 text-center xl:text-left">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal}>
                 <h2 className="text-3xl sm:text-4xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-2xl">{t[lang].portTitle}</h2>
-                <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white shadow-[0_0_15px_white] xl:mx-0 mx-auto" />
+                <motion.div initial={{ width: 0 }} whileInView={{ width: 80 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white shadow-[0_0_15px_white] xl:mx-0 mx-auto" />
               </motion.div>
 
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="flex flex-wrap justify-center xl:justify-end gap-2 md:gap-4">
@@ -668,7 +666,7 @@ export default function HomeClient({
                 {filteredProjects.map((project: any, i: number) => (
                   <motion.div
                     key={project.id}
-                    layout="position"
+
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
@@ -707,12 +705,12 @@ export default function HomeClient({
 
         {/* 6. CERTIFICATIONS LIST SECTION */}
         <section id="more" className="min-h-screen py-16 md:py-32 px-4 md:px-6 relative flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] border-t border-white/5">
-          <AmbientParticles />
+          {/* AmbientParticles removed - already rendered in Hero/Contact sections */}
           <div className="w-full max-w-6xl relative z-10">
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} variants={cinematicReveal} className="mb-16 md:mb-32 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">{t[lang].moreTitle}</h2>
-              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
+              <motion.div initial={{ width: 0 }} whileInView={{ width: 64 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="h-1 md:h-1.5 bg-white mx-auto shadow-[0_0_15px_white]" />
             </motion.div>
 
             <div className="flex flex-col border-t border-white/10">
@@ -786,7 +784,7 @@ export default function HomeClient({
       {/* PROJECT MODAL POPUP */}
       <AnimatePresence>
         {selectedProject && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-3xl overflow-y-auto overflow-x-hidden">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-md overflow-y-auto overflow-x-hidden">
             <div className="max-w-7xl mx-auto w-full relative min-h-screen flex flex-col pt-10">
               <div className="sticky top-6 w-full px-6 flex justify-end z-[210]">
                 <motion.button whileHover={{ scale: 1.2, rotate: 180 }} onClick={() => setSelectedProject(null)} className="w-16 h-16 rounded-full flex items-center justify-center text-white border-2 border-white/20 hover:bg-white hover:text-black transition-all duration-500 shadow-2xl">
