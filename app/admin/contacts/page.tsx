@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Plus, Edit2, Trash2, Image as ImageIcon, Loader2, Save, GripVertical } from "lucide-react";
+import { Plus, Edit2, Trash2, Image as ImageIcon, Loader2, Save, GripVertical, Eye, EyeOff } from "lucide-react";
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, rectSortingStrategy } from '@dnd-kit/sortable';
 import { useSortable } from '@dnd-kit/sortable';
@@ -143,6 +143,19 @@ export default function ContactsAdminPage() {
     }
   };
 
+  const toggleHidden = async (item: any) => {
+    try {
+      await fetch(`/api/contacts/${item.id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ is_hidden: !item.is_hidden }),
+      });
+      setItems(prev => prev.map(c => c.id === item.id ? { ...c, is_hidden: !c.is_hidden } : c));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const openEdit = (item: any) => {
     setFormData({
       id: item.id,
@@ -186,7 +199,7 @@ export default function ContactsAdminPage() {
             <SortableContext items={items} strategy={rectSortingStrategy}>
               {items.map((item) => (
                 <SortableItem key={item.id} id={item.id}>
-                  <div className="pl-6 flex-shrink-0">
+                  <div className={`pl-6 flex-shrink-0 ${item.is_hidden ? 'opacity-40' : ''}`}>
                     <div className="w-16 h-16 bg-white/5 rounded-2xl p-3 flex items-center justify-center">
                       {item.icon ? (
                         <img src={item.icon} alt="icon" className="w-full h-full object-contain filter invert" />
@@ -195,11 +208,23 @@ export default function ContactsAdminPage() {
                       )}
                     </div>
                   </div>
-                  <div className="flex-1 overflow-hidden">
-                    <h3 className="text-xl font-black text-white mt-1 uppercase tracking-widest">{item.label}</h3>
+                  <div className={`flex-1 overflow-hidden ${item.is_hidden ? 'opacity-40' : ''}`}>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xl font-black text-white mt-1 uppercase tracking-widest">{item.label}</h3>
+                      {item.is_hidden && (
+                        <span className="bg-yellow-500/90 text-black text-[10px] font-bold px-2 py-0.5 rounded">Tersembunyi</span>
+                      )}
+                    </div>
                     <p className="text-sm text-gray-500 truncate">{item.url}</p>
                   </div>
                   <div className="flex gap-2">
+                    <button 
+                      onClick={() => toggleHidden(item)} 
+                      className={`${item.is_hidden ? 'bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500' : 'bg-green-500/20 text-green-400 hover:bg-green-500'} hover:text-white p-2 rounded-lg transition-colors`}
+                      title={item.is_hidden ? 'Tampilkan' : 'Sembunyikan'}
+                    >
+                      {item.is_hidden ? <EyeOff size={16} /> : <Eye size={16} />}
+                    </button>
                     <button onClick={() => openEdit(item)} className="bg-blue-500/20 text-blue-400 hover:bg-blue-500 hover:text-white p-2 rounded-lg transition-colors">
                       <Edit2 size={16} />
                     </button>
