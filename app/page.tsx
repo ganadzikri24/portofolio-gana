@@ -19,7 +19,7 @@ export default async function Page() {
     supabaseAdmin.from('experience').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
     supabaseAdmin.from('skills').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
     supabaseAdmin.from('certifications').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }),
-    supabaseAdmin.from('contacts').select('*').eq('is_hidden', false).order('order_index', { ascending: true }).order('id', { ascending: true })
+    supabaseAdmin.from('contacts').select('*').or('is_hidden.eq.false,is_hidden.is.null').order('order_index', { ascending: true }).order('id', { ascending: true })
   ]);
 
   return (
