@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ganabitz.site",
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Muhamad Ganabitz Dzikri | Portfolio",
     description: "Portofolio resmi Muhamad Ganabitz Dzikri (Ganabitz).",
